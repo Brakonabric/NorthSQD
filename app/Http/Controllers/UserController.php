@@ -37,7 +37,6 @@ class UserController extends Controller
                 'password'   =>   $password
          )
             );
-        $users = DB::table('users')->get();
-        return view('users',['users'=>$users]);
+        return redirect('/users');
     }
 }
