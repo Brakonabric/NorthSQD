@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductListController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products',function () {
-    return view('products');
-});
+Route::get('/products',[ProductListController::class, 'showall']);
+
+Route::get('/users',[UserController::class, 'showall']);
+Route::get('/users/fill',[UserController::class, 'fill']);
