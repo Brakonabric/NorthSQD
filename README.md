@@ -1,0 +1,2 @@
+# NorthSQD
+Magebit team project
