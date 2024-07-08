@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -14,24 +15,28 @@ class UserController extends Controller
         $users = DB::table('users')->get();
         return view('users',['users'=>$users]);
     }
-    public function fill():View {
+    public function remove():View {
+        DB::table('users')->delete();
+        $users = DB::table('users')->get();
+        return view('users',['users'=>$users]);
+    }
+    public function showRegistrationForm()
+    {
+        return view('auth.register');
+    }
+    public function register(Request $request)
+    {
+ 
+        $username = $request->username;
+        $password = $request->password;
+        $email= $request->email;
         DB::table('users')->insert(
             array(
-                   'id'     =>   '1', 
-                   'email'   =>   'rain@gmail.com',
-                   'username'   =>   'rainheart',
-                   'password'   =>   '111'
-            )
-       );
-       DB::table('users')->insert(
-        array(
-            'id'     =>   '2', 
-            'email'   =>   'jang@gmail.com',
-            'username'   =>   'janney',
-            'password'   =>   '222'
-    
-     )
-   );
+                'email'   =>   $email,
+                'username'   =>   $username,
+                'password'   =>   $password
+         )
+            );
         $users = DB::table('users')->get();
         return view('users',['users'=>$users]);
     }

@@ -21,4 +21,7 @@ Route::get('/', function () {
 Route::get('/products',[ProductListController::class, 'showall']);
 
 Route::get('/users',[UserController::class, 'showall']);
-Route::get('/users/fill',[UserController::class, 'fill']);
+Route::get('/users/remove',[UserController::class, 'remove']);
+Route::get('/register', [UserController::class, 'showRegistrationForm']);
+Route::post('/register', [UserController::class, 'register'])->name('register');
+
