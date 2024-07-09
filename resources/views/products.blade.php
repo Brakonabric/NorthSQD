@@ -64,13 +64,7 @@
                     </div>
                 @endforeach
             </div> --}}
-            
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Horizontal Sliding Gallery</title>
-                <link rel="stylesheet" href="styles.css">
-            
-            
+        
                 <div class="container scroll-container">
                     @foreach($items as $item)
                         <div class="product-block">
@@ -100,6 +94,7 @@
                                 <div class="label weight">Weight:</div>
                                 <div>{{$item->weight}}</div>
                             </div> --}}
+                        <div class="product-car">
                             <div class="item-detail name">
                                 <div class="label">Name:{{$item->name}}</div>
                             </div>
@@ -114,7 +109,7 @@
                                     
                                 </div>
                             @endif
-
+                        </div>
                                 {{-- <div class="item-detail discount">
                                     <div class="label">Discount:{{$item->discount}}</div>
                                 </div> --}}

@@ -105,5 +105,8 @@ body {
 .showall{
     text-transform: uppercase;
     color: #DB3998;
-   
+}
+
+.scroll-container {
+    margin-top: 20px;
 }
