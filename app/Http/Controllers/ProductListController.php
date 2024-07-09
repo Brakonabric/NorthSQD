@@ -75,7 +75,6 @@ class ProductListController extends Controller
             'name' => 'required',
             'price' => 'required',
             'category' => 'required',
-            'in_stock' => 'required|boolean',
             'imageUrl' => 'required',
             'size' => 'required',
             'weight' => 'required'
@@ -86,7 +85,7 @@ class ProductListController extends Controller
         'description' => $request->description,
         'price' => $request->price,
         'category' => $request->category,
-        'in_stock' => $request->in_stock,
+        'in_stock' => $request->has('in_stock'),
         'imageUrl' => $request->imageUrl,
         'size' => $request->size,
         'weight' => $request->weight,
