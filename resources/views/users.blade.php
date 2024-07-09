@@ -10,9 +10,10 @@
 
             <thead>
         
-              <th>Username</th>
         
               <th>email</th>
+              <th>name</th>
+              <th>surname</th>
         
             </thead>
         
@@ -23,8 +24,9 @@
         
                 <tr>
         
-                  <td>{{$user->username}} </td>
                   <td>{{$user->email}} </td>
+                  <td>{{$user->name}} </td>
+                  <td>{{$user->surname}} </td>
         
                 </tr>
         @endforeach

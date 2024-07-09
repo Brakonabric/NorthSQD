@@ -7,6 +7,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use App\Models\Item;
 use DB;
 
 class ProductListController extends Controller
@@ -20,39 +21,52 @@ class ProductListController extends Controller
     }
     public function fill(): RedirectResponse{
         DB::table('items')->delete();
-        DB::table('items')->insert([    
-        'name' => 'shirt',
+        Item::create([
+            'name' => 'shirt1',
         'description' => 'something',
         'price' => 22.5,
-        'cart_id' => 5,
+
         'category' => 'shirts',
         'in_stock' => true,
         'imageUrl' => 'mmm.com',
         'size' => 'L',
-        'weight' => '2.5',
+        'weight' => '2.5'
         ]);
-        DB::table('items')->insert([    
+        Item::create([
             'name' => 'shirt2',
-            'description' => 'something',
-            'price' => 22.5,
-            'cart_id' => 5,
-            'category' => 'shirts',
-            'in_stock' => true,
-            'imageUrl' => 'mmm.com',
-            'size' => 'L',
-            'weight' => '2.5',
+        'description' => 'something',
+        'price' => 22.5,
+
+        'category' => 'shirts',
+        'in_stock' => true,
+        'imageUrl' => 'mmm.com',
+        'size' => 'L',
+        'weight' => '2.5'
         ]);
-        DB::table('items')->insert([    
+        Item::create([
             'name' => 'shirt3',
-            'description' => 'something',
-            'price' => 22.5,
-            'cart_id' => 5,
-            'category' => 'shirts',
-            'in_stock' => true,
-            'imageUrl' => 'mmm.com',
-            'size' => 'L',
-            'weight' => '2.5',
+        'description' => 'something',
+        'price' => 22.5,
+
+        'category' => 'shirts',
+        'in_stock' => true,
+        'imageUrl' => 'mmm.com',
+        'size' => 'L',
+        'weight' => '2.5'
         ]);
         return redirect('/products');
+    }
+    public function getProduct($id){
+        try{
+        $item = Item::find($id);
+        if(empty($item)){
+            throw new \Exception('Product not found');
+        }
+            return view('product',['item'=>$item]);
+        }
+        catch(\Exception $e){
+            
+            return redirect('/error');
+        }
     }
 }
