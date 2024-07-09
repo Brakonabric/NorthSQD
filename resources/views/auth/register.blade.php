@@ -8,7 +8,8 @@
     <body>
         <form method="POST" action="{{ route('register') }}">
             @csrf
-            <input type="text" name="username" placeholder="Name">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="surname" placeholder="Surname">
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Password">
             <button type="submit">Register</button>
