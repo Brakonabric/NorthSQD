@@ -7,6 +7,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use App\Models\Item;
 use DB;
 
 class ProductListController extends Controller
@@ -20,11 +21,21 @@ class ProductListController extends Controller
     }
     public function fill(): RedirectResponse{
         DB::table('items')->delete();
+        Item::create([
+            'name' => 'shirt4',
+        'description' => 'something',
+        'price' => 22.5,
+
+        'category' => 'shirts',
+        'in_stock' => true,
+        'imageUrl' => 'mmm.com',
+        'size' => 'L',
+        'weight' => '2.5'
+        ]);
         DB::table('items')->insert([    
         'name' => 'shirt',
         'description' => 'something',
         'price' => 22.5,
-        'cart_id' => 5,
         'category' => 'shirts',
         'in_stock' => true,
         'imageUrl' => 'mmm.com',
@@ -35,7 +46,6 @@ class ProductListController extends Controller
             'name' => 'shirt2',
             'description' => 'something',
             'price' => 22.5,
-            'cart_id' => 5,
             'category' => 'shirts',
             'in_stock' => true,
             'imageUrl' => 'mmm.com',
@@ -46,7 +56,6 @@ class ProductListController extends Controller
             'name' => 'shirt3',
             'description' => 'something',
             'price' => 22.5,
-            'cart_id' => 5,
             'category' => 'shirts',
             'in_stock' => true,
             'imageUrl' => 'mmm.com',
