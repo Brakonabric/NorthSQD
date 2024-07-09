@@ -1,0 +1,112 @@
+
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory; /* Snap to each product block */
+}
+
+.product-block {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 10px;
+    width: 35%;
+    min-width: 35%;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    scroll-snap-align: start;
+}
+
+.product-block img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.item-detail {
+    margin-bottom: 10px;
+}
+
+.item-detail .label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.item-detail .price,
+.item-detail .discount {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.wrap {
+    display: flex;
+    gap: 10px;
+}
+
+/* Scrollbar styles */
+.scroll-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Optional: Buttons for manual scrolling */
+.scroll-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #888;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.scroll-button:hover {
+    background-color: #555;
+}
+
+
+.showall{
+    text-transform: uppercase;
+    color: #DB3998;
+}
+
+.scroll-container {
+    margin-top: 20px;
+}
