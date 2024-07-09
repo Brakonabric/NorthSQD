@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Route::get('/products',[ProductListController::class, 'showall']);
 Route::get('/products/fill',[ProductListController::class, 'fill'])->middleware('auth');
+Route::post('/products/addProduct',[ProductListController::class, 'addProduct'])->name('addProduct');
+Route::get('/products/addProduct',[ProductListController::class, 'showAddProductForm']);
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
 Route::get('/users',[UserController::class, 'showall'])->middleware('auth');
