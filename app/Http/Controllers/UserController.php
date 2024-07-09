@@ -7,6 +7,10 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 use DB;
 
 class UserController extends Controller
@@ -15,28 +19,45 @@ class UserController extends Controller
         $users = DB::table('users')->get();
         return view('users',['users'=>$users]);
     }
-    public function remove():View {
+    public function remove(): RedirectResponse{
         DB::table('users')->delete();
-        $users = DB::table('users')->get();
-        return view('users',['users'=>$users]);
+        return redirect('/users');
     }
     public function showRegistrationForm()
     {
         return view('auth.register');
     }
-    public function register(Request $request)
+    public function register(Request $request): RedirectResponse
     {
- 
-        $username = $request->username;
-        $password = $request->password;
-        $email= $request->email;
-        DB::table('users')->insert(
-            array(
-                'email'   =>   $email,
-                'username'   =>   $username,
-                'password'   =>   $password
-         )
-            );
+        $request->validate([
+            'username' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required'
+        ]);
+         User::create([
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ]);
         return redirect('/users');
     }
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+    public function login(Request $request) : RedirectResponse
+    {
+        $loginData = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required']
+        ]);
+        if (Auth::attempt($loginData)){
+            $request->session()->regenerate();
+            return redirect('/users');
+        }
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
+    }
+    
 }

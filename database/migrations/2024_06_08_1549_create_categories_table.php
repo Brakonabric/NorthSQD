@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->char('category',length:50);
-            //$table->rememberToken();
-            //$table->timestamps();
         });
     }
 

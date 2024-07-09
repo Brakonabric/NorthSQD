@@ -36,14 +36,14 @@
         
                 <tr>
         
-                  <td>{{$user->name}} </td>
-                  <td>{{$user->description}} </td>
-                  <td>{{$user->price}} </td>
-                  <td>{{$user->category}} </td>
-                  <td>{{$user->inStock}} </td>
-                  <td>{{$user->size}} </td>
-                  <td>{{$user->weight}} </td>
-                  <td>{{$user->discount}} </td>
+                  <td>{{$item->name}} </td>
+                  <td>{{$item->description}} </td>
+                  <td>{{$item->price}} </td>
+                  <td>{{$item->category}} </td>
+                  <td>{{$item->in_stock}} </td>
+                  <td>{{$item->size}} </td>
+                  <td>{{$item->weight}} </td>
+                  <td>{{$item->discount}} </td>
         
                 </tr>
         @endforeach

@@ -17,17 +17,13 @@ return new class extends Migration
             $table->char('description',length: 50);
             $table->double('price');
             $table->unsignedBigInteger('cart_id');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('cart_id')->references('id')->on('carts')->onDelete('cascade');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->char('category',length: 50);
+            //$table->foreign('cart_id')->references('id')->on('carts')->onDelete('cascade');
             $table->boolean('in_stock');
             $table->string('imageUrl', length:50);
             $table->char('size', length:50);
             $table->double('weight');
             $table->double('discount')->nullable();
-
-            //$table->rememberToken();
-            //$table->timestamps();
         });
     }
 
