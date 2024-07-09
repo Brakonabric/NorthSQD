@@ -30,12 +30,14 @@ class UserController extends Controller
     public function register(Request $request): RedirectResponse
     {
         $request->validate([
-            'username' => 'required',
+            'name' => 'required',
+            'surname' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required'
         ]);
          User::create([
-            'username' => $request->username,
+            'name' => $request->name,
+            'surname' => $request->surname,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
@@ -59,5 +61,4 @@ class UserController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ]);
     }
-    
 }
