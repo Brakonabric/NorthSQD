@@ -22,7 +22,7 @@ class ProductListController extends Controller
     public function fill(): RedirectResponse{
         DB::table('items')->delete();
         Item::create([
-            'name' => 'shirt4',
+            'name' => 'shirt1',
         'description' => 'something',
         'price' => 22.5,
 
@@ -32,36 +32,41 @@ class ProductListController extends Controller
         'size' => 'L',
         'weight' => '2.5'
         ]);
-        DB::table('items')->insert([    
-        'name' => 'shirt',
+        Item::create([
+            'name' => 'shirt2',
         'description' => 'something',
         'price' => 22.5,
+
         'category' => 'shirts',
         'in_stock' => true,
         'imageUrl' => 'mmm.com',
         'size' => 'L',
-        'weight' => '2.5',
+        'weight' => '2.5'
         ]);
-        DB::table('items')->insert([    
-            'name' => 'shirt2',
-            'description' => 'something',
-            'price' => 22.5,
-            'category' => 'shirts',
-            'in_stock' => true,
-            'imageUrl' => 'mmm.com',
-            'size' => 'L',
-            'weight' => '2.5',
-        ]);
-        DB::table('items')->insert([    
+        Item::create([
             'name' => 'shirt3',
-            'description' => 'something',
-            'price' => 22.5,
-            'category' => 'shirts',
-            'in_stock' => true,
-            'imageUrl' => 'mmm.com',
-            'size' => 'L',
-            'weight' => '2.5',
+        'description' => 'something',
+        'price' => 22.5,
+
+        'category' => 'shirts',
+        'in_stock' => true,
+        'imageUrl' => 'mmm.com',
+        'size' => 'L',
+        'weight' => '2.5'
         ]);
         return redirect('/products');
+    }
+    public function getProduct($id){
+        try{
+        $item = Item::find($id);
+        if(empty($item)){
+            throw new \Exception('Product not found');
+        }
+            return view('product',['item'=>$item]);
+        }
+        catch(\Exception $e){
+            
+            return redirect('/error');
+        }
     }
 }
