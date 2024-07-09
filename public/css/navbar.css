@@ -7,46 +7,72 @@
     position: relative;
     display: flex;
     background-color: rgb(255, 255, 255);
-    margin: 1rem;
+    margin: 10vw;
     margin-top: 0;
-    height: 3.5rem;
+    height: 8vw;
     padding: 0 auto;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.2rem solid #d5d5d5;
+    border-bottom: 0.5vw solid #d5d5d5;
 }
 
 .menu-wrapper {
     position: absolute;
+    display: flex;
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
+    width: 4vw;
+    height: 4vw;
+}
+
+.logo {
+    width: 17vw;
+    height: 5vw;
+    padding: 2px;
 }
 
 .menu {
-    display: inline-block;
+    display: inline-flex;
     padding: 0;
     border: 0;
     background: none;
-    height: 25px;
-    width: 25px;
+}
+
+.menu svg {
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+    padding: 1px;
 }
 
 .button-wrapper {
     position: absolute;
+    display: flex; /* Changed to flex */
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .button-wrapper button {
-    display: inline-block;
+    display: inline-flex; /* Changed to inline-flex */
     padding: 0;
+    padding-left: 1vw;
     border: 0;
     align-items: center;
     justify-content: center;
     background: none;
     margin-left: 2px;
+}
+
+.button-wrapper button svg {
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    margin: 0;
+    width: 4vw;
+    height: 4vw;
 }
 
 .search-box {
