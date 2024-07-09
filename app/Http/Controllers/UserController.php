@@ -44,7 +44,7 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
-        $cart = Cart::create([
+        Cart::create([
             'amount' => 0,
             'user_id' => $user->id
         ]);
@@ -68,4 +68,8 @@ class UserController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ]);
     }
+    public function logout(Request $request) : RedirectResponse{
+        Auth::logout();
+        return redirect('/login');
+    } 
 }

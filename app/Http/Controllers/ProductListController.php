@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -68,5 +69,32 @@ class ProductListController extends Controller
             
             return redirect('/error');
         }
+    }
+    public function addProduct(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required',
+            'category' => 'required',
+            'imageUrl' => 'required',
+            'size' => 'required',
+            'weight' => 'required'
+        ]);
+        
+        Item::create([
+        'name' => $request->name,
+        'description' => $request->description,
+        'price' => $request->price,
+        'category' => $request->category,
+        'in_stock' => $request->has('in_stock'),
+        'imageUrl' => $request->imageUrl,
+        'size' => $request->size,
+        'weight' => $request->weight,
+        'discount' => $request->discount
+        ]);
+        return redirect('products');
+    }
+    public function showAddProductForm()
+    {
+        return view('addProduct');
     }
 }
