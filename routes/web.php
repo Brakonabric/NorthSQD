@@ -19,13 +19,14 @@ Route::get('/', function () {
 });
 
 Route::get('/products',[ProductListController::class, 'showall']);
-Route::get('/products/fill',[ProductListController::class, 'fill']);
+Route::get('/products/fill',[ProductListController::class, 'fill'])->middleware('auth');
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
-Route::get('/users',[UserController::class, 'showall']);
-Route::get('/users/remove',[UserController::class, 'remove']);
+Route::get('/users',[UserController::class, 'showall'])->middleware('auth');
+Route::get('/users/remove',[UserController::class, 'remove'])->middleware('auth');
 Route::get('/register', [UserController::class, 'showRegistrationForm']);
 Route::post('/register', [UserController::class, 'register'])->name('register');
 Route::get('/login', [UserController::class, 'showLoginForm']);
 Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::get('/logout', [UserController::class, 'logout']);
 
