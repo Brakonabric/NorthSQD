@@ -15,5 +15,6 @@
 <header id="navbar-container">
     @include('templates/navbar')
 </header>
+@include('templates/footer')
 </body>
 </html>

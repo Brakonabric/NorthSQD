@@ -16,9 +16,7 @@ return new class extends Migration
             $table->char('name',length: 50);
             $table->char('description',length: 50);
             $table->double('price');
-            $table->unsignedBigInteger('cart_id');
             $table->char('category',length: 50);
-            //$table->foreign('cart_id')->references('id')->on('carts')->onDelete('cascade');
             $table->boolean('in_stock');
             $table->string('imageUrl', length:50);
             $table->char('size', length:50);
