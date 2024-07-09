@@ -11,6 +11,9 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Cart;
+use App\Controllers\CartController;
+use Illuminate\Support\Facades\Log;
 use DB;
 
 class UserController extends Controller
@@ -35,11 +38,15 @@ class UserController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required'
         ]);
-         User::create([
+        $user = User::create([
             'name' => $request->name,
             'surname' => $request->surname,
             'email' => $request->email,
             'password' => Hash::make($request->password)
+        ]);
+        $cart = Cart::create([
+            'amount' => 0,
+            'user_id' => $user->id
         ]);
         return redirect('/users');
     }
