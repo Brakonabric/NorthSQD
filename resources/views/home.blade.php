@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
 <body>
-<header id="navbar-container">
-    @include('templates/navbar')
-</header>
+@include('templates/navbar')
 @include('templates/footer')
 </body>
 </html>
