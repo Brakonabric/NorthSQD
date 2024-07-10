@@ -27,7 +27,9 @@ class CartController extends Controller
                 'cart_id' => $userDBCart->id,
                 'quantity' => $id['quantity']
             ]);
+            $userDBCart->amount+=$id['price']*$id['quantity'];
         }
+        $userDBCart->save();
         return redirect()->back()->with('success', 'Cart items were uploaded to db');
     }
 }
