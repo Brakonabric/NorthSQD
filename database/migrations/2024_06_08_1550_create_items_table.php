@@ -18,7 +18,7 @@ return new class extends Migration
             $table->double('price');
             $table->char('category',length: 50);
             $table->boolean('in_stock');
-            $table->string('imageUrl', length:50);
+            $table->longText('imageUrl');
             $table->char('size', length:50);
             $table->double('weight');
             $table->double('discount')->nullable();
