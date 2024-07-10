@@ -1,6 +1,13 @@
 <link rel="stylesheet" href="{{ asset('css/products.css') }}">
 <script src="{{ asset('js/scroll.js') }}"></script>
  {{-- Later need to delete txt from divs name, dicount, price etc.        --}}
+    
+
+    <div class="sales-title">
+        <p class="topsales">TOP sales</p>
+        <a href="#" class="shopall">Shop all</a>
+    </div>
+
     <div class="container scroll-container">
         @foreach($items as $item)
 
@@ -42,14 +49,20 @@
                                     $discountedPrice = $item->price - ($item->price * ($item->discount / 100));
                                 @endphp
                                 <div class="item-detail price">
-                                    <div class="label">{{ number_format($discountedPrice, 2) }}€</div>
+                                    <div class="label">
+                                        {{ number_format($discountedPrice, 2) }}€
+                                    </div>
                                 </div>
                                 <div class="item-detail old-price">
-                                    <div class="label"><s>{{ $item->price }}€</s></div>
+                                    <div class="label">
+                                        {{ $item->price }}€
+                                    </div>
                                 </div>
                                 @else
                                 <div class="item-detail price">
-                                    <div class="label">{{$item->price}}€</div>
+                                    <div class="label">
+                                        {{$item->price}}€
+                                    </div>
                                 </div>
                                 @endif
                                 {{-- <div class="item-detail price">
