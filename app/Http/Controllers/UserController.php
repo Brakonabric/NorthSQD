@@ -11,13 +11,17 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Item;
 use App\Models\Cart;
 use App\Controllers\CartController;
 use Illuminate\Support\Facades\Log;
+use App\Traits\CartLogicTrait;
+use App\Models\CartItem;
 use DB;
 
 class UserController extends Controller
 {
+    use CartLogicTrait;
     public function showall():View {
         $users = DB::table('users')->get();
         return view('users',['users'=>$users]);
@@ -62,14 +66,45 @@ class UserController extends Controller
         ]);
         if (Auth::attempt($loginData)){
             $request->session()->regenerate();
-            return redirect('/users');
-        }
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ]);
+            $userCart = Cart::where('user_id',Auth::user()->id)->first();
+            if($userCart){
+                $cart = session()->get('cart');
+                $products=CartItem::where('cart_id',$userCart->id)->get();
+                foreach($products as $product){
+                    $id = $product->item_id;
+                    $item = Item::find($id);
+            if(!$cart) {
+                $cart= [
+                    $id => [
+                    "id" => $item->id,
+                    "name" => $item->name,
+                    "quantity" => $product->quantity,
+                    "price" => $item->price,
+                    "imageUrl" => $item->imageUrl
+                ]];
+            
+            }
+            else {
+                $cart[$id] = [
+                    "id" => $item->id,
+                    "name" => $item->name,
+                    "quantity" => $product->quantity,
+                    "price" => $item->price,
+                    "imageUrl" => $item->imageUrl
+                ];
+            }
+                    }
+                    session()->put('cart', $cart);
+                }
+                return redirect('/users');
+            }
+            return back()->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ]);
     }
     public function logout(Request $request) : RedirectResponse{
         Auth::logout();
+        session()->flush();
         return redirect('/login');
     } 
 }

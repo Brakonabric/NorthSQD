@@ -1,4 +1,6 @@
-.test {
+
+
+.sticky-bar {
     position: sticky;
     background-color: white;
     top: 0;
@@ -10,6 +12,7 @@
     display: flex;
     background-color: white;
     margin: 15px 5vw 15px 5vw;
+    padding: 0.5vw 0 0.5vw 0;
     justify-content: center;
     align-items: center;
     z-index: 999;
@@ -80,56 +83,50 @@
     }
 }
 
-#menu:active {
-    background: #1be37f;
-}
-
 .dropdown-nav-list {
     position: relative;
     display: none;
-    grid-template-columns: 40% 40%;
-    grid-template-rows: 60%;
     width: 100vw;
-    height: 50vh;
-    padding: 0 0 0 5vh;
+    padding: 0 0 0 5vw;
     background-color: rgb(255, 255, 255);
-    z-index: 1;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-    border-top: 1px solid;
+    border-top: 0.3vw solid #DB3998;
 }
 
 .dropdown-nav-list ul {
     list-style: none;
-    margin-left: 1.2rem;
+    margin: 0;
     padding: 0;
 }
 
 .dropdown-nav-list a {
     text-decoration: none;
     color: #888;
-    transition: all 0.3s ease;
-    display: block;
 }
 
 .dropdown-nav-list a:hover {
     text-decoration: none;
-    color: #e92063;
 }
 
 .dropdown-nav-list li {
+    display: flex;
     padding: 0 0 0.8rem 0;
+    align-items: center;
+    justify-content: left;
 }
 
-.dropdown-nav-list h4 {
-    padding: 0;
-    margin: 1.2rem 1rem 1rem 1rem;
-}
-
-.sale {
+.sale h3{
     color: #34A853;
 }
+.sale {
+    align-items: center;
+}
 
-.grid-element p {
-    display: inline;
-    font-weight: bold;
+.sale h4 {
+    color: black;
+}
+
+.sale li a {
+    display: flex;
+    align-items: center;
 }

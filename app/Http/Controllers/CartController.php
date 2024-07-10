@@ -2,17 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
 use Illuminate\View\View;
+//use App\Traits\CartLogicTrait;
+use App\Models\Cart;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Item;
-use DB;
+use App\Models\CartItem;
+use Illuminate\Support\Facades\Auth;
 
-class ProductListController extends Controller
+class CartController extends Controller
 {
-    public function addCartToUser($id) {
-        echo $id;
+    public function showCart(){
+        $cart = session()->get('cart');
+        return view('cart',['cart'=>$cart]);
+    }
+    public function saveCart(){
+        $cart = session()->get('cart');
+        $user = Auth::user();
+        $userDBCart = Cart::where('user_id',Auth::user()->id)->first();
+        CartItem::where('cart_id',$userDBCart->id)->delete();
+        foreach($cart as $id){
+            CartItem::create([
+                'item_id' => $id['id'],
+                'cart_id' => $userDBCart->id,
+                'quantity' => $id['quantity']
+            ]);
+            $userDBCart->amount+=$id['price']*$id['quantity'];
+        }
+        $userDBCart->save();
+        return redirect()->back()->with('success', 'Cart items were uploaded to db');
     }
 }

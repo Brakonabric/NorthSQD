@@ -1,4 +1,11 @@
-<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+</head>
+<body>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -24,15 +31,12 @@
                 <div class="footer-col">
                     <h4>Info</h4>
                     <ul>
-                        <li><a href="#">Rodions</a></li>
-                        <li><a href="#">Linass</a></li>
-                        <li><a href="#">Matiss</a></li>
-                        <li><a href="#">Katerina</a></li>
-                        <li><a href="#">Deniss</a></li>
+                        <li><a href="#">About NorthSQD</a></li>
+                        <li><a href="#">Refund policy</a></li>
+                        <li><a href="#">Shipping policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4></h4>
                     <ul>
                         <li><a href="#" class="Sales">TOP Sales</a></li>
                         <li><a href="#">
@@ -51,3 +55,5 @@
             <p>&copy; 2024 NorthSQD | Magebit Bootcamp. All rights reserved.</p>
         </div>
     </footer>
+</body>
+</html>
