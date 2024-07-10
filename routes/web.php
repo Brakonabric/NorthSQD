@@ -32,3 +32,5 @@ Route::get('/login', [UserController::class, 'showLoginForm']);
 Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::get('/logout', [UserController::class, 'logout']);
 
+Route::get('/addToCart', [UserController::class, 'register'])->name('addToCart');
+
