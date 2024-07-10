@@ -14,6 +14,7 @@
               <th>name</th>
               <th>quantity</th>
               <th>price</th>
+              <th>remove</th>
         
             </thead>
         
@@ -27,6 +28,7 @@
                   <td>{{$item['name']}} </td>
                   <td>{{$item['quantity']}} </td>
                   <td>{{($item['price'])*($item['quantity'])}} </td>
+                  <td><a href="{{ route('removeFromCart',$item['id']) }}">Remove</a></td>
         
                 </tr>
         @endforeach

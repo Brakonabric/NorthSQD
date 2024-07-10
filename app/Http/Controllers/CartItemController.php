@@ -27,12 +27,12 @@ class CartItemController extends Controller
                 "imageUrl" => $item->imageUrl
             ]];
         session()->put('cart', $cart);
-        return redirect()->back()->with('success', 'Product added to cart successfully!');
+        return redirect('saveCart')->with('success', 'Product added to cart successfully!');
         }
         else if (isset($cart[$id])) {
             $cart[$id]['quantity']++;
             session()->put('cart', $cart);
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
+            return redirect('saveCart')->with('success', 'Product added to cart successfully!');
         }
         else {
             $cart[$id]= [
@@ -43,7 +43,26 @@ class CartItemController extends Controller
                 "imageUrl" => $item->imageUrl
             ];
         session()->put('cart', $cart);
-        return redirect()->back()->with('success', 'Product added to cart successfully!');
+        return redirect('saveCart')->with('success', 'Product added to cart successfully!');
     }
 }
+public function removeFromCart($id)
+    {
+        $cart = session()->get('cart');
+        if (isset($cart[$id])) {
+            if($cart[$id]['quantity']>1){
+                $cart[$id]['quantity']--;
+                session()->put('cart', $cart);
+                return redirect('saveCart')->with('success', 'Product added to cart successfully!');
+            }
+            else{
+                $cart = array_splice($cart,$id,1);
+                session()->put('cart', $cart);
+                return redirect('saveCart')->with('success', 'Product added to cart successfully!');
+            }
+            return redirect('saveCart')->with('success', 'Product added to cart successfully!');
+        }
+        throw new \Exception($cart[$id]);
+        return redirect('saveCart')->with('success', 'Product added to cart successfully!');
+    }
 }

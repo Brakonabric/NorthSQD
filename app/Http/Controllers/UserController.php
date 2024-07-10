@@ -11,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Item;
 use App\Models\Cart;
 use App\Controllers\CartController;
 use Illuminate\Support\Facades\Log;
@@ -67,39 +68,33 @@ class UserController extends Controller
             $request->session()->regenerate();
             $userCart = Cart::where('user_id',Auth::user()->id)->first();
             if($userCart){
+                $cart = session()->get('cart');
                 $products=CartItem::where('cart_id',$userCart->id)->get();
                 foreach($products as $product){
-                    $cart = session()->get('cart');
+                    $id = $product->item_id;
                     $item = Item::find($id);
             if(!$cart) {
                 $cart= [
                     $id => [
                     "id" => $item->id,
                     "name" => $item->name,
-                    "quantity" => 1,
+                    "quantity" => $product->quantity,
                     "price" => $item->price,
                     "imageUrl" => $item->imageUrl
                 ]];
-            session()->put('cart', $cart);
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
-            }
-            else if (isset($cart[$id])) {
-                $cart[$id]['quantity']++;
-                session()->put('cart', $cart);
-                return redirect()->back()->with('success', 'Product added to cart successfully!');
+            
             }
             else {
-                $cart[$id]= [
+                $cart[$id] = [
                     "id" => $item->id,
                     "name" => $item->name,
-                    "quantity" => 1,
+                    "quantity" => $product->quantity,
                     "price" => $item->price,
                     "imageUrl" => $item->imageUrl
                 ];
-            session()->put('cart', $cart);
             }
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
                     }
+                    session()->put('cart', $cart);
                 }
                 return redirect('/users');
             }

@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cart_items', function (Blueprint $table) {
-            $table->id();
             $table->integer('quantity');
             $table->unsignedBigInteger('cart_id');
             $table->unsignedBigInteger('item_id');
