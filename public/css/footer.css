@@ -14,16 +14,16 @@
     flex-wrap: wrap;
 }
 
-ul{
+.row ul{
     list-style: none;
 }
 
 .footer{
     border-top: solid;
     border-top-color: rgba(77, 71, 71, 0.459);
-    background-color: #ffffff;
     padding: 70px 0;
-    margin: 50px 0 0 0;
+    margin: 50px 50px 0 50px;
+
 }
 
 .footer-col{
@@ -32,73 +32,36 @@ ul{
 }
 
 .footer-col h4{
-    font-size: 20px;
+    font-size: 18px;
     color: #000000;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-    font-weight: bolder;
-    font-size: large;
-    position: relative;
-}
-
-.footer-col h4::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom:  -10px;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-}
-
-.footer-col ul li:not(:last-child){
     margin-bottom: 10px;
+    position: static;
 }
 
 .footer-col ul li a{
     font-size: 16px;
     text-transform: capitalize;
-    color: #ffff;
     text-decoration: none;
-    font-weight: 300;
     color: #000000;
     display: block;
     transition: all 0.3s ease;
+    margin-bottom: 10px;
+
 }
 .footer-col ul li a:hover{
     color: #e92063;
     padding-left: 10px;
 }
 
-.footer-col .social-links a{
-    display:  inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgb(0, 0, 0);
-    margin: 0 10xp 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-}
-
-.footer-col .social-links a:hover{
-    color: #ffffff;
-    background-color: #e92063;
-}
-
-.footer-col ul li a svg {
-    margin-bottom: 3px;
-    margin-left: 1px; 
-    vertical-align: middle; 
-}
-
 .footer-bottom {
-    background-color: #000;
-    color: #fff;
+    background-color: #000000;
+    color:white;
     text-align: center;
-    padding: 30px;
-    font-size: smaller;
+    padding: 30px 0;
+}
+
+.footer-col .Sales{
+    margin-top: 32px;
 }
 
 @media(max-width: 767px){
@@ -112,6 +75,7 @@ ul{
 @media(max-width: 574px){
     .footer-col{
         width: 100%;
+        margin-left: 10px;
         
     }
 
