@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductListController;
+use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,5 +37,8 @@ Route::get('/login', [UserController::class, 'showLoginForm']);
 Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::get('/logout', [UserController::class, 'logout']);
 
-Route::get('/addToCart', [UserController::class, 'register'])->name('addToCart');
+Route::get('/addToCart/{id}', [CartItemController::class, 'addToCart'])->name('addToCart');
+Route::get('/saveCart', [CartController::class, 'saveCart'])->name('saveCart');
+Route::get('/cart', [CartController::class, 'showCart'])->name('saveCart');
+
 

@@ -1,26 +1,21 @@
 <?php
-
-namespace App\Http\Controllers;
-
+namespace App\Traits;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\View\View;
-//use App\Traits\CartLogicTrait;
-use App\Models\Cart;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Item;
-use App\Models\CartItem;
-use Illuminate\Support\Facades\Auth;
-
-class CartItemController extends Controller
-{
-    //use CartLogicTrait;
-    public function addToCart($id)
-    {
+use DB;
+trait CartLogicTrait {
+    public function addToCart($id) {
         $cart = session()->get('cart');
         $item = Item::find($id);
+        $this->info('Display this on the screen');
+        echo('ddd');
         if(!$cart) {
             $cart= [
                 $id => [
-                "id" => $item->id,
                 "name" => $item->name,
                 "quantity" => 1,
                 "price" => $item->price,
@@ -36,7 +31,6 @@ class CartItemController extends Controller
         }
         else {
             $cart[$id]= [
-                "id" => $item->id,
                 "name" => $item->name,
                 "quantity" => 1,
                 "price" => $item->price,
