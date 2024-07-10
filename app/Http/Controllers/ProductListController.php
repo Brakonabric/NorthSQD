@@ -24,36 +24,33 @@ class ProductListController extends Controller
         DB::table('items')->delete();
         Item::create([
             'name' => 'shirt1',
-        'description' => 'something',
-        'price' => 22.5,
-
-        'category' => 'shirts',
-        'in_stock' => true,
-        'imageUrl' => 'mmm.com',
-        'size' => 'L',
-        'weight' => '2.5'
+            'description' => 'something',
+            'price' => 22.5,
+            'category' => 'shirts',
+            'in_stock' => true,
+            'imageUrl' => 'mmm.com',
+            'size' => 'L',
+            'weight' => '2.5'
         ]);
         Item::create([
             'name' => 'shirt2',
-        'description' => 'something',
-        'price' => 22.5,
-
-        'category' => 'shirts',
-        'in_stock' => true,
-        'imageUrl' => 'mmm.com',
-        'size' => 'L',
-        'weight' => '2.5'
+            'description' => 'something',
+            'price' => 22.5,
+            'category' => 'shirts',
+            'in_stock' => true,
+            'imageUrl' => 'mmm.com',
+            'size' => 'L',
+            'weight' => '2.5'
         ]);
         Item::create([
             'name' => 'shirt3',
-        'description' => 'something',
-        'price' => 22.5,
-
-        'category' => 'shirts',
-        'in_stock' => true,
-        'imageUrl' => 'mmm.com',
-        'size' => 'L',
-        'weight' => '2.5'
+            'description' => 'something',
+            'price' => 22.5,
+            'category' => 'shirts',
+            'in_stock' => true,
+            'imageUrl' => 'mmm.com',
+            'size' => 'L',
+            'weight' => '2.5'
         ]);
         return redirect('/products');
     }

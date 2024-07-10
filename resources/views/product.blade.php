@@ -14,5 +14,6 @@
                   <p>{{$item->size}} </p>
                   <p>{{$item->weight}} </p>
                   <p>{{$item->discount}} </p>
+                  <a href="{{ route('addToCart') }}">toCart</a>
     </body>
 </html>
