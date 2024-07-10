@@ -15,7 +15,7 @@
 @include('templates/navbar')
 <div class="emptyModulePlace">EMPTY</div>
 @include('templates/products')
-<div class="emptyModulePlace">EMPTY</div>
+@include('templates/prieviewCollection')
 @include('templates/footer')
 </body>
 </html>
