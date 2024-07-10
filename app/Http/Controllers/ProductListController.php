@@ -20,6 +20,10 @@ class ProductListController extends Controller
         $items = DB::table('items')->get();
         return view('products',['items'=>$items]);
     }
+    public function showall2():View {
+        $items = DB::table('items')->get();
+        return view('home',['items'=>$items]);
+    }
     public function fill(): RedirectResponse{
         DB::table('items')->delete();
         Item::create([

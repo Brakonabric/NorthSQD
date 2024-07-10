@@ -24,6 +24,9 @@ Route::post('/products/addProduct',[ProductListController::class, 'addProduct'])
 Route::get('/products/addProduct',[ProductListController::class, 'showAddProductForm']);
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
+Route::get('/',[ProductListController::class, 'showall2']);
+
+
 Route::get('/users',[UserController::class, 'showall'])->middleware('auth');
 Route::get('/users/remove',[UserController::class, 'remove'])->middleware('auth');
 Route::get('/register', [UserController::class, 'showRegistrationForm']);
