@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 <script src="{{ asset('js/nav.js') }}"></script>
-<div class="test">
-
+<div class="sticky-bar">
     <div class="header-mob">
         <div class="button-container" id="left-container">
             <button onclick="" class="mob-nav-button" id="menu">
@@ -46,8 +45,14 @@
     </div>
     <div class="dropdown-nav-list" id="dropdown-nav-list">
         <div class="grid-element">
-            <h4>Categories</h4>
+            <br>
             <ul>
+                <li>
+                    <h3>Categories</h3>
+                </li>
+                <li>
+                    <a href="">Collections</a>
+                </li>
                 <li>
                     <a href="">T-Short</a>
                 </li>
@@ -58,36 +63,18 @@
                     <a href="">Phone Cases</a>
                 </li>
                 <li>
-                    <a href="">Stickers</a>
+                    <a href="/products">Stickers</a>
                 </li>
-            </ul>
-        </div>
-        <div class="grid-element">
-            <h4>Collections</h4>
-            <ul>
+            </ul><br>
+            <ul  class="sale">
                 <li>
-                    <a href="">Rodion</a>
+                    <h3>TOP Sales</h3>
                 </li>
                 <li>
-                    <a href="">Linass</a>
-                </li>
-                <li>
-                    <a href="">Matiss</a>
-                </li>
-                <li>
-                    <a href="">Katerina</a>
-                </li>
-                <li>
-                    <a href="">Deniss</a>
-                </li>
-            </ul>
-        </div>
-        <div class="grid-element">
-            <h4 class="sale">TOP Sales</h4>
-            <ul>
-                <li>
-                    <img src="" alt="#">
-                    <p>SALE</p>
+                    <a href="/products">
+                        <img src="svg/sale-mark.svg" alt="">
+                        <h4>SALE</h4>
+                    </a>
                 </li>
             </ul>
         </div>

@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let dropdown = document.getElementById("dropdown-nav-list");
 
     menuButton.addEventListener("click", () => {
-        if (dropdown.style.display === "grid") {
+        if (dropdown.style.display === "block") {
             dropdown.style.display = "none";
         } else {
-            dropdown.style.display = "grid";
+            dropdown.style.display = "block";
         }
     });
 
