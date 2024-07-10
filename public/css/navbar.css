@@ -24,6 +24,16 @@
     justify-content: flex-end;
 }
 
+#right-container svg {
+    margin-left: 10px;
+    justify-content: flex-end;
+}
+
+#left-container svg {
+    margin-right: 10px;
+    justify-content: flex-start;
+}
+
 .logo {
     height: 90%;
     padding: auto;
@@ -41,21 +51,6 @@
     height: 100%;
 }
 
-#cart {
-    justify-content: flex-end;
-}
-
-#wishlist {
-    justify-content: flex-end;
-}
-
-#user {
-    justify-content: flex-end;
-}
-
-#menu {
-    justify-content: flex-start;
-}
 @media(min-widht: 768px){
     .mob-nav-button {
         display: none;
