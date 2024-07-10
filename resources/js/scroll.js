@@ -1,4 +1,4 @@
-// scripts.js
+// scripts.js for scrolling product cards
 document.addEventListener('DOMContentLoaded', function() {
     const scrollContainer = document.querySelector('.scroll-container');
     
