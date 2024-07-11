@@ -31,8 +31,8 @@ Route::get('/',[ProductListController::class, 'showall2']);
 
 Route::get('/users',[UserController::class, 'showall'])->middleware('auth');
 Route::get('/users/remove',[UserController::class, 'remove'])->middleware('auth');
-Route::get('/register', [UserController::class, 'showRegistrationForm']);
-Route::post('/register', [UserController::class, 'register'])->name('register');
+Route::get('/sign-up', [UserController::class, 'showRegistrationForm']);
+Route::post('/sign-up', [UserController::class, 'register'])->name('register');
 Route::get('/login', [UserController::class, 'showLoginForm']);
 Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::get('/logout', [UserController::class, 'logout']);
@@ -42,5 +42,9 @@ Route::get('/removeFromCart/{id}', [CartItemController::class, 'removeFromCart']
 
 Route::get('/saveCart', [CartController::class, 'saveCart'])->name('saveCart');
 Route::get('/cart', [CartController::class, 'showCart'])->name('saveCart');
+
+Route::get('/error', function () {
+    return view('error');
+});
 
 

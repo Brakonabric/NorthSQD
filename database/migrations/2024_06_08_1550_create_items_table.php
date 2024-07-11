@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->char('name',length: 50);
-            $table->char('description',length: 50);
+            $table->ongText('description');
             $table->double('price');
             $table->char('category',length: 50);
             $table->boolean('in_stock');
@@ -22,6 +22,7 @@ return new class extends Migration
             $table->char('size', length:50);
             $table->double('weight');
             $table->double('discount')->nullable();
+            $table->double('color')->nullable();
         });
     }
 

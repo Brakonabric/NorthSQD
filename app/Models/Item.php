@@ -15,7 +15,9 @@ class Item extends Model
         'in_stock',
         'imageUrl',
         'size',
-        'weight'
+        'weight',
+        'discount',
+        'color'
     ];
     public $timestamps = false;
 }
