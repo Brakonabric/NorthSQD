@@ -13,12 +13,9 @@ use DB;
 
 class ProductListController extends Controller
 {
-    public function index():View {
-
-    }
     public function showall():View {
         $items = DB::table('items')->get();
-        return view('products',['items'=>$items]);
+        return view('plp',['items'=>$items]);
     }
     public function showall2():View {
         $items = DB::table('items')->get();

@@ -20,10 +20,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/products',[ProductListController::class, 'showall']);
+Route::get('/products',[ProductListController::class, 'showall'])->name('products');
 Route::get('/products/fill',[ProductListController::class, 'fill'])->middleware('auth');
-Route::post('/products/addProduct',[ProductListController::class, 'addProduct'])->name('addProduct');
-Route::get('/products/addProduct',[ProductListController::class, 'showAddProductForm']);
+Route::post('/products/add-product',[ProductListController::class, 'addProduct'])->name('addProduct');
+Route::get('/products/add-product',[ProductListController::class, 'showAddProductForm']);
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
 Route::get('/',[ProductListController::class, 'showall2']);

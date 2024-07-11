@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/products.css') }}">
+<link rel="stylesheet" href="{{ asset('css/plp.css') }}">
 <script src="{{ asset('js/scroll.js') }}"></script>
  {{-- Later need to delete txt from divs name, dicount, price etc.        --}}
     

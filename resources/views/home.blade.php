@@ -14,8 +14,8 @@
 <body>
 @include('templates/navbar')
 <div class="emptyModulePlace">EMPTY</div>
-@include('templates/products')
-@include('templates/prieviewCollection')
+@include('templates.plp-vert-slider')
+@include('templates.pre-collection')
 @include('templates/footer')
 </body>
 </html>
