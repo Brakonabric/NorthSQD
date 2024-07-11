@@ -9,7 +9,12 @@
     </div>
 
     <div class="collection-grid">
-        <div class="preview 1"><a href="#"><img src="images/1.png"></a>Rodions</div>
+        <div class="preview 1">
+            <a href="#">
+                <img src="images/1.png">
+            </a>
+            Rodions
+        </div>
         <div class="preview 2"><a href="#"><img src="images/1.png"></a>Linass</div>
         <div class="preview 3"><a href="#"><img src="images/1.png"></a>Matiss</div>
         <div class="preview 4"><a href="#"><img src="images/1.png"></a>Katerina</div>
