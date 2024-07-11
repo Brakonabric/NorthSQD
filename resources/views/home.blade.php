@@ -16,6 +16,7 @@
 <div class="emptyModulePlace">EMPTY</div>
 @include('templates/products')
 @include('templates/prieviewCollection')
+@include('templates/contacts')
 @include('templates/footer')
 </body>
 </html>
