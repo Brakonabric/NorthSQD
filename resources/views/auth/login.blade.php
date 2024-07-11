@@ -37,6 +37,7 @@
         <input class="social" type="image" src="{{asset('svg/google_ic.svg')}}"/>
         <input class="social" type="image" src="{{asset('svg/apple_ic.svg')}}"/>
     </div>
+    <hr class="auth_line"></hr>
     {{-- @include('templates/contacts')
     @include('templates/footer') --}}
     </body>
