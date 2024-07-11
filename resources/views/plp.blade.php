@@ -12,10 +12,10 @@
         <title>Products</title>
     </head>
     <body>
- 
-        <h2>TOP sales</h2>   
+
+        <h2>TOP sales</h2>
         <strong><a href="" class="showall">Show all</a></strong>
-            
+
 
 
  {{-- Later need to delete txt from divs name, dicount, price etc.        --}}
@@ -24,12 +24,12 @@
 
         <div class="product-block">
                             {{-- <img src="{{ $item->image_url }}" alt="{{ $item->name }}"> --}}
-                            
+
                             <div class="image-container">
                                 <div class="like-button">&#9829;</div>
                                 <img src="images/1.png" alt="{{ $item->name }}">
                             </div>
-                            
+
                             {{-- <div class="item-detail">
                                 <div class="label description">Description:</div>
                                 <div>{{$item->description}}</div>
@@ -50,7 +50,7 @@
                                 <div class="label weight">Weight:</div>
                                 <div>{{$item->weight}}</div>
                             </div> --}}
-                        
+
                             <div class="item-detail name">
                                 <div class="label">{{$item->name}}</div>
                             </div>
@@ -87,17 +87,17 @@
                                 {{-- @if($item->discount !== null)
                                 <div class="item-detail discount">
                                     <div class="label">Old price:{{$item->discount}}</div>
-                                    
+
                                 </div>
                             @endif --}}
                         </div>
-                               
-                            
+
+
     </div>
                     @endforeach
 </div>
                 <script src="scripts.js"></script>
-            
-        
+
+
     </body>
 </html>
