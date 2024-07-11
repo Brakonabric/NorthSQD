@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->char('name',length: 50);
-            $table->ongText('description');
+            $table->longText('description');
             $table->double('price');
             $table->char('category',length: 50);
             $table->boolean('in_stock');
