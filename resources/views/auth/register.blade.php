@@ -35,7 +35,7 @@
             <label for ="password">Password</label>
             <div class="passinp">
             <input id="password" type="password" name="password" placeholder="Enter your password">
-            <input id="showpass" class="showpass" type="image" src="{{asset('svg/Eyehide.svg')}}" onclick="togglePassword()"/>
+            <input id="showpass" class="showpass" type="image" src="{{asset('svg/Eyehide.svg')}}"/>
             </div>
             </div>
             <div class="input-wrap">
@@ -50,4 +50,19 @@
         <input class="social" type="image" src="{{asset('svg/apple_ic.svg')}}"/>
     </div>
     </body>
+    <script>
+        let el=document.getElementById("showpass");
+        el.addEventListener("click", togglePassword)
+        function togglePassword() {
+            event.preventDefault();
+            let x = document.getElementById("password");
+// TODO change image on click
+//            var img = document.getElementById("passImg");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+          }
+          </script>
 </html>

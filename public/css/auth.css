@@ -10,7 +10,6 @@ body {
 a{
     text-decoration: none;
     color:#518EF8;
-    ;
 }
 .loginForm{
     display: flex;
@@ -18,9 +17,34 @@ a{
     align-items: center;
     margin-top: 44px;
 }
-.loginForm form{
-    width: 90%;
+@media (min-width: 575px) {
+    .social{
+        border-radius: 10px;
+        border: 2px, solid, #ececec;
+        padding: 15px;
+        width:5%;
+        height:30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .loginForm form{
+    width: 20%;
 }
+}
+@media (max-width: 574px) {
+    .social{
+        border-radius: 10px;
+        border: 2px, solid, #ececec;
+        padding: 15px;
+        width:25%;
+        height:25px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .loginForm form{
+        width: 90%;
+    }
+    }
 .input-wrap{
     padding-top:20px;
     display: flex;
@@ -93,21 +117,23 @@ a{
     position: relative;
 }
 .continue:before{
+    margin-right: .25em;
     content:" ";
+    width: 30%;
     display: block;
     height: 2px;
-    width: 30%;
     position: absolute;
     top:50%;
     left: 5%;
     background: #e7e7e7;
   }
   .continue:after{
+    margin-left: .25em;
+    width: 30%;
     display: block;
     content:" ";
     height: 2px;
     top:50%;
-    width: 30%;
     position: absolute;
     right: 5%;
     background: #e7e7e7;
@@ -115,15 +141,6 @@ a{
 .buttonBox{
     display:flex;
     justify-content: center;
-}
-.social{
-    border-radius: 10px;
-    border: 2px, solid, #ececec;
-    padding: 15px;
-    width:25%;
-    height:25px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 /* @media(max-width: 574px){

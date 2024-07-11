@@ -22,7 +22,7 @@
                 <label for ="password">Password</label>
                 <div class="passinp">
                     <input id="password" type="password" name="password" placeholder="Enter your password">
-                    <input id="showpass" class="showpass" type="image" src="{{asset('svg/Eyehide.svg')}}">
+                   <input id="showpass" class="showpass" type="image" src="{{asset('svg/Eyehide.svg')}}">
                 </div>
             <a href="#">Forgot Password?</a>
             </div>
@@ -37,7 +37,8 @@
         <input class="social" type="image" src="{{asset('svg/google_ic.svg')}}"/>
         <input class="social" type="image" src="{{asset('svg/apple_ic.svg')}}"/>
     </div>
-    
+    {{-- @include('templates/contacts')
+    @include('templates/footer') --}}
     </body>
     <script>
         let el=document.getElementById("showpass");
