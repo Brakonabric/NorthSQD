@@ -17,8 +17,9 @@ class CartController extends Controller
         return view('cart',['cart'=>$cart]);
     }
     public function saveCart(){
-        $cart = session()->get('cart');
         $user = Auth::user();
+        if($user){
+        $cart = session()->get('cart');
         $userDBCart = Cart::where('user_id',Auth::user()->id)->first();
         CartItem::where('cart_id',$userDBCart->id)->delete();
         foreach($cart as $id){
@@ -31,5 +32,7 @@ class CartController extends Controller
         }
         $userDBCart->save();
         return redirect()->back()->with('success', 'Cart items were uploaded to db');
+    }
+    return redirect()->back()->with('message', 'The user is not logged in');
     }
 }

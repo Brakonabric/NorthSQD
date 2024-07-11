@@ -7,7 +7,6 @@
         <title>Users</title>
     <body>
         <table class="table table-hover">
-
             <thead>
         
         

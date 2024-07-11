@@ -4,19 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NorthSQD</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
 <body>
 @include('templates/navbar')
 <div class="emptyModulePlace">EMPTY</div>
-@include('templates/products')
-@include('templates/prieviewCollection')
-@include('templates/contacts')
+@include('templates.plp-hor-slider')
+@include('templates.pre-collection')
+@include('templates.contacts')
 @include('templates/footer')
 </body>
 </html>

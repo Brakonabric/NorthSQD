@@ -37,14 +37,10 @@ class UserController extends Controller
     public function register(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => 'required',
-            'surname' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required'
         ]);
         $user = User::create([
-            'name' => $request->name,
-            'surname' => $request->surname,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
