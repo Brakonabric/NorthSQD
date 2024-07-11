@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.image-container{
+    width:50%;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; 
+    max-width: 100%; 
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 30px;
+}
+
+.content-container{
+    width:60%;
+    margin: 50px 50px 300px 30px
+}
+
+.card__header, .card__footer {
+    width: 100%;
+}
+
+.card__title {
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: -0.02ch;
+    word-break: break-word;
+    hyphens: auto;
+    text-transform: uppercase;
+  }
+
+
+.card__slide {
+    display:flex;
+    flex-direction: row;
+
+}
+
+
+.card__image {
+    width: 100%;
+    height: auto; 
+    border-radius: 4px 4px 0 0; 
+}
+
+
+.card__subtitle p {
+    font-size: 1em;
+    color: #777;
+}
+
+.card__price {
+    margin-top: 15px;
+    font-size: 1.25em;
+    color: #000000;
+}
+
+/* <-----------Color Working-----------> */
+#white{
+    background-color: grey;
+}
+
+#black{
+    background-color: black;
+}
+
+#blue{
+    background: blue;
+}
+
+.ring:hover {
+    border-color: rgb(72, 199, 72);
+}
+
+.color{
+    margin: 35px 35px 35px 0; 
+}
+
+
+.color ul, .size ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.color li, .size li {
+    margin: 4px 0;
+    display: inline;
+}
+
+.color ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.color li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+
+
+
+.card__point{
+    margin-bottom: 30px;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    background-color: #3498db;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.button a:hover {
+    background-color: #2980b9;
+}
+
+.descriptions button {
+    margin: 4px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.descriptions button:hover {
+    background-color: #ccc;
+}
