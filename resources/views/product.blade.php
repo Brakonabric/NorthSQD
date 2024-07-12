@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/pdp.css') }}">
-    <title>Products</title>
+    <title>Product Details</title>
 </head>
 <body>
     @include('templates/navbar')
@@ -26,8 +26,6 @@
                 <p class="card__price">€ {{ $items['item']->price }}</p>
                 <p class="card__discount">{{ $items['item']->discount }} </p>
             </header>
-
-
             <!-- CARD POINT -->
             <div class="card__point">
                 <div class="color">
@@ -37,31 +35,55 @@
                         <li id="blue" class="ring"></li>
                     </ul>
                 </div>
-                <div class="size">
+                <div class="size-chooser">
                     <ul>
+                        {{--<li class="card__size">S({{ $item->size }})</li>--}}
+                        {{--<li class="card__size">M({{ $item->size }})</li>--}}
+                        {{--<li class="card__size">L({{ $item->size }})</li>--}}
+                        
                         @if ($items['size'])
                         <li class="card__copy">{{ $items['size']->size }}</li>
                         @endif
                     </ul>
                 </div>
             </div>
-            <!-- CARD FOOTER -->
-            <footer class="card__footer">
+            <!-- CARD BTN -->
+            <div class="card__footer">
                 <div class="card__actions">
-                    <button class="button">
-                        <a href="{{ route('addToCart', $items['item']->id) }}">toCart</a>
+                    <button class="submit-btn">
+                        <a href="{{ route('addToCart', $items['item']->id) }}">Add to Cart</a>
                     </button>
-                    @if ($items['size'])
-                    <p>{{ $items['size']->in_stock }}</p>
-                    @endif
+                    {{-- Задействуй для примнения класса --}}
+                    {{-- @if ($items['size']) --}}
+                    {{-- <p>{{ $items['size']->in_stock }}</p> --}}
+                    {{-- @endif --}}
                 </div>
+                <!-- CARD DESCRIPTIONS -->
                 <div class="descriptions">
-                    <button>Details</button>
-                    <button>Shipping and returns</button>
-                    <p>{{ $items['item']->description }}</p>
+                    <button class="describe-button-active tab-button tab-button-active" data-index="0">Details</button>
+                    <button class="describe-button-active tab-button" data-index="1">Shipping and returns</button>
                 </div>
-            </footer>
+                <div class="tab-contents">
+                    <div class="tab-content" data-index="0">
+                        <p><span>{{ $items['item']->description }}</span></p>
+                        <p><span>Details:</span></p>
+                        <ul>
+                            <li><span>Unisex, relaxed fit shirt</span></li>
+                            <li><span>100% cotton </span></li>
+                            <li><span>OEKO-TEX® Standard 100 Certified</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" data-index="1">
+                        <p>View our full  <a href="">shipping information.</a></p>
+                        <p>Currently our merch is shipped out of the US which means International customers may experience higher shipping costs, custom charges, or longer shipping times. We hope to improve this in the future to make sure The Sims products are accessible across the globe.</p>
+                        <p>View our full <a href="">return policy.</a></p>
+                        <p>We accept returns within 31 days. Non-returnable items include final sale items, giftcards, downloadable products, personalized and print-on-demand products.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="{{ asset('js/pdp.js') }}"></script>
 </body>
 </html>
