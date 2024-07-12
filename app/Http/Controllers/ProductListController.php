@@ -9,6 +9,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Item;
+use App\Models\ItemColor;
+use App\Models\ItemSize;
 use DB;
 
 class ProductListController extends Controller
@@ -61,12 +63,24 @@ class ProductListController extends Controller
         if(empty($item)){
             throw new \Exception('Product not found');
         }
-            return view('product',['item'=>$item]);
-        }
+    }
         catch(\Exception $e){
-            
+
             return redirect('/error');
         }
+            $size=null;
+            $color = ItemColor::where('item_id', $id)->first();
+            if($color){
+            $size = ItemSize::where('color_id', $color->id)->first();
+            }
+
+                $items=[
+                    'item'=>$item,
+                    'color'=>$color,
+                    'size'=>$size
+                ];  
+            return view('product',['items'=>$items]);
+        
     }
     public function addProduct(Request $request){
         $request->validate([
@@ -78,17 +92,45 @@ class ProductListController extends Controller
             'weight' => 'required'
         ]);
         
-        Item::create([
+        $item = Item::create([
         'name' => $request->name,
         'description' => $request->description,
         'price' => $request->price,
         'category' => $request->category,
-        'in_stock' => $request->has('in_stock'),
+        #'in_stock' => $request->has('in_stock'),
         'imageUrl' => $request->imageUrl,
-        'size' => $request->size,
         'weight' => $request->weight,
         'discount' => $request->discount
         ]);
+        // foreach($request->colors as $color){
+        //     if(array_key_exists("name",$color)){
+        //     $color = ItemColor::create([
+        //        'in_stock' =>array_key_exists("instock",$color),
+        //        'color' =>$color["name"],
+        //        'item_id' =>$item->id
+        //     ]);
+        //     $sizes=explode(";",$color["sizes"]);
+        //     foreach($sizes as $size){
+        //         $sizeElements=explode(",",$size);
+        //         $instock;
+        //         $sizeEl;
+        //         foreach($sizeElements as $sizeElement){
+        //             if($sizeElement === 1 || $sizeElement === 0){
+        //                 $instock=$sizeElement; 
+        //              }
+        //              else{
+        //                  $sizeEl=$sizeElement;
+        //              }
+        //         }
+        //         ItemSize::create([
+        //            'in_stock' =>$instock,
+        //            'size' =>$sizeEl,
+        //            'color_id' =>$color->id
+        //         ]);
+        //     }
+        // }
+        // }
+        
         return redirect('products');
     }
     public function showAddProductForm()
