@@ -7,6 +7,11 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, p, a, button {
+    font-family: inherit;
 }
 
 .container-contacts{
@@ -28,7 +33,6 @@ body {
 .list li{
     margin-bottom: 15px;
     color: #1E1F27;
-    font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -69,7 +73,6 @@ body {
 
 .list a{
   font-size: 16px;
-  text-transform: capitalize;
   text-decoration: none;
   color: #000000;
   transition: all 0.3s ease;
