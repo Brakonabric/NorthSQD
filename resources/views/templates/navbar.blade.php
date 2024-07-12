@@ -54,7 +54,7 @@
                     <a href="">Collections</a>
                 </li>
                 <li>
-                    <a href="">T-Short</a>
+                    <a href="">T-Shirts</a>
                 </li>
                 <li>
                     <a href="">Sweatshirts</a>
