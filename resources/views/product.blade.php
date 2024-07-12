@@ -13,18 +13,18 @@
         <!-- CARD SLIDE -->
         <div class="image-container">
             <div class="card__slide">
-                <img src="{{ $item->imageUrl }}" alt="Product Image" class="card__image">
+                <img src="{{ $items['item']->imageUrl }}" alt="Product Image" class="card__image">
             </div>
         </div>
         <div class="content-container">
             <!-- CARD HEADER -->
             <header class="card__header">
-                <h2 class="card__title">{{ $item->name }}</h2>
+                <h2 class="card__title">{{ $items['item']->name }}</h2>
                 <h3 class="card__subtitle">
-                    <p>{{ $item->category }}</p>
+                    <p>{{ $items['item']->category }}</p>
                 </h3>
-                <p class="card__price">€ {{ $item->price }}</p>
-                <p class="card__discount">{{ $item->discount }} </p>
+                <p class="card__price">€ {{ $items['item']->price }}</p>
+                <p class="card__discount">{{ $items['item']->discount }} </p>
             </header>
 
 
@@ -39,9 +39,9 @@
                 </div>
                 <div class="size">
                     <ul>
-                        <li class="card__copy">{{ $item->size }}</li>
-                        <li class="card__copy">{{ $item->size }}</li>
-                        <li class="card__copy">{{ $item->size }}</li>
+                        @if ($items['size'])
+                        <li class="card__copy">{{ $items['size']->size }}</li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -49,14 +49,16 @@
             <footer class="card__footer">
                 <div class="card__actions">
                     <button class="button">
-                        <a href="{{ route('addToCart', $item->id) }}">toCart</a>
+                        <a href="{{ route('addToCart', $items['item']->id) }}">toCart</a>
                     </button>
-                    <p>{{ $item->in_stock }}</p>
+                    @if ($items['size'])
+                    <p>{{ $items['size']->in_stock }}</p>
+                    @endif
                 </div>
                 <div class="descriptions">
                     <button>Details</button>
                     <button>Shipping and returns</button>
-                    <p>{{ $item->description }}</p>
+                    <p>{{ $items['item']->description }}</p>
                 </div>
             </footer>
         </div>

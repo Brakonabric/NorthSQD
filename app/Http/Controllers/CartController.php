@@ -14,6 +14,9 @@ class CartController extends Controller
 {
     public function showCart(){
         $cart = session()->get('cart');
+        // if(!$cart){
+        //     return back()->withErrors(['empty' => 'The cart is empty']);
+        // }
         return view('cart',['cart'=>$cart]);
     }
     public function saveCart(){

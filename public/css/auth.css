@@ -65,10 +65,11 @@ a{
     margin-top: 20px;
 }
 
-#showpass {
+.showpass {
     margin: auto 4% auto auto;
     height:20px;
     width:20px;
+    cursor:pointer;
 } 
 
 .input-wrap input {

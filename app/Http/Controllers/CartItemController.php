@@ -62,7 +62,6 @@ public function removeFromCart($id)
             }
             return redirect('saveCart')->with('success', 'Product added to cart successfully!');
         }
-        throw new \Exception($cart[$id]);
         return redirect('saveCart')->with('success', 'Product added to cart successfully!');
     }
 }

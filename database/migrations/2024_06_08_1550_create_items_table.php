@@ -17,12 +17,9 @@ return new class extends Migration
             $table->longText('description');
             $table->double('price');
             $table->char('category',length: 50);
-            $table->boolean('in_stock');
             $table->longText('imageUrl');
-            $table->char('size', length:50);
             $table->double('weight');
             $table->double('discount')->nullable();
-            $table->double('color')->nullable();
         });
     }
 
