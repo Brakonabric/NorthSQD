@@ -91,7 +91,6 @@ body {
 }
 
 .color li {
-    border-color: #777;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -102,19 +101,23 @@ body {
 }
 
 #white {
+    border-color: grey;
     background-color: white;
 }
 
 #black {
+    border-color: grey;
     background-color: black;
 }
 
 #blue {
+    border-color: grey;
     background-color: blue;
 }
 
+
 .color ul li.ring:hover {
-    border-color: rgb(72, 199, 72);
+    border-color: rgb(72, 199, 72) !important;
 }
 
 

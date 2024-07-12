@@ -69,7 +69,7 @@
                         <p>View our full  <a href="">shipping information.</a></p>
                         <p>Currently our merch is shipped out of the US which means International customers may experience higher shipping costs, custom charges, or longer shipping times. We hope to improve this in the future to make sure The Sims products are accessible across the globe.</p>
                         <p>View our full <a href="">return policy.</a></p>
-                        <p>We accept returns within 30 days. Non-returnable items include final sale items, giftcards, downloadable products, personalized and print-on-demand products.</p>
+                        <p>We accept returns within 31 days. Non-returnable items include final sale items, giftcards, downloadable products, personalized and print-on-demand products.</p>
                     </div>
                 </div>
             </div>
