@@ -13,18 +13,18 @@
         <!-- CARD SLIDE -->
         <div class="image-container">
             <div class="card__slide">
-                <img src="{{ $item->imageUrl }}" alt="Product Image" class="card__image">
+                <img src="{{ $items['item']->imageUrl }}" alt="Product Image" class="card__image">
             </div>
         </div>
         <div class="content-container">
             <!-- CARD HEADER -->
             <header class="card__header">
-                <h2 class="card__title">{{ $item->name }}</h2>
+                <h2 class="card__title">{{ $items['item']->name }}</h2>
                 <h3 class="card__subtitle">
-                    <p>By {{ $item->category }}</p>
+                    <p>{{ $items['item']->category }}</p>
                 </h3>
-                <p class="card__price">€ {{ $item->price }}</p>
-                <p class="card__discount">{{ $item->discount }} </p>
+                <p class="card__price">€ {{ $items['item']->price }}</p>
+                <p class="card__discount">{{ $items['item']->discount }} </p>
             </header>
             <!-- CARD POINT -->
             <div class="card__point">
@@ -37,9 +37,13 @@
                 </div>
                 <div class="size-chooser">
                     <ul>
-                        <li class="card__size">S({{ $item->size }})</li>
-                        <li class="card__size">M({{ $item->size }})</li>
-                        <li class="card__size">L({{ $item->size }})</li>
+                        {{--<li class="card__size">S({{ $item->size }})</li>--}}
+                        {{--<li class="card__size">M({{ $item->size }})</li>--}}
+                        {{--<li class="card__size">L({{ $item->size }})</li>--}}
+                        
+                        @if ($items['size'])
+                        <li class="card__copy">{{ $items['size']->size }}</li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -47,8 +51,12 @@
             <div class="card__footer">
                 <div class="card__actions">
                     <button class="submit-btn">
-                        <a href="{{ route('addToCart', $item->id) }}">Add to Cart</a>
+                        <a href="{{ route('addToCart', $items['item']->id) }}">Add to Cart</a>
                     </button>
+                    {{-- Задействуй для примнения класса --}}
+                    {{-- @if ($items['size']) --}}
+                    {{-- <p>{{ $items['size']->in_stock }}</p> --}}
+                    {{-- @endif --}}
                 </div>
                 <!-- CARD DESCRIPTIONS -->
                 <div class="descriptions">
@@ -57,7 +65,7 @@
                 </div>
                 <div class="tab-contents">
                     <div class="tab-content" data-index="0">
-                        <p><span>{{ $item->description }}</span></p>
+                        <p><span>{{ $items['item']->description }}</span></p>
                         <p><span>Details:</span></p>
                         <ul>
                             <li><span>Unisex, relaxed fit shirt</span></li>

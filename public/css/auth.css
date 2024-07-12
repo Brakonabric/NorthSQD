@@ -1,8 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:Plus Jakarta Sans;
+    font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+h1, h2, h3, h4, p, a, button {
+    font-family: inherit;
+}
+
 .box{
     margin-top: 8vh;
     text-align: center;
@@ -65,10 +70,11 @@ a{
     margin-top: 20px;
 }
 
-#showpass {
+.showpass {
     margin: auto 4% auto auto;
     height:20px;
     width:20px;
+    cursor:pointer;
 } 
 
 .input-wrap input {
