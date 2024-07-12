@@ -1,48 +1,95 @@
-.collection{
+.pre-collection {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 90vh;
-    border-radius: 5vh;
+    width: 100%;
+    border-radius: 8vw;
+    border: 0;
     margin: 1rem 0 1rem 0;
     padding: 5vw;
     background: linear-gradient(198deg, rgba(236, 0, 140, 0.80) -8.13%, #80B3FF 108.85%);
 }
-.descr{
+
+.description {
     display: flex;
     flex-direction: column;
-
-}
-.h2{
-    margin-bottom: 1vh;
+    color: white;
 }
 
-.preview{
-    background-color: beige;
-    width: 162px;
-    height: 162px;
-    border-radius: 15px;
-    overflow: hidden;
+.h2 {
+    margin: 2vh 0 1vh 0;
+}
+
+.link-grid-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+}
+
+.grid-link-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-wrap {
+    color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    color: white;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px -10px 10px rgba(0, 0, 0, 0.1);
-
+    align-items: end;
+    text-decoration: none;
+    border-radius: 10%;
+    padding-bottom: 4%;
+    background-image: url('/images/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.preview img{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-
+/*Mobile*/
+@media (max-width: 768px) {
+    .link-grid-container {
+        margin-top: 6%;
+        justify-items: center;
+    }
+    .link-wrap {
+        height: 40vw;
+        width: 40vw;
+        margin-bottom: 10%;
+    }
 }
 
-.collection-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 1rem;
-    margin-top: 2rem;   
+/*Desktop*/
+@media (min-width: 769px) {
+    .description h2 {
+        text-align: center;
+        padding: 0 33vw;
+        margin: 0 0 1vh 0;
+    }
+
+    .description p {
+        text-align: center;
+        padding: 0 22vw;
+    }
+
+    .pre-collection {
+        display: block;
+        width: 90vw;
+        margin: 0 5vw 0 5vw;
+        border-radius: 3vw;
+        padding: 4vw;
+    }
+    .link-grid-container {
+        display: flex;
+        margin-top: 3.5%;
+        justify-content: space-between;
+    }
+
+    .link-wrap {
+        height: 14vw;
+        width: 14vw;
+    }
+
+    .link-wrap:last-child {
+        display: none;
+    }
 }

@@ -1,24 +1,30 @@
 <link rel="stylesheet" href="{{ asset('css/pre-collection.css') }}">
 <script src="{{ asset('js/pre-collection.js') }}"></script>
-<div class="collection">
-    <div class="descr">
+<div class="pre-collection">
+    <div class="description">
         <h2 class="h2">Experience the Spirit of the North</h2>
-        <p class="description">Experience by the breathtaking beauty of the North, our team has crafted unique collections that blend 
-            style warmth, and a touch of adventure.
-        </p>
+        <p class="">Inspired by the breathtaking beauty of the North, our team has crafted unique collections that blend
+            style, warmth, and a touch of adventure.</p>
     </div>
-
-    <div class="collection-grid">
-        <div class="preview 1">
-            <a href="#">
-                <img src="images/1.png">
+    <div class="link-grid-container">
+            <a href="#" class="link-wrap">
+                <h3 class="">RODIONS</h3>
             </a>
-            Rodions
-        </div>
-        <div class="preview 2"><a href="#"><img src="images/1.png"></a>Linass</div>
-        <div class="preview 3"><a href="#"><img src="images/1.png"></a>Matiss</div>
-        <div class="preview 4"><a href="#"><img src="images/1.png"></a>Katerina</div>
-        <div class="preview 5"><a href="#"><img src="images/1.png"></a>Denis</div>
-        <div class="preview 6"><a href="#"><img src="images/1.png"></a>Top sales</div>
+            <a href="#" class="link-wrap">
+                <h3 class="">LINASS</h3>
+            </a>
+
+            <a href="#" class="link-wrap">
+                <h3 class="">MATISS</h3>
+            </a>
+            <a href="#" class="link-wrap">
+                <h3 class="">KATERINA</h3>
+            </a>
+            <a href="#" class="link-wrap">
+                <h3 class="">DENISS</h3>
+            </a>
+            <a href="#" class="link-wrap">
+                <h3 class="top-sales-in-coll">TOP SALES</h3>
+            </a>
     </div>
 </div>
