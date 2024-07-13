@@ -24,7 +24,7 @@ class CartItemController extends Controller
                 "name" => $item->name,
                 "quantity" => 1,
                 "price" => $item->price,
-                "imageUrl" => $item->imageUrl
+                "imagePath" => $item->imagePath
             ]];
         session()->put('cart', $cart);
         return redirect('saveCart')->with('success', 'Product added to cart successfully!');
@@ -40,7 +40,7 @@ class CartItemController extends Controller
                 "name" => $item->name,
                 "quantity" => 1,
                 "price" => $item->price,
-                "imageUrl" => $item->imageUrl
+                "imagePath" => $item->imagePath
             ];
         session()->put('cart', $cart);
         return redirect('saveCart')->with('success', 'Product added to cart successfully!');

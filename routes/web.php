@@ -26,7 +26,7 @@ Route::post('/products/add-product',[ProductListController::class, 'addProduct']
 Route::get('/products/add-product',[ProductListController::class, 'showAddProductForm']);
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
-Route::get('/',[ProductListController::class, 'showall2']);
+Route::get('/',[ProductListController::class, 'homeSlider']);
 
 
 Route::get('/users',[UserController::class, 'showall'])->middleware('auth');

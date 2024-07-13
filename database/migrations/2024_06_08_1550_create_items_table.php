@@ -17,7 +17,8 @@ return new class extends Migration
             $table->longText('description');
             $table->double('price');
             $table->char('category',length: 50);
-            $table->longText('imageUrl');
+            $table->char('collection',length: 50);
+            $table->longText('imagePath');
             $table->double('weight');
             $table->double('discount')->nullable();
         });

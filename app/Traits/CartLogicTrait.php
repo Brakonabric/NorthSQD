@@ -19,7 +19,7 @@ trait CartLogicTrait {
                 "name" => $item->name,
                 "quantity" => 1,
                 "price" => $item->price,
-                "imageUrl" => $item->imageUrl
+                "imagePath" => $item->imagePath
             ]];
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product added to cart successfully!');
@@ -34,7 +34,7 @@ trait CartLogicTrait {
                 "name" => $item->name,
                 "quantity" => 1,
                 "price" => $item->price,
-                "imageUrl" => $item->imageUrl
+                "imagePath" => $item->imagePath
             ];
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product added to cart successfully!');

@@ -13,7 +13,7 @@
             <input type="text" name="price" placeholder="price">
             <input type="text" name="category" placeholder="category">
             <input type="checkbox" name="in_stock" placeholder="in_stock">
-            <input type="text" name="imageUrl" placeholder="imageUrl">
+            <input type="text" name="imagePath" placeholder="imagePath">
             <input type="text" name="size" placeholder="size">
             <input type="text" name="weight" placeholder="weight">
             <input type="text" name="discount" placeholder="discount">

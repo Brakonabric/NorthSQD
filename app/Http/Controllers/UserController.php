@@ -76,7 +76,7 @@ class UserController extends Controller
                     "name" => $item->name,
                     "quantity" => $product->quantity,
                     "price" => $item->price,
-                    "imageUrl" => $item->imageUrl
+                    "imagePath" => $item->imagePath
                 ]];
             
             }
@@ -86,7 +86,7 @@ class UserController extends Controller
                     "name" => $item->name,
                     "quantity" => $product->quantity,
                     "price" => $item->price,
-                    "imageUrl" => $item->imageUrl
+                    "imagePath" => $item->imagePath
                 ];
             }
                     }
