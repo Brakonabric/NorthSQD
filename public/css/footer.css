@@ -9,11 +9,6 @@
     margin: auto;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .row ul{
     list-style: none;
 }
@@ -21,14 +16,13 @@
 .footer{
     border-top: solid;
     border-top-color: rgba(77, 71, 71, 0.459);
-    padding: 70px 0;
-    margin: 50px 50px 0 50px;
+    padding: 10vw 0;
+    margin: 5vh 5vw 0 5vw;
 
 }
 
 .footer-col{
     width: 25%;
-    padding: 0 15px;
 }
 
 .footer-col h4{
@@ -61,22 +55,28 @@
 }
 
 .footer-col .Sales{
-    margin-top: 32px;
+    /*margin-top: 32px;*/
 }
 
-@media(max-width: 767px){
+@media(max-width: 768px){
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     .footer-col{
-        width: 50%;
+        width: 40%;
         margin-bottom: 30px;
     }
-
 }
 
-@media(max-width: 574px){
-    .footer-col{
-        width: 100%;
-        margin-left: 10px;
-        
+@media(min-width: 769px){
+    .row{
+        display: flex;
+        flex-wrap: wrap;
     }
-
+    .footer-col{
+        width: 20%;
+        margin-left: 10px;
+    }
 }
