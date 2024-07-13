@@ -42,7 +42,7 @@
                         {{--<li class="card__size">L({{ $item->size }})</li>--}}
                         
                         @if ($items['size'])
-                        <li class="card__copy">{{ $items['size']->size }}</li>
+                        <li class="card__size">{{ $items['size']->size }}</li>
                         @endif
                     </ul>
                 </div>
