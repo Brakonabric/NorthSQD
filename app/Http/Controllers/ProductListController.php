@@ -19,44 +19,11 @@ class ProductListController extends Controller
         $items = DB::table('items')->get();
         return view('plp',['items'=>$items]);
     }
-    public function showall2():View {
-        $items = DB::table('items')->get();
+    public function homeSlider():View {
+        $items = DB::table('items')->inRandomOrder()->take(8)->get();
         return view('home',['items'=>$items]);
     }
-    public function fill(): RedirectResponse{
-        DB::table('items')->delete();
-        Item::create([
-            'name' => 'shirt1',
-            'description' => 'something',
-            'price' => 22.5,
-            'category' => 'shirts',
-            'in_stock' => true,
-            'imageUrl' => 'mmm.com',
-            'size' => 'L',
-            'weight' => '2.5'
-        ]);
-        Item::create([
-            'name' => 'shirt2',
-            'description' => 'something',
-            'price' => 22.5,
-            'category' => 'shirts',
-            'in_stock' => true,
-            'imageUrl' => 'mmm.com',
-            'size' => 'L',
-            'weight' => '2.5'
-        ]);
-        Item::create([
-            'name' => 'shirt3',
-            'description' => 'something',
-            'price' => 22.5,
-            'category' => 'shirts',
-            'in_stock' => true,
-            'imageUrl' => 'mmm.com',
-            'size' => 'L',
-            'weight' => '2.5'
-        ]);
-        return redirect('/products');
-    }
+
     public function getProduct($id){
         try{
         $item = Item::find($id);
@@ -87,7 +54,7 @@ class ProductListController extends Controller
             'name' => 'required',
             'price' => 'required',
             'category' => 'required',
-            'imageUrl' => 'required',
+            'imagePath' => 'required',
             'size' => 'required',
             'weight' => 'required'
         ]);
@@ -98,7 +65,7 @@ class ProductListController extends Controller
         'price' => $request->price,
         'category' => $request->category,
         #'in_stock' => $request->has('in_stock'),
-        'imageUrl' => $request->imageUrl,
+        'imagePath' => $request->imagePath,
         'weight' => $request->weight,
         'discount' => $request->discount
         ]);

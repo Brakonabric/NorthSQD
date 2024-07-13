@@ -9,7 +9,7 @@
         @foreach($items as $item)
             <div class="product-block">
                 <div class="image-container">
-                    <img src={{$item->imageUrl}}; alt={{ $item->name }}>
+                    <img src="{{asset($item->imagePath)}}" alt={{ $item->name }}>
 {{--        figure out add this to route and wrape into <a href="/products/{{$item->id}}">--}}
                 </div>
                 <h3 class="name">
