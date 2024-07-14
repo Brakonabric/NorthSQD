@@ -26,12 +26,12 @@ The padded collar and tongue create a sleek, eye-catching silhouette, while the 
 	Blank product sourced from China.
 
 Embrace the spirit of the North with NorthSQD.",
-                'price' => 45.00,
+                'price' => 120.00,
                 'category' => 'Shoes',
-                'collection' => 'Linass',
-                'imagePath' => 'images\Linass\Shoes_Linass_white_1.png',
-                'weight' => 3.5,
-                'discount' => 5.01,
+                'collection' => 'Deniss',
+                'imagePath' => 'images/Deniss/Shoes_Deniss_white_1.png',
+                'weight' => 2.5,
+                'discount' => 20.01,
                 'colors' => ['white'],
                 'sizes' => ['EU 36','EU 38','EU 39','EU 42']
             ],
@@ -53,45 +53,40 @@ Embrace the spirit of the North with NorthSQD.",
     Blank product sourced from Bangladesh
 
 Embrace sustainable fashion with the Organic Cotton T-Shirt by NorthSQD, and let the spirit of the northern lights illuminate your style.",
-                'price' => 20.00,
+                'price' => 35.00,
                 'category' => 'T-Shirt',
-                'collection' => 'Linass',
-                'imagePath' => 'images\Linass\T-Shirt_Linass_white_1.png',
-                'weight' => 1.2,
-                'discount' => 3.01,
-                'colors' => ['white', 'black', 'pink'],
+                'collection' => 'Deniss',
+                'imagePath' => 'images/Deniss/T-Shirt_Deniss_gray_1.png',
+                'weight' => 2.5,
+                'discount' => 5.01,
+                'colors' => ['white', 'black', 'gray'],
                 'sizes' => ['S','M','L','XL'],
             ],
             //Accessories
             [
-                'name' => "Minimalist Backpack",
-                'description' => "Introducing the NorthSQD All-Over Print Minimalist Backpack—perfect for those who are always on the move, inspired by the ethereal beauty of the northern lights. This spacious backpack is crafted from water-resistant material and offers a stylish yet functional design. With ample storage, including a large inside pocket for a laptop and a hidden pocket for valuables, this backpack is ideal for travelers and daily commuters alike.
+                'name' => "Large Eco Tote",
+                'description' => "Introducing the NorthSQD Organic Twill Tote Bag by Econscious—where eco-friendliness meets the enchanting spirit of the northern lights. This spacious and sturdy tote bag is perfect for showcasing your designs, offering ample space for groceries, books, and other essentials. Its durable fabric, dual straps, and flat bottom ensure both style and functionality.
 
-    Made from 100% polyester
-    Fabric weight: 9.56 oz./yd.² (325 g/m²), weight may vary by 5%
-    Dimensions: 16.1″ (41 cm) in height, 12.2″ (31 cm) in width, and 5.5″ (14 cm) in diameter
-    Capacity: 5.3 gallons (20 l)
-    Max weight: 44 lbs (20 kg)
-    Water-resistant material
-    A large inside pocket with a separate pocket that fits a 15″ laptop
-    A hidden pocket with zipper on the back of the bag
-    Top zipper has 2 sliders with zipper pulls
-    Silky lining, piped inside hems, and a soft mesh back
-    Padded ergonomic bag straps made from polyester
-    Printed, cut, and hand-sewn by our expert in-house team
-    Download CPSIA compliance certificates
-    Download the fabric safety test certificate
-    Blank product components sourced from China
+    100% certified organic cotton 3/1 twill
+    Fabric weight: 8 oz/yd² (272 g/m²)
+    Dimensions: 20″ × 14″ × 5″ (50.8 × 35.6 × 12.7 cm)
+    Capacity: 6 gallons (23 l)
+    Weight limit: 30 lbs (13.6 kg)
+    1″ × 25″ (2.5 × 63.5 cm) long self-fabric dual straps
+    Open main compartment, flat bottom
+    The fabric of this product is certified by OCS (Organic Content Standard) and GOTS (Global Organic Textile Standard)
+    The fabric of this product is OEKO-TEX Standard 100 certified and PETA-Approved Vegan
+    Blank product sourced from China or India
 
-Travel in style and comfort with the NorthSQD All-Over Print Minimalist Backpack, where practicality meets the enchanting allure of the northern lights.",
-                'price' => 50.00,
+Combine sustainability with style using the NorthSQD Organic Twill Tote Bag. Perfect for eco-conscious shoppers, this bag ensures your designs stand out while embracing the magical essence of the northern lights.",
+                'price' => 15,
                 'category' => 'Accessories',
-                'collection' => 'Linass',
-                'imagePath' => 'images\Linass\Accessories_Linass_white_2.png',
+                'collection' => 'Deniss',
+                'imagePath' => 'images/Deniss/Accessories_Deniss_oyster_3.png',
                 'weight' => 4.3,
-                'discount' => 5.01,
-                'colors' => ['white'],
-                'sizes' => ['Medium'],
+                'discount' => null,
+                'colors' => ['oyster'],
+                'sizes' => ['Large'],
             ],
             //Sweatshirt
             [
@@ -116,8 +111,8 @@ Travel in style and comfort with the NorthSQD All-Over Print Minimalist Backpack
 Experience the perfect blend of comfort and sustainability with the NorthSQD Unisex Organic Raglan Sweatshirt. Let the spirit of the northern lights brighten your everyday style.",
                 'price' => 30.00,
                 'category' => 'Sweatshirt',
-                'collection' => 'Linass',
-                'imagePath' => 'images\Linass\Sweatshirt_Linass_white_1.png',
+                'collection' => 'Deniss',
+                'imagePath' => 'images/Deniss/Sweatshirt_Deniss_orange_1.png',
                 'weight' => 2.9,
                 'discount' => null,
                 'colors' => ['white'],
@@ -143,12 +138,12 @@ Experience the perfect blend of comfort and sustainability with the NorthSQD Uni
     Blank product sourced from Latvia and Mexico
 
 Perfect as a canvas for your designs, the NorthSQD Premium Eco Hoodie will keep your prints and embroidery looking fresh, even after multiple washes. Add your unique touch or simply showcase your branded logo on this premium, eco-friendly piece. Embrace the spirit of the northern lights with NorthSQD.",
-                'price' => 45.00,
+                'price' => 70.00,
                 'category' => 'Hoodie',
-                'collection' => 'Linass',
-                'imagePath' => 'images\Linass\Hoodie_Linass_white_1.png',
+                'collection' => 'Deniss',
+                'imagePath' => 'images/Deniss/Hoodie_Deniss_black_2.png',
                 'weight' => 3.2,
-                'discount' => null,
+                'discount' => 20.01,
                 'colors' => ['white', 'black'],
                 'sizes' => ['S','M','L','XL'],
             ],
@@ -167,12 +162,12 @@ Perfect as a canvas for your designs, the NorthSQD Premium Eco Hoodie will keep 
 Experience the perfect blend of sustainability and style with the NorthSQD x adidas Dad Hat. Add your unique touch and let the spirit of the northern lights shine through your everyday wear.",
                 'price' => 15.00,
                 'category' => 'Hoodie',
-                'collection' => 'Linass',
-                'imagePath' => 'images\Linass\Hat_Linass_white_1.png',
+                'collection' => 'Deniss',
+                'imagePath' => 'images/Deniss/Hat_Deniss_white_2.png',
                 'weight' => 3.2,
                 'discount' => 2.01,
                 'colors' => ['white', 'black'],
-                'sizes' => ['Medium size'],
+                'sizes' => ['Medium'],
             ]
         ];
 
