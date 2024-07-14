@@ -1,29 +1,28 @@
 .plp-hor-slider {
-    display: block;
-    margin: 5vh 0 8vh 0;
+    margin: 5vh 0 8vh;
 }
 
 .shop-all {
     text-decoration: none;
     text-transform: uppercase;
     color: #DB3998;
-    border-bottom: solid 3px #DB3998;
+    border-bottom: 3px solid #DB3998;
     font-size: 12px;
-    font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 200% */
+    line-height: 24px;
+}
+
+.product-container {
+    text-decoration: none;
+    padding: 5%;
 }
 
 .sales-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 4vw 12vw 4vw;
+    margin: 0 4vw;
 }
-
-.product-container {
-    padding: 0 10% 0 10%;
- }
 
 .product-wrapper {
     display: flex;
@@ -39,37 +38,38 @@
 .name {
     display: flex;
     color: black;
-    /*line-height: 20px;*/
-    line-height: 180%;
-    justify-items: center;
+    line-height: 1.8;
+    margin: 0;
 }
 
 .price {
+    margin: 0;
+}
+
+.new-price {
     color: black;
-    font-weight: lighter;
-    /*line-height: 21px;*/
-    line-height: 175%;
+    font-weight: 300;
+    line-height: 1.75;
 }
 
 .old-price {
     color: darkgrey;
     font-weight: 100;
-    line-height: 18px; /* 180% */
-    text-decoration-line: line-through;
-
+    line-height: 18px;
+    text-decoration: line-through;
 }
 
 .wrap {
     display: flex;
     gap: 10px;
     align-items: center;
+    margin: 0;
 }
 
 @media(max-width: 768px) {
     .scroll-container {
         display: flex;
         white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
         overflow-x: scroll;
     }
@@ -77,14 +77,31 @@
     .scroll-container::-webkit-scrollbar {
         display: none;
     }
+
+    .product-container {
+        width: 50vw;
+    }
+
+    .sales-title {
+        margin-bottom: 12vw;
+    }
+
+    .product-image {
+        width: 50vw;
+        height: 50vw;
+    }
 }
 
-@media (max-width: 991px) and (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 991px) {
     .scroll-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        margin: 0 5vh 0 5vh;
+        margin: 0 5vh;
+    }
+
+    .sales-title {
+        margin-bottom: 6vw;
     }
 }
 
@@ -93,6 +110,10 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        margin: 0 5vh 0 5vh;
+        margin: 0 5vh;
+    }
+
+    .sales-title {
+        margin-bottom: 4vw;
     }
 }

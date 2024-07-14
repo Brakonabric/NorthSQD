@@ -36,7 +36,8 @@
         <a href="#" class="link-wrap">
             <h3 class="">KATERINA</h3>
         </a>
-        <a href="#" class="link-wrap">
+        <a href="#" class="link-wrap"
+           style="background-image: url({{ asset('/images/Deniss/Shoes_Deniss_white_1.png') }})">
             <h3 class="">DENISS</h3>
         </a>
         <a href="#" class="link-wrap">

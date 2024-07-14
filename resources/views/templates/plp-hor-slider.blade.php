@@ -11,7 +11,6 @@
                 <div class="product-wrapper">
                     <div class="image-container">
                         <img class="product-image" src="{{asset($item->imagePath)}}" alt={{ $item->name }}>
-                        {{--        figure out add this to route and wrape into <a href="/products/{{$item->id}}">--}}
                     </div>
                     <h3 class="name">
                         {{$item->name}}
@@ -21,14 +20,14 @@
                             @php
                                 $discountedPrice = $item->price - $item->discount;
                             @endphp
-                            <h4 class="price">
+                            <h4 class="new-price price">
                                 €{{ number_format($discountedPrice, 2) }}
                             </h4>
-                            <h5 class="old-price">
+                            <h5 class="old-price price">
                                 €{{ $item->price }}
                             </h5>
                         @else
-                            <h4 class="price">
+                            <h4 class="new-price price">
                                 €{{$item->price}}
                             </h4>
                         @endif
