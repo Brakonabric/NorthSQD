@@ -7,32 +7,34 @@
     </div>
     <div class="scroll-container">
         @foreach($items as $item)
-            <div class="product-block">
-                <div class="image-container">
-                    <img src="{{asset($item->imagePath)}}" alt={{ $item->name }}>
-{{--        figure out add this to route and wrape into <a href="/products/{{$item->id}}">--}}
+            <a href="{{ route('products')}}/{{$item->id}}"  class="product-container">
+                <div class="product-wrapper">
+                    <div class="image-container">
+                        <img class="product-image" src="{{asset($item->imagePath)}}" alt={{ $item->name }}>
+                        {{--        figure out add this to route and wrape into <a href="/products/{{$item->id}}">--}}
+                    </div>
+                    <h3 class="name">
+                        {{$item->name}}
+                    </h3>
+                    <div class="wrap">
+                        @if($item->discount !== null && $item->discount > 0)
+                            @php
+                                $discountedPrice = $item->price - $item->discount;
+                            @endphp
+                            <h4 class="price">
+                                €{{ number_format($discountedPrice, 2) }}
+                            </h4>
+                            <h5 class="old-price">
+                                €{{ $item->price }}
+                            </h5>
+                        @else
+                            <h4 class="price">
+                                €{{$item->price}}
+                            </h4>
+                        @endif
+                    </div>
                 </div>
-                <h3 class="name">
-                    {{$item->name}}
-                </h3>
-                <div class="wrap">
-                    @if($item->discount !== null && $item->discount > 0)
-                        @php
-                            $discountedPrice = $item->price - ($item->price * ($item->discount / 100));
-                        @endphp
-                        <h4 class="price">
-                            €{{ number_format($discountedPrice, 2) }}
-                        </h4>
-                        <h5 class="old-price">
-                            €{{ $item->price }}
-                        </h5>
-                    @else
-                        <h4 class="price">
-                            €{{$item->price}}
-                        </h4>
-                    @endif
-                </div>
-            </div>
+            </a>
         @endforeach
     </div>
 </div>

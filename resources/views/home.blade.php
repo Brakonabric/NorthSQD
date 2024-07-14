@@ -23,11 +23,12 @@
             style, warmth, and a touch of adventure.</p>
     </div>
     <div class="link-grid-container">
-        <a href="#" class="link-wrap">
-            <h3 class="">RODIONS</h3>
+        <a href="#" class="link-wrap"
+           style="background-image: url({{ asset('/images/Linass/Accessories_Linass_white_2.png') }})">
+            <h3 class="">LINASS</h3>
         </a>
         <a href="#" class="link-wrap">
-            <h3 class="">LINASS</h3>
+            <h3 class="">RODIONS</h3>
         </a>
         <a href="#" class="link-wrap">
             <h3 class="">MATISS</h3>
@@ -43,7 +44,6 @@
         </a>
     </div>
 </div>
-@include('templates.contacts')
 @include('templates/footer')
 </body>
 </html>

@@ -44,9 +44,21 @@
         </div>
     </div>
     <div class="dropdown-nav-list" id="dropdown-nav-list">
-        <div class="grid-element">
+        <div>
             <br>
             <ul>
+<<<<<<< HEAD
+                <li><h3>Categories</h3></li>
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Sweatshirts</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Hoodie</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Hat</a></li>
+            </ul>
+            <br>
+            <ul class="sale">
+=======
                 <li>
                     <h3>Categories</h3>
                 </li>
@@ -67,15 +79,14 @@
                 </li>
             </ul><br>
             <ul  class="sale">
+>>>>>>> main
                 <li>
                     <h3>TOP Sales</h3>
                 </li>
-                <li>
-                    <a href="/products">
+                <li><a href="/products">
                         <img src="svg/sale-mark.svg" alt="">
                         <h4>SALE</h4>
-                    </a>
-                </li>
+                    </a></li>
             </ul>
         </div>
     </div>
