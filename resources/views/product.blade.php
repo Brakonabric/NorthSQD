@@ -14,6 +14,17 @@
     <div class="image-container">
         <div class="card__slide">
             <img src="{{asset($items['item']->imagePath)}}" alt="Product Image" class="card__image">
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="{{asset($items['item']->imagePath)}}" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="{{asset($items['item']->imagePath)}}" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="{{asset($items['item']->imagePath)}}" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <div class="content-container">

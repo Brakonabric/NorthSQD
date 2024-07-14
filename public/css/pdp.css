@@ -1,209 +1,229 @@
 /* Reset and global styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 
-h1, h2, h3, h4, p, a, button {
-    font-family: inherit;
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+button {
+  font-family: inherit;
 }
 
 /* Product Card Styles */
 .card {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.image-container {
-    width: 50%;
+.image-container .card__slide img {
+  padding: 0;
 }
 
 .card__slide {
-    display: flex;
-    flex-direction: row;
+  max-width: 300px;
+}
+
+.small-img-col img {
+  max-width: 60px;
+}
+
+.thumbnail-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 10px;
 }
 
 .card__image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px 4px 0 0;
+  width: 100%;
+  height: auto;
+  border-radius: 4px 4px 0 0;
+}
+
+.small-img-row {
+  display: flex;
+  justify-content: space-around;
 }
 
 .content-container {
-    width: 50%;
-    padding: 20px;
+  width: 50%;
+  padding: 20px;
 }
 
 .card__header,
 .card__footer {
-    width: 100%;
+  width: 100%;
 }
 
 .card__title {
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .card__subtitle p {
-    font-size: 14px;
-    color: #777;
+  font-size: 14px;
+  color: #777;
 }
 
 .card__price {
-    font-size: 1.25em;
-    color: #000;
-    margin-bottom: 10px;
+  font-size: 1.25em;
+  color: #000;
+  margin-bottom: 10px;
 }
 
 .card__discount {
-    font-size: 14px;
-    color: #f00;
-    margin-bottom: 10px;
+  font-size: 14px;
+  color: #f00;
+  margin-bottom: 10px;
 }
 
 /* Color Point Styles */
 .card__point {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .color {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .color ul,
 .size-chooser ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .color li {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-    cursor: pointer;
-    border: 3px solid transparent;
-    transition: border-color 0.3s;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.3s;
 }
 
 #white {
-    border-color: grey;
-    background-color: white;
+  border-color: grey;
+  background-color: white;
 }
 
 #black {
-    border-color: grey;
-    background-color: black;
+  border-color: grey;
+  background-color: black;
 }
 
 #blue {
-    border-color: grey;
-    background-color: blue;
+  border-color: grey;
+  background-color: blue;
 }
-
 
 .color ul li.ring:hover {
-    border-color: rgb(72, 199, 72) !important;
+  border-color: rgb(72, 199, 72) !important;
 }
 
-
 .size-chooser li {
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid #999;
-    background-color: #fff;
-    color: #000;
-    margin-right: 10px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #999;
+  background-color: #fff;
+  color: #000;
+  margin-right: 10px;
 }
 
 .size-chooser li:hover,
 .size-chooser li.selected {
-    border: 2px solid #2cc354;
-    font-weight: bold;
+  border: 2px solid #2cc354;
+  font-weight: bold;
 }
 
 /* Submit Button Styles */
 .submit-btn {
-    background-color: #db3998;
-    display: flex;
-    width: 350px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: none;
-    margin-bottom: 20px;
+  background-color: #db3998;
+  display: flex;
+  width: 350px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 20px;
 }
 
 .submit-btn a {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 800;
-    text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .submit-btn:hover {
-    background-color: #c8327d;
+  background-color: #c8327d;
 }
 
 /* Description Tabs Styles */
 .descriptions {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .descriptions button {
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #000;
-    margin-right: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000;
+  margin-right: 20px;
 }
 
 .describe-button-active.tab-button--active {
-    text-decoration: underline;
-    text-decoration-thickness: 0.3rem;
-    text-underline-offset: 0.6rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.3rem;
+  text-underline-offset: 0.6rem;
 }
 
 /* Tab Content Styles */
 .tab-contents {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .tab-content {
-    display: none;
+  display: none;
 }
 
 .tab-content--active {
-    display: block;
+  display: block;
 }
