@@ -67,25 +67,25 @@
 }
 
 @media (max-width: 767px) {
-    .mob-nav-button svg {
+/*    .mob-nav-button svg {
         width: 6vw;
         height: 6vw;
     }
 
     .logo {
         width: 60%;
-    }
+    } */
 }
 
 @media (max-width: 574px) {
-    .mob-nav-button svg {
+ /*   .mob-nav-button svg {
         width: 8vw;
         height: 8vw;
     }
 
     .logo {
         width: 120%
-    }
+    } */
 }
 
 .dropdown-nav-list {

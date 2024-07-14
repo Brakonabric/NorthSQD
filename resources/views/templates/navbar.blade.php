@@ -47,6 +47,7 @@
         <div>
             <br>
             <ul>
+<<<<<<< HEAD
                 <li><h3>Categories</h3></li>
                 <li><a href="#">T-Shirts</a></li>
                 <li><a href="#">Sweatshirts</a></li>
@@ -57,6 +58,28 @@
             </ul>
             <br>
             <ul class="sale">
+=======
+                <li>
+                    <h3>Categories</h3>
+                </li>
+                <li>
+                    <a href="">Collections</a>
+                </li>
+                <li>
+                    <a href="">T-Shirts</a>
+                </li>
+                <li>
+                    <a href="">Sweatshirts</a>
+                </li>
+                <li>
+                    <a href="">Phone Cases</a>
+                </li>
+                <li>
+                    <a href="/products">Stickers</a>
+                </li>
+            </ul><br>
+            <ul  class="sale">
+>>>>>>> main
                 <li>
                     <h3>TOP Sales</h3>
                 </li>
