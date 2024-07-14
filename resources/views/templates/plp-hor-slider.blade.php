@@ -18,7 +18,7 @@
                 <div class="wrap">
                     @if($item->discount !== null && $item->discount > 0)
                         @php
-                            $discountedPrice = $item->price - ($item->price * ($item->discount / 100));
+                            $discountedPrice = $item->price - $item->discount;
                         @endphp
                         <h4 class="price">
                             €{{ number_format($discountedPrice, 2) }}
