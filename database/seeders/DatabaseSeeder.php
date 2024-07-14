@@ -9,14 +9,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(
-            CollectionLinass::class,
-//            [
-//                CollectionDeniss::class,
+            [
+                CollectionLinass::class,
+                CollectionDeniss::class,
 //                CollectionKaterina::class,
-//                CollectionLinass::class,
 //                CollectionMatiss::class,
-//                CollectionRodions::class,
-//        ]
+//                CollectionRodions::class
+            ]
         );
     }
 }

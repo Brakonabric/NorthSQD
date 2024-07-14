@@ -1,28 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container{
-    max-width: 1170px;
-    margin: auto;
-}
-
-.row ul{
-    list-style: none;
-}
-
-.footer{
-    border-top: solid;
-    border-top-color: rgba(77, 71, 71, 0.459);
-    padding: 10vw 0;
+.footer-module {
+    font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 5% 0 2% 0;
     margin: 5vh 5vw 0 5vw;
-
-}
-
-.footer-col{
-    width: 25%;
 }
 
 .footer-col h4{
@@ -32,51 +11,106 @@
     position: static;
 }
 
-.footer-col ul li a{
+.footer-col ul li a, .row-contacts ul li a{
+    display: inline-flex;
+    width: 100%;
     font-size: 16px;
-    text-transform: capitalize;
     text-decoration: none;
     color: #000000;
-    display: block;
-    transition: all 0.3s ease;
     margin-bottom: 10px;
-
+    transition: all 0.3s ease;
 }
-.footer-col ul li a:hover{
+
+.footer-col ul li a:hover , .row-contacts ul li a:hover{
     color: #e92063;
-    padding-left: 10px;
 }
 
 .footer-bottom {
     background-color: #000000;
     color:white;
     text-align: center;
-    padding: 30px 0;
+    padding: 2% 2%;
 }
 
 .footer-col .Sales{
-    /*margin-top: 32px;*/
+    color: #009a2e;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.payment-row ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.payment-row ul li {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    gap: 10%;
+    transition: none;
+}
+
+.footer-svg {
+    padding-right: 1%;
+}
+
+.mobile-contacts {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    border-bottom: solid lightgrey;
+}
+
+.mobile-contacts ul li {
+    margin-bottom: 5%;
 }
 
 @media(max-width: 768px){
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
     .footer-col{
         width: 40%;
         margin-bottom: 30px;
     }
+
+    .payment-row img {
+        width: 80%;
+    }
+    .social img {
+        width: 50%;
+    }
+
+    .pc {
+        display: none;
+    }
 }
 
 @media(min-width: 769px){
-    .row{
-        display: flex;
-        flex-wrap: wrap;
-    }
     .footer-col{
-        width: 20%;
-        margin-left: 10px;
+        width: 12%;
+    }
+    .mobile {
+        display: none;
+    }
+    .pc-contacts {
+        width: 25%;
+    }
+    .payment-row {
+        margin: 3% 0;
+        padding: 0 20%;
+    }
+
+    .sales-col {
+        width: 13%;
     }
 }

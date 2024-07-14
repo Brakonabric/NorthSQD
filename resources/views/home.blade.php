@@ -44,7 +44,6 @@
         </a>
     </div>
 </div>
-@include('templates.contacts')
 @include('templates/footer')
 </body>
 </html>
