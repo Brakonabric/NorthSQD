@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
                 CollectionDeniss::class,
                CollectionKaterina::class,
 //                CollectionMatiss::class,
-//                CollectionRodions::class
+                CollectionRodions::class
             ]
         );
     }

@@ -64,7 +64,7 @@ Embrace sustainable fashion with the Organic Cotton T-Shirt by NorthSQD, and let
             ],
             //Accessories
             [
-                'name' => "Minimalist Backpack",
+                'name' => "Snap Case for iPhone",
                 'description' => "Introducing the NorthSQD All-Over Print Minimalist Backpack—perfect for those who are always on the move, inspired by the ethereal beauty of the northern lights. This spacious backpack is crafted from water-resistant material and offers a stylish yet functional design. With ample storage, including a large inside pocket for a laptop and a hidden pocket for valuables, this backpack is ideal for travelers and daily commuters alike.
 
 Introducing the NorthSQD Tough Case for iPhone®—where durability meets the enchanting spirit of the northern lights. Designed with a dual-layer for extra protection, this case ensures your phone stays safe with an impact-resistant outer shell and an impact-absorbing inner liner. Customize it with your designs to offer customers a stylish yet robust protective case.

@@ -27,7 +27,7 @@
            style="background-image: url({{ asset('/images/Linass/Accessories_Linass_white_2.png') }})">
             <h3 class="">LINASS</h3>
         </a>
-        <a href="#" class="link-wrap">
+        <a href="#" class="link-wrap" style="background-image: url({{ asset('/images/Rodions/Accessories_Rodions_white_1.png') }})">
             <h3 class="">RODIONS</h3>
         </a>
         <a href="#" class="link-wrap">

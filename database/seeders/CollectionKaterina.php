@@ -66,17 +66,18 @@ Embrace sustainable fashion with the Organic Cotton T-Shirt by NorthSQD, and let
             //Accessories
             [
                 'name' => "Snap Case for iPhone",
-                'description' => "Looking for a premium phone case to keep your device safe? We got you covered! NorthSQD Snap Case for iPhone® is slim and lightweight for a classy and minimalistic look.
+                'description' => "Introducing the NorthSQD Tough Case for iPhone®—where durability meets the enchanting spirit of the northern lights. Designed with a dual-layer for extra protection, this case ensures your phone stays safe with an impact-resistant outer shell and an impact-absorbing inner liner. Customize it with your designs to offer customers a stylish yet robust protective case.
 
-  
-    Made of polycarbonate (PC) material
-    Wireless charging compatible
+    Polycarbonate outer shell
+    Thermoplastic Polyurethane (TPU) inner liner
+    Dual-layer protection
     Precisely aligned port openings
-    Matte and gloss finish options
-    Blank product sourced from the Republic of Korea
+    Induction charging compatible
+    Designable edges (3D wrap)
+    Matte or gloss finish
+    Blank product sourced from Korea
 
-
-Go stylish with our NorthSQD Snap Case for iPhone®.",
+Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining practicality with the mystical charm of the northern lights, this case is perfect for those who want to protect their device in style.",
                 'price' => 32.00,
                 'category' => 'Accessories',
                 'collection' => 'Katerina',
