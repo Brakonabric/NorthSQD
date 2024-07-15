@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class CartItemController extends Controller
 {
     //use CartLogicTrait;
-    public function addToCart($id)
+    public function addToCart($id,$sizeId=null)
     {
         $cart = session()->get('cart');
         $item = Item::find($id);
@@ -56,7 +56,7 @@ public function removeFromCart($id)
                 return redirect('saveCart')->with('success', 'Product added to cart successfully!');
             }
             else{
-                $cart = array_splice($cart,$id,1);
+                unset($cart[$id]);
                 session()->put('cart', $cart);
                 return redirect('saveCart')->with('success', 'Product added to cart successfully!');
             }

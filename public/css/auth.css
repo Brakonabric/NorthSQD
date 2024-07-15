@@ -68,6 +68,7 @@ a{
     min-height:40px;
     cursor:pointer;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .showpass {

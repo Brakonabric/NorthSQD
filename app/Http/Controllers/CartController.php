@@ -29,6 +29,7 @@ class CartController extends Controller
             CartItem::create([
                 'item_id' => $id['id'],
                 'cart_id' => $userDBCart->id,
+                // 'size' => $id['size'],
                 'quantity' => $id['quantity']
             ]);
             $userDBCart->amount+=$id['price']*$id['quantity'];

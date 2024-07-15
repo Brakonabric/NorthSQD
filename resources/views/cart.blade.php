@@ -9,12 +9,15 @@
 
 <body>
     @include('templates/navbar')
-    <h1>Your Cart</h1>
     <div class="cart_items">
+        <h1>Your Cart</h1>
+        @php
+        $subtotal=0;
+        @endphp
         @if ($cart)
         @foreach ($cart as $item)
             <div class="item_box">
-                <img src="{{ asset('svg/logo.svg') }}" alt="">
+                <img src="{{ asset($item['imagePath']) }}" alt="">
                 <div class="item_desc">
                     <p class="item_title">{{ $item['name'] }}</p>
                     <p class="item_size">Size</p>
@@ -23,18 +26,34 @@
                 <div class="item_quantity">
                     <a href="{{ route('removeFromCart', $item['id']) }}"><img onClick="plus()" src="{{ asset('svg/minus.svg') }}" alt=""></a>
                     <div class="item_number">
-                        <p class = "quantity">{{ $item['quantity'] }}</p>
+                        <p class = "quantity">{{$item['quantity']}}</p>
                     </div>
                     <a href="{{ route('addToCart', $item['id']) }}"><img src="{{ asset('svg/plus.svg') }}" alt=""></a>
                 </div>
             </div>
+            @php
+            $subtotal+= $item['price'] * $item['quantity'] ;
+            @endphp
         @endforeach
         @endif
-        <div class="TotalCost">
-            <p>Subtotal</p>
-            <p>Price</p>
-        </div>
+    </div>
+    <div class="totalCost">
+        <div class="totalCostBox">
+        <p>Subtotal</p>
+        <p class="costNumber">€{{$subtotal}}</p>
         <hr>
+        </div>
+        <div class="totalCostBox">
+        <p>Shipping</p>
+        <p class="costNumber">From €1.99</p>
+        <hr>
+        </div>
+        <div class="totalCostBox">
+        <p class ="total">Total</p>
+        <p class ="totalNumber" >€{{$subtotal+1.99}}</p>
+        <hr>
+        </div>
+        <button class="submit">Continue</button>
     </div>
 </body>
 </html>
