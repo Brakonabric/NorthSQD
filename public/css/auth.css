@@ -8,81 +8,91 @@ h1, h2, h3, h4, p, a, button {
     font-family: inherit;
 }
 
-.box{
+.box {
     margin-top: 8vh;
     text-align: center;
 }
-a{
+
+a {
     text-decoration: none;
-    color:#518EF8;
+    color: #518EF8;
 }
-.loginForm{
+
+.loginForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 44px;
 }
-@media (min-width: 575px) {
-    .social{
+
+@media (min-width: 769px) {
+    .social {
         border-radius: 10px;
-        border: 2px, solid, #ececec;
+        border: 2px solid #ececec;
         padding: 15px;
-        width:5%;
-        height:30px;
+        width: 5%;
+        height: 30px;
         margin-left: 10px;
         margin-right: 10px;
     }
-    .loginForm form{
-    width: 20%;
+
+    .loginForm form {
+        width: 20%;
+    }
+
 }
-}
-@media (max-width: 574px) {
-    .social{
+
+@media (max-width: 768px) {
+    .social {
         border-radius: 10px;
-        border: 2px, solid, #ececec;
+        border: 2px solid #ececec;
         padding: 15px;
-        width:25%;
-        height:25px;
+        width: 25%;
+        height: 25px;
         margin-left: 10px;
         margin-right: 10px;
     }
-    .loginForm form{
+
+    .loginForm form {
         width: 90%;
     }
-    }
-.input-wrap{
-    padding-top:20px;
+}
+
+.input-wrap {
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
 }
-.input-wrap input,label{
-    display:block;
+
+.input-wrap input, label {
+    display: block;
 }
+
 .input-wrap .submit {
     background-color: #DB3998;
-    color:white;
-    border:none;
+    color: white;
+    border: none;
     border-radius: 15px;
-    min-height:40px;
-    cursor:pointer;
+    min-height: 40px;
+    cursor: pointer;
     margin-top: 20px;
     font-weight: bold;
 }
 
 .showpass {
     margin: auto 4% auto auto;
-    height:20px;
-    width:20px;
-    cursor:pointer;
-} 
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
 
 .input-wrap input {
     width: 94%;
     min-height: 40px;
     border-radius: 10px;
-    border: 2px, solid, #ececec;
+    border: 2px solid #ececec;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -92,72 +102,75 @@ a{
     font-size: 14px;
     text-align: right;
 }
+
 .input-wrap input:focus {
 
-    border: 2px, solid, #414141;
+    border: 2px solid #414141;
 }
-.passinp{
+
+.passinp {
     display: flex;
     border-radius: 10px;
-    border: 2px, solid, #ececec;
-}
-.passinp:focus-within { 
-    border: 2px, solid, #414141;
+    border: 2px solid #ececec;
 }
 
-.passinp input{
-    height:30px;
-    width:30px;
-    border:none;
-}
-.passinp input:focus{
-    border:none;
-    outline:none;
-}
-#password{
-    width:90%;
+.passinp:focus-within {
+    border: 2px solid #414141;
 }
 
-.continue{
-    color:#646464;
+.passinp input {
+    height: 30px;
+    width: 30px;
+    border: none;
+}
+
+.passinp input:focus {
+    border: none;
+    outline: none;
+}
+
+#password {
+    width: 90%;
+}
+
+.continue {
+    color: #646464;
     text-align: center;
     position: relative;
 }
-.continue:before{
+
+.continue:before {
     margin-right: .25em;
-    content:" ";
+    content: " ";
     width: 30%;
     display: block;
     height: 2px;
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 5%;
     background: #e7e7e7;
-  }
-  .continue:after{
+}
+
+.continue:after {
     margin-left: .25em;
     width: 30%;
     display: block;
-    content:" ";
+    content: " ";
     height: 2px;
-    top:50%;
+    top: 50%;
     position: absolute;
     right: 5%;
     background: #e7e7e7;
-  }
-.buttonBox{
-    display:flex;
+}
+
+.buttonBox {
+    display: flex;
     justify-content: center;
 }
-.auth_line{
-    border-top: 1px solid #DB3998;
-    margin-top: 60px;
+
+.auth_line {
+    background-color: #DB3998;
+    border: 0;
+    height: 2px;
+    margin-top: calc(60px + 10vh);
 }
-
-/* @media(max-width: 574px){
-    .container-contacts{
-        width: 100%;
-        
-    }
-
-} */

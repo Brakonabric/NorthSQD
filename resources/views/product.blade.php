@@ -9,18 +9,20 @@
 </head>
 <body>
 @include('templates/navbar')
-
 <div class="card">
     <div class="image-container">
         <div class="thumbnails">
             <div class="small-img-col">
-                <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="thumbnail" data-image="{{ asset($items['item']->imagePath) }}">
+                <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="thumbnail"
+                     data-image="{{ asset($items['item']->imagePath) }}">
             </div>
             <div class="small-img-col">
-                <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="thumbnail" data-image="{{ asset($items['item']->imagePath) }}">
+                <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="thumbnail"
+                     data-image="{{ asset($items['item']->imagePath) }}">
             </div>
             <div class="small-img-col">
-                <img src="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}" class="thumbnail" data-image="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}">
+                <img src="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}" class="thumbnail"
+                     data-image="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}">
             </div>
         </div>
         <div class="card__slide">
@@ -48,7 +50,8 @@
             <div class="color">
                 <ul>
                     @foreach($items['colors'] as $color)
-                        <li style="background-color: {{$color->color}}" id="{{ $color->color }}" class="ring color-btn"></li>
+                        <li style="background-color: {{$color->color}}" id="{{ $color->color }}"
+                            class="ring color-btn"></li>
                     @endforeach
                 </ul>
             </div>
@@ -83,20 +86,25 @@
             <div class="tab-contents">
                 <div class="tab-content" data-index="0">
                     <p>{!! $items['item']->description !!}</p>
-                    <div class="space-after-description"></div> 
-                <div class="tab-content" data-index="1">
-                    <p>View our full <a href="#">shipping information.</a></p>
-                    <div class="space-between-shipping-text"></div> 
-                    <p>Currently our merch is shipped out of the US which means International customers may experience higher shipping costs, custom charges, or longer shipping times. We hope to improve this in the future to make sure The Sims products are accessible across the globe.</p>
-                    <div class="space-between-text-return"></div> 
-                    <p>View our full <a href="#">return policy.</a></p>
-                    <div class="space-after-content"></div> 
-                    <p>We accept returns within 31 days. Non-returnable items include final sale items, giftcards, downloadable products, personalized and print-on-demand products.</p>
+                    <div class="space-after-description"></div>
+                    <div class="tab-content" data-index="1">
+                        <p>View our full <a href="#">shipping information.</a></p>
+                        <div class="space-between-shipping-text"></div>
+                        <p>Currently our merch is shipped out of the US which means International customers may
+                            experience higher shipping costs, custom charges, or longer shipping times. We hope to
+                            improve this in the future to make sure The Sims products are accessible across the
+                            globe.</p>
+                        <div class="space-between-text-return"></div>
+                        <p>View our full <a href="#">return policy.</a></p>
+                        <div class="space-after-content"></div>
+                        <p>We accept returns within 31 days. Non-returnable items include final sale items, giftcards,
+                            downloadable products, personalized and print-on-demand products.</p>
+                    </div>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 @include('templates/footer')
 </body>
-
 </html>

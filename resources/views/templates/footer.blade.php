@@ -16,7 +16,7 @@
                     <li>
                         <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="svg/Icon_Mail.svg" alt=""><strong>info@northsquad.lv</strong></a>
                     </li>
-                    <li class="social">
+                    <li class="social-svg">
                         <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt=""></a>
                         <a href="#"><img src="{{asset('svg/Icon_WhatsApp.svg')}}" alt=""></a>
                         <a href="#"><img src="{{asset('svg/Icon_Instagram.svg')}}" alt=""></a>
@@ -48,7 +48,7 @@
                     <li>
                         <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset('svg/Icon_Mail.svg')}}" alt="">info@northsquad.lv</a>
                     </li>
-                    <li class="social">
+                    <li class="social-svg">
                         <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt=""></a>
                         <a href="#"><img src="{{asset('svg/Icon_WhatsApp.svg')}}" alt=""></a>
                         <a href="#"><img src="{{asset('svg/Icon_Instagram.svg')}}" alt=""></a>

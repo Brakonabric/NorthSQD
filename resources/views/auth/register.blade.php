@@ -54,7 +54,7 @@
         <input class="social" type="image" src="{{ asset('svg/apple_ic.svg') }}" />
     </div>
     <hr class="auth_line">
-    </hr>
+
 </body>
 <script>
     let el = document.getElementById("showpass");

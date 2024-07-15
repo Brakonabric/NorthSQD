@@ -42,9 +42,7 @@
         <input class="social" type="image" src="{{ asset('svg/apple_ic.svg') }}" />
     </div>
     <hr class="auth_line">
-    </hr>
-    {{-- @include('templates/contacts')
-    @include('templates/footer') --}}
+    @include('templates/footer')
 </body>
 <script>
     let el = document.getElementById("showpass");
