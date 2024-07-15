@@ -1,5 +1,4 @@
-/* Reset and global styles */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,77 +8,98 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
-  font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-}
+  font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+} */
 
-h1,
-h2,
-h3,
-h4,
-p,
-a,
-button {
+h1, h2, h3, h4, p, a, button {
   font-family: inherit;
 }
 
 /* Product Card Styles */
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border-radius: 4px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   overflow: hidden;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
   padding: 20px;
-  box-sizing: border-box;
 }
 
-.image-container .card__slide img {
-  padding: 0;
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
 }
 
-.card__slide {
-  max-width: 300px;
+/* Image Styles */
+.image-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.small-img-col {
+  margin-bottom: 10px;
 }
 
 .small-img-col img {
-  max-width: 60px;
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
 
-.thumbnail-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-right: 10px;
+.small-img-col img:hover,
+.small-img-col img.active {
+  border-color: #2cc354;
 }
 
-.card__image {
+.card__slide {
+  position: relative;
+  flex-grow: 1;
+}
+
+.card__slide img {
   width: 100%;
   height: auto;
   border-radius: 4px 4px 0 0;
 }
 
-.small-img-row {
-  display: flex;
-  justify-content: space-around;
-}
-
+/* Content Styles */
 .content-container {
-  width: 50%;
+  width: 100%;
   padding: 20px;
 }
 
-.card__header,
-.card__footer {
-  width: 100%;
+@media (min-width: 768px) {
+  .content-container {
+    width: 50%;
+  }
+}
+
+.card__header {
+  margin-bottom: 10px;
 }
 
 .card__title {
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -87,6 +107,7 @@ button {
 .card__subtitle p {
   font-size: 14px;
   color: #777;
+  margin-bottom: 10px; 
 }
 
 .card__price {
@@ -95,19 +116,23 @@ button {
   margin-bottom: 10px;
 }
 
-.card__discount {
-  font-size: 14px;
-  color: #f00;
+.card__price-discounted {
   margin-bottom: 10px;
 }
 
-/* Color Point Styles */
-.card__point {
-  margin-bottom: 20px;
+.original-price {
+  color: #999; 
+  text-decoration: line-through; 
+  margin-right: 10px; 
 }
 
-.color {
-  margin-bottom: 20px;
+.discount {
+  color: #f00; 
+}
+
+/* Color Point and Size Chooser Styles */
+.card__point {
+  margin-top: 20px; 
 }
 
 .color ul,
@@ -125,26 +150,30 @@ button {
   margin-right: 10px;
   cursor: pointer;
   border: 3px solid transparent;
+  border-color: gray;
   transition: border-color 0.3s;
 }
 
-#white {
-  border-color: grey;
-  background-color: white;
+.color li:hover {
+  border-color: rgb(72, 199, 72);
 }
 
-#black {
-  border-color: grey;
-  background-color: black;
+.color li.selected {
+  border-color: #2cc354;
 }
 
-#blue {
-  border-color: grey;
-  background-color: blue;
+.size-chooser {
+  margin-top: 40px;
+  margin-bottom: 20px; 
 }
 
-.color ul li.ring:hover {
-  border-color: rgb(72, 199, 72) !important;
+.size-chooser h3 {
+  margin-bottom: 10px; 
+}
+
+.size-chooser ul {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .size-chooser li {
@@ -157,6 +186,7 @@ button {
   background-color: #fff;
   color: #000;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .size-chooser li:hover,
@@ -165,17 +195,44 @@ button {
   font-weight: bold;
 }
 
+.size-out-stock {
+  background-color: crimson;
+  color: white;
+}
+
+.size-option.selected {
+  border: 2px solid #2cc354; 
+  font-weight: bold; 
+}
+
+.size-option {
+  cursor: pointer; 
+  margin-right: 10px; 
+  list-style: none; 
+}
+
+.size-in-stock {
+  color: #000; 
+}
+
+.size-out-stock {
+  color: #999; 
+  text-decoration: line-through; 
+}
+
 /* Submit Button Styles */
 .submit-btn {
   background-color: #db3998;
   display: flex;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 50px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   border: none;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px; 
 }
 
 .submit-btn a {
@@ -193,7 +250,8 @@ button {
 .descriptions {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
 }
 
 .descriptions button {
@@ -215,9 +273,14 @@ button {
   text-underline-offset: 0.6rem;
 }
 
+.descriptions button.tab-button--active {
+  text-decoration: underline;
+}
+
+
 /* Tab Content Styles */
 .tab-contents {
-  margin-top: 20px;
+  margin-top: 20px; 
 }
 
 .tab-content {
@@ -226,4 +289,12 @@ button {
 
 .tab-content--active {
   display: block;
+}
+
+.space-after-description,
+.space-between-details-ul,
+.space-between-shipping-text,
+.space-between-text-return,
+.space-after-content {
+  margin-bottom: 20px; 
 }
