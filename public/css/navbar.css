@@ -62,7 +62,7 @@
 .dropdown-nav-list {
     position: relative;
     display: none;
-    width: 100vw;
+    width: 95vw;
     padding: 0 0 5% 5vw;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
@@ -141,7 +141,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2% 0;
+    padding: 12px 0;
 }
 
 .nav-list-item {
@@ -215,7 +215,7 @@
     .navbar-header {
         /*height: 100%;*/
         height: calc(100% - 32px);
-        padding-top: 2%;
+        padding-top: 20px;
     }
 
     .button-container {

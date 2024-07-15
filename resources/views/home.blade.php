@@ -40,7 +40,7 @@
            style="background-image: url({{ asset('/images/Deniss/Shoes_Deniss_white_1.png') }})">
             <h3 class="">DENISS</h3>
         </a>
-        <a href="#" class="link-wrap">
+        <a href="#" class="link-wrap" style="background-image: url({{ asset('/images/Katerina/Hat_Katerina_black_3.png') }})">
             <h3 class="top-sales-in-coll">TOP SALES</h3>
         </a>
     </div>
