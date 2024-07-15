@@ -7,7 +7,7 @@
                 <ul>
                     <li>
                         <a href="https://www.google.lv/maps/place/Uriekstes+iela+2A,+Zieme%C4%BCu+rajons,+R%C4%ABga,+LV-1005/@56.9895222,24.1091361,15z/data=!3m1!4b1!4m6!3m5!1s0x46eecf7557626a35:0xdcf974b277b9432b!8m2!3d56.9895109!4d24.1194144!16s%2Fg%2F11bw3z9_t5?entry=ttu">
-                            <img class="footer-svg" src="svg/Icon-Address.svg" alt=""><strong>2a Uriekstes, Riga</strong></a>
+                            <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt=""><strong>2a Uriekstes, Riga</strong></a>
                     </li>
                     <li>
                         <a href="tel:+371 25000666"><img class="footer-svg" src="svg/Icon_Phone.svg" alt=""><strong>+371 25000666</strong>
@@ -17,19 +17,19 @@
                         <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="svg/Icon_Mail.svg" alt=""><strong>info@northsquad.lv</strong></a>
                     </li>
                     <li class="social">
-                        <a href="#"><img src="svg/Icon_Twitter.svg" alt=""></a>
-                        <a href="#"><img src="svg/Icon_WhatsApp.svg" alt=""></a>
-                        <a href="#"><img src="svg/Icon_Instagram.svg" alt=""></a>
+                        <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt=""></a>
+                        <a href="#"><img src="{{asset('svg/Icon_WhatsApp.svg')}}" alt=""></a>
+                        <a href="#"><img src="{{asset('svg/Icon_Instagram.svg')}}" alt=""></a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="payment-row">
             <ul>
-                <li><img src="svg/master card.svg" alt=""></li>
-                <li><img src="svg/visa.svg" alt=""></li>
-                <li><img src="svg/paypal.svg" alt=""></li>
-                <li><img src="svg/googlePay.svg" alt=""></li>
+                <li><img src="{{asset('svg/master card.svg')}}" alt=""></li>
+                <li><img src="{{asset('svg/visa.svg')}}" alt=""></li>
+                <li><img src="{{asset('svg/paypal.svg')}}" alt=""></li>
+                <li><img src="{{asset('svg/googlePay.svg')}}" alt=""></li>
             </ul>
         </div>
     </div>
@@ -40,18 +40,18 @@
                 <ul>
                     <li>
                         <a href="https://www.google.lv/maps/place/Uriekstes+iela+2A,+Zieme%C4%BCu+rajons,+R%C4%ABga,+LV-1005/@56.9895222,24.1091361,15z/data=!3m1!4b1!4m6!3m5!1s0x46eecf7557626a35:0xdcf974b277b9432b!8m2!3d56.9895109!4d24.1194144!16s%2Fg%2F11bw3z9_t5?entry=ttu">
-                            <img class="footer-svg" src="svg/Icon-Address.svg" alt="">2a Uriekstes, Riga</a>
+                            <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="">2a Uriekstes, Riga</a>
                     </li>
                     <li>
-                        <a href="tel:+371 25000666"><img class="footer-svg" src="svg/Icon_Phone.svg" alt="">+371 25000666</a>
+                        <a href="tel:+371 25000666"><img class="footer-svg" src="{{asset('svg/Icon_Phone.svg')}}" alt="">+371 25000666</a>
                     </li>
                     <li>
-                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="svg/Icon_Mail.svg" alt="">info@northsquad.lv</a>
+                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset('svg/Icon_Mail.svg')}}" alt="">info@northsquad.lv</a>
                     </li>
                     <li class="social">
-                        <a href="#"><img src="svg/Icon_Twitter.svg" alt=""></a>
-                        <a href="#"><img src="svg/Icon_WhatsApp.svg" alt=""></a>
-                        <a href="#"><img src="svg/Icon_Instagram.svg" alt=""></a>
+                        <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt=""></a>
+                        <a href="#"><img src="{{asset('svg/Icon_WhatsApp.svg')}}" alt=""></a>
+                        <a href="#"><img src="{{asset('svg/Icon_Instagram.svg')}}" alt=""></a>
                     </li>
                 </ul>
             </div>
@@ -93,10 +93,10 @@
         </div>
         <div class="payment-row pc">
             <ul>
-                <li><img src="svg/master card.svg" alt=""></li>
-                <li><img src="svg/visa.svg" alt=""></li>
-                <li><img src="svg/paypal.svg" alt=""></li>
-                <li><img src="svg/googlePay.svg" alt=""></li>
+                <li><img src="{{asset('svg/master card.svg')}}" alt=""></li>
+                <li><img src="{{asset('svg/visa.svg')}}" alt=""></li>
+                <li><img src="{{asset('svg/paypal.svg')}}" alt=""></li>
+                <li><img src="{{asset('svg/googlePay.svg')}}" alt=""></li>
             </ul>
         </div>
     </div>
