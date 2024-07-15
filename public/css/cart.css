@@ -17,6 +17,7 @@ body {
 }
 .item_box img{
     width:25%;
+    height:80%
 }
 .item_desc{
     display: flex;
@@ -51,7 +52,7 @@ body {
 .item_number{
     font-weight: bold;
     margin-top: 0;
-    vertical-align: 3px;
+    vertical-align: 35px;
     text-align: center;
 }
 .totalCost{
@@ -101,7 +102,7 @@ body {
 }
 @media (min-width: 575px) {
     .cart_items , .totalCost{
-    width: 50%;
+    width: 20%;
 }
 }
 @media (max-width: 574px) {

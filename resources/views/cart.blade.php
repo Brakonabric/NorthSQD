@@ -20,15 +20,19 @@
                 <img src="{{ asset($item['imagePath']) }}" alt="">
                 <div class="item_desc">
                     <p class="item_title">{{ $item['name'] }}</p>
-                    <p class="item_size">Size</p>
+                    @if($item['size'])
+                    <p class="item_size">Size {{$item['size']}}</p>
+                    @else
+                    <p class="item_size"></p>
+                    @endif
                     <p class="item_cost">€{{ $item['price'] * $item['quantity'] }}</p>
                 </div>
                 <div class="item_quantity">
-                    <a href="{{ route('removeFromCart', $item['id']) }}"><img onClick="plus()" src="{{ asset('svg/minus.svg') }}" alt=""></a>
+                    <a href="{{ route('removeFromCart', $item) }}"><img onClick="plus()" src="{{ asset('svg/minus.svg') }}" alt=""></a>
                     <div class="item_number">
                         <p class = "quantity">{{$item['quantity']}}</p>
                     </div>
-                    <a href="{{ route('addToCart', $item['id']) }}"><img src="{{ asset('svg/plus.svg') }}" alt=""></a>
+                    <a href="{{ route('addToCart', $item) }}"><img src="{{ asset('svg/plus.svg') }}" alt=""></a>
                 </div>
             </div>
             @php

@@ -71,20 +71,24 @@ class UserController extends Controller
                     $item = Item::find($id);
             if(!$cart) {
                 $cart= [
-                    $id => [
+                    $product->id => [
                     "id" => $item->id,
                     "name" => $item->name,
                     "quantity" => $product->quantity,
+                    "color"=> $product->color,
+                    "size"=> $product->size,
                     "price" => $item->price,
                     "imagePath" => $item->imagePath
                 ]];
             
             }
             else {
-                $cart[$id] = [
+                $cart[$product->id] = [
                     "id" => $item->id,
                     "name" => $item->name,
                     "quantity" => $product->quantity,
+                    "color"=> $product->color,
+                    "size"=> $product->size,
                     "price" => $item->price,
                     "imagePath" => $item->imagePath
                 ];
