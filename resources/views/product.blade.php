@@ -10,21 +10,20 @@
 @include('templates/navbar')
 
 <div class="card">
-    <!-- CARD SLIDE -->
     <div class="image-container">
-        <div class="card__slide">
-            <img src="{{asset($items['item']->imagePath)}}" alt="Product Image" class="card__image">
-            <div class="small-img-row">
-                <div class="small-img-col">
-                    <img src="{{asset($items['item']->imagePath)}}" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="{{asset($items['item']->imagePath)}}" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="{{asset($items['item']->imagePath)}}" alt="">
-                </div>
+        <div class="thumbnails">
+            <div class="small-img-col">
+                <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="thumbnail" data-image="{{ asset($items['item']->imagePath) }}">
             </div>
+            <div class="small-img-col">
+                <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="thumbnail" data-image="{{ asset($items['item']->imagePath) }}">
+            </div>
+            <div class="small-img-col">
+                <img src="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}" class="thumbnail" data-image="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}">
+            </div>
+        </div>
+        <div class="card__slide">
+            <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="card__image">
         </div>
     </div>
     <div class="content-container">
@@ -34,41 +33,38 @@
             <h3 class="card__subtitle">
                 <p>{{ $items['item']->category }}</p>
             </h3>
-            <p class="card__price">€ {{ $items['item']->price }}</p>
-            <p class="card__discount">{{ $items['item']->discount }} </p>
+            @if ($items['item']->discount)
+                <div class="card__price-discounted">
+                    <span class="original-price">€ {{ $items['item']->price }}</span>
+                    <span class="discount">€{{ $items['item']->discount }}</span>
+                </div>
+            @else
+                <p class="card__price">€ {{ $items['item']->price }}</p>
+            @endif
         </header>
         <!-- CARD POINT -->
         <div class="card__point">
             <div class="color">
                 <ul>
-                    @if ($items['colors'])
                     @foreach($items['colors'] as $color)
-                        <li style="background-color:{{$color->color}}" id={{ $color->color }}  class="ring"></li>
+                        <li style="background-color:{{$color->color}}" id="{{ $color->color }}" class="ring color-btn"></li>
                     @endforeach
-                    @endif
                 </ul>
             </div>
             <div class="size-chooser">
-                
-                <ul>
-                    {{--<li class="card__size">S({{ $item->size }})</li>--}}
-                    {{--<li class="card__size">M({{ $item->size }})</li>--}}
-                    {{--<li class="card__size">L({{ $item->size }})</li>--}}
-                    @if ($items['colors'])
-                    @foreach($items['colors'] as $color)
-                    <p>{{$color->color}}</p>
-                    @if ($items['sizes'])
-                    @foreach($items['sizes'][$color->color] as $size)
-                    @if($size->in_stock)
-                        <li class="card__size" id="{{$color}}">{{ $size->size }}</li>
-                    @else 
-                        <li class="card__size" id="{{$color}}"style="background-color: crimson">{{ $size->size }}</li>
-                    @endif
-                    @endforeach
-                    @endif
-                    @endforeach
-                    @endif
-                </ul>
+                @foreach($items['colors'] as $color)
+                    <div class="sizes" id="sizes-{{ $color->color }}" style="display: none;">
+                        <p>{{ $color->color }}</p>
+                        <ul>
+                            @foreach($items['sizes'][$color->color] as $size)
+                                <li class="size-option {{ $size->in_stock ? 'size-in-stock' : 'size-out-stock' }}"
+                                    id="{{ $color->color }}-{{ $size->size }}">
+                                    {{ $size->size }}
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endforeach
             </div>
         </div>
         <!-- CARD BTN -->
@@ -77,37 +73,34 @@
                 <button class="submit-btn">
                     <a href="{{ route('addToCart', $items['item']->id) }}">Add to Cart</a>
                 </button>
-                {{-- Задействуй для примнения класса --}}
-                {{-- @if ($items['size']) --}}
-                {{-- <p>{{ $items['size']->in_stock }}</p> --}}
-                {{-- @endif --}}
             </div>
             <!-- CARD DESCRIPTIONS -->
             <div class="descriptions">
-                <button class="describe-button-active tab-button tab-button-active" data-index="0">Details</button>
-                <button class="describe-button-active tab-button" data-index="1">Shipping and returns</button>
+                <button class="describe-button tab-button tab-button-active" data-index="0">Details</button>
+                <button class="describe-button tab-button" data-index="1">Shipping and returns</button>
             </div>
             <div class="tab-contents">
                 <div class="tab-content" data-index="0">
-                    <p><span>{{ $items['item']->description }}</span></p>
+                    <p>{{ $items['item']->description }}</p>
+                    <div class="space-after-description"></div> 
                     <p><span>Details:</span></p>
+                    <div class="space-between-details-ul"></div> 
                     <ul>
-                        <li><span>Unisex, relaxed fit shirt</span></li>
-                        <li><span>100% cotton </span></li>
-                        <li><span>OEKO-TEX® Standard 100 Certified</span></li>
+                        <li>Unisex, relaxed fit shirt</li>
+                        <li>100% cotton</li>
+                        <li>OEKO-TEX® Standard 100 Certified</li>
                     </ul>
                 </div>
                 <div class="tab-content" data-index="1">
-                    <p>View our full <a href="">shipping information.</a></p>
-                    <p>Currently our merch is shipped out of the US which means International customers may experience
-                        higher shipping costs, custom charges, or longer shipping times. We hope to improve this in the
-                        future to make sure The Sims products are accessible across the globe.</p>
-                    <p>View our full <a href="">return policy.</a></p>
-                    <p>We accept returns within 31 days. Non-returnable items include final sale items, giftcards,
-                        downloadable products, personalized and print-on-demand products.</p>
+                    <p>View our full <a href="#">shipping information.</a></p>
+                    <div class="space-between-shipping-text"></div> 
+                    <p>Currently our merch is shipped out of the US which means International customers may experience higher shipping costs, custom charges, or longer shipping times. We hope to improve this in the future to make sure The Sims products are accessible across the globe.</p>
+                    <div class="space-between-text-return"></div> 
+                    <p>View our full <a href="#">return policy.</a></p>
+                    <div class="space-after-content"></div> 
+                    <p>We accept returns within 31 days. Non-returnable items include final sale items, giftcards, downloadable products, personalized and print-on-demand products.</p>
                 </div>
             </div>
-        </div>
     </div>
 </div>
 
