@@ -41,19 +41,32 @@
         <div class="card__point">
             <div class="color">
                 <ul>
-                    <li id="white" class="ring"></li>
-                    <li id="black" class="ring"></li>
-                    <li id="blue" class="ring"></li>
+                    @if ($items['colors'])
+                    @foreach($items['colors'] as $color)
+                        <li style="background-color:{{$color->color}}" id={{ $color->color }}  class="ring"></li>
+                    @endforeach
+                    @endif
                 </ul>
             </div>
             <div class="size-chooser">
+                
                 <ul>
                     {{--<li class="card__size">S({{ $item->size }})</li>--}}
                     {{--<li class="card__size">M({{ $item->size }})</li>--}}
                     {{--<li class="card__size">L({{ $item->size }})</li>--}}
-
-                    @if ($items['size'])
-                        <li class="card__size">{{ $items['size']->size }}</li>
+                    @if ($items['colors'])
+                    @foreach($items['colors'] as $color)
+                    <p>{{$color->color}}</p>
+                    @if ($items['sizes'])
+                    @foreach($items['sizes'][$color->color] as $size)
+                    @if($size->in_stock)
+                        <li class="card__size" id="{{$color}}">{{ $size->size }}</li>
+                    @else 
+                        <li class="card__size" id="{{$color}}"style="background-color: crimson">{{ $size->size }}</li>
+                    @endif
+                    @endforeach
+                    @endif
+                    @endforeach
                     @endif
                 </ul>
             </div>

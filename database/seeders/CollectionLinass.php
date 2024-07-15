@@ -191,7 +191,7 @@ Experience the perfect blend of sustainability and style with the NorthSQD x adi
 
             foreach ($itemData['colors'] as $color) {
                 // 1/5 chance for in_stock to be false (0)
-                $inStockColor = rand(1, 5) === 1 ? 0 : 1;
+                $inStockColor = rand(1, 3) === 1 ? 0 : 1;
 
                 // Seed Item Colors Table
                 $colorId = DB::table('item_colors')->insertGetId([
@@ -202,7 +202,7 @@ Experience the perfect blend of sustainability and style with the NorthSQD x adi
 
                 foreach ($itemData['sizes'] as $size) {
                     // 1/5 chance for in_stock to be false (0)
-                    $inStockSize = rand(1, 5) === 1 ? 0 : 1;
+                    $inStockSize = rand(1, 3) === 1 ? 0 : 1;
 
                     // Seed Item Sizes Table
                     DB::table('item_sizes')->insert([

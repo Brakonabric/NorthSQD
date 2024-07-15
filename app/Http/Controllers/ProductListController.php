@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Collection;
 use App\Models\Item;
 use App\Models\ItemColor;
 use App\Models\ItemSize;
@@ -35,16 +36,25 @@ class ProductListController extends Controller
 
             return redirect('/error');
         }
-            $size=null;
-            $color = ItemColor::where('item_id', $id)->first();
-            if($color){
-            $size = ItemSize::where('color_id', $color->id)->first();
+            $colors = ItemColor::where('item_id', $id)->get();
+            $sizes=[];
+            foreach ($colors as $color) {
+                $gottenSizes = ItemSize::where('color_id', $color->id)->get();
+                
+                if($gottenSizes){
+                $colorSize = [
+                    'color' => $color->color,
+                    'sizes' => $gottenSizes,
+                ];
+                $sizes[$color->color]=$gottenSizes;
             }
+            }
+
 
                 $items=[
                     'item'=>$item,
-                    'color'=>$color,
-                    'size'=>$size
+                    'colors'=>$colors,
+                    'sizes'=>$sizes
                 ];  
             return view('product',['items'=>$items]);
         
