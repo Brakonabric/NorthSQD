@@ -96,6 +96,6 @@
 </div>
 <script src="scripts.js"></script>
 
-
+@include('templates/footer')
 </body>
 </html>

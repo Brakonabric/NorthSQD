@@ -155,15 +155,16 @@ Perfect as a canvas for your designs, the NorthSQD Premium Eco Hoodie will keep 
             //Hat
             [
                 'name' => "Abibas Dad Hat",
-                'description' => "Introducing the NorthSQD x abibas Dad Hat—where versatility meets the enchanting allure of the northern lights. This stylish hat is made of 100% recycled polyester, offering a lightweight and adjustable fit perfect for any occasion. Enhance its appeal with custom embroidery designs on the front, back, and left side to create a standout accessory.
-
-    Made from 100% recycled polyester
-    Unstructured
-    6-panel, low-profile
-    One size fits all
-    Adjustable snapback closure
-    Blank product sourced from China
-
+                'description' => "Introducing the NorthSQD x abibas Dad Hat—where versatility meets the enchanting allure of the northern lights. This stylish hat is made of 100% recycled polyester, offering a lightweight and adjustable fit perfect for any occasion. Enhance its appeal with custom embroidery designs on the front, back, and left side to create a standout accessory.<br>
+                <br>Details:
+                <ul class='db-list'>
+        <li>Made from 100% recycled polyester</li>
+        <li>Unstructured</li>
+        <li>6-panel, low-profile</li>
+        <li>One size fits all</li>
+        <li>Adjustable snapback closure</li>
+        <li>Blank product sourced from China</li>
+        </ul>
 Experience the perfect blend of sustainability and style with the NorthSQD x adidas Dad Hat. Add your unique touch and let the spirit of the northern lights shine through your everyday wear.",
                 'price' => 15.00,
                 'category' => 'Hat',

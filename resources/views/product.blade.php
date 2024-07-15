@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/pdp.css') }}">
+    <script src="{{ asset('js/pdp.js') }}"></script>
     <title>Product Details</title>
 </head>
 <body>
@@ -47,7 +48,7 @@
             <div class="color">
                 <ul>
                     @foreach($items['colors'] as $color)
-                        <li style="background-color:{{$color->color}}" id="{{ $color->color }}" class="ring color-btn"></li>
+                        <li style="background-color: {{$color->color}}" id="{{ $color->color }}" class="ring color-btn"></li>
                     @endforeach
                 </ul>
             </div>
@@ -81,16 +82,8 @@
             </div>
             <div class="tab-contents">
                 <div class="tab-content" data-index="0">
-                    <p>{{ $items['item']->description }}</p>
+                    <p>{!! $items['item']->description !!}</p>
                     <div class="space-after-description"></div> 
-                    <p><span>Details:</span></p>
-                    <div class="space-between-details-ul"></div> 
-                    <ul>
-                        <li>Unisex, relaxed fit shirt</li>
-                        <li>100% cotton</li>
-                        <li>OEKO-TEX® Standard 100 Certified</li>
-                    </ul>
-                </div>
                 <div class="tab-content" data-index="1">
                     <p>View our full <a href="#">shipping information.</a></p>
                     <div class="space-between-shipping-text"></div> 
@@ -103,7 +96,7 @@
             </div>
     </div>
 </div>
-
-<script src="{{ asset('js/pdp.js') }}"></script>
+@include('templates/footer')
 </body>
+
 </html>
