@@ -166,7 +166,7 @@ Perfect as a canvas for your designs, the NorthSQD Premium Eco Hoodie will keep 
 
 Experience the perfect blend of sustainability and style with the NorthSQD x adidas Dad Hat. Add your unique touch and let the spirit of the northern lights shine through your everyday wear.",
                 'price' => 15.00,
-                'category' => 'Hoodie',
+                'category' => 'Hat',
                 'collection' => 'Linass',
                 'imagePath' => 'images\Linass\Hat_Linass_white_1.png',
                 'weight' => 3.2,
