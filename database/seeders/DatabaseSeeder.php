@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
             [
                 CollectionLinass::class,
                 CollectionDeniss::class,
-//                CollectionKaterina::class,
+               CollectionKaterina::class,
 //                CollectionMatiss::class,
 //                CollectionRodions::class
             ]
