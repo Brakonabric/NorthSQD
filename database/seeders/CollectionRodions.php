@@ -93,22 +93,27 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'name' => "Unisex Sweatshirt",
                 'description' => "Discover unparalleled comfort and style with the NorthSQD Unisex Organic Raglan Sweatshirt, inspired by the mesmerizing northern lights. Designed for everyday wear, this sweatshirt promises to be a favorite in your wardrobe. The soft fleece inside offers a cozy feel, while the smooth 100% organic cotton exterior maintains a clean, polished look. Its premium materials ensure that your prints remain flawless and embroidery designs stay neat and durable.
 
-    100% organic cotton exterior
-    Charcoal Melange’s exterior: 60% organic cotton, 40% recycled polyester
-    80% organic cotton, 20% recycled polyester interior
-    97% organic cotton, 3% elastane ribs
-    Fabric weight: 8.3 oz/yd² (280 g/m²)
-    Fabric weight for Charcoal Melange: 10.3 oz/yd² (348 g/m²)
-    Side-seamed
-    Raglan sleeves
-    Neck tape
-    Brushed fleece lining
-    2 × 2 ribbed cuffs, collar, and hem
-    The fabric of this product is certified by GRS (Global Recycled Standard), OCS (Organic Content Standard), and GOTS (Global Organic Textile Standard)
-    The fabric of this product is OEKO-TEX Standard 100 certified and PETA-Approved Vegan
-    Blank product sourced from Pakistan
+                <br>
+                <br>Details:
+                <ul class='db-list'>
+                <li>100% organic cotton exterior</li>
+                <li>Charcoal Melange’s exterior: 60% organic cotton, 40% recycled polyester</li>
+                <li>80% organic cotton, 20% recycled polyester interior</li>
+                <li>97% organic cotton, 3% elastane ribs</li>
+                <li>Fabric weight: 8.3 oz/yd² (280 g/m²)</li>
+                <li>Fabric weight for Charcoal Melange: 10.3 oz/yd² (348 g/m²)</li>
+                <li>Side-seamed</li>
+                <li>Raglan sleeves</li>
+                <li>Neck tape</li>
+                <li>Brushed fleece lining</li>
+                <li>2 × 2 ribbed cuffs, collar, and hem</li>
+                <li>The fabric of this product is certified by GRS (Global Recycled Standard), OCS (Organic Content Standard), and GOTS (Global Organic Textile Standard)</li>
+                <li>The fabric of this product is OEKO-TEX Standard 100 certified and PETA-Approved Vegan</li>
+                <li>Blank product sourced from Pakistan</li>
+                </ul>
+                
 
-Experience the perfect blend of comfort and sustainability with the NorthSQD Unisex Organic Raglan Sweatshirt. Let the spirit of the northern lights brighten your everyday style.",
+",
                 'price' => 30.00,
                 'category' => 'Sweatshirt',
                 'collection' => 'Rodions',
@@ -123,21 +128,26 @@ Experience the perfect blend of comfort and sustainability with the NorthSQD Uni
                 'name' => "Premium Eco Hoodie",
                 'description' => "Elevate your wardrobe with the NorthSQD Premium Eco Hoodie, where sustainability meets the enchanting charm of the northern lights. Exclusively available at Printful, this hoodie is crafted from high-quality organic and recycled materials, offering a luxurious, brushed inside for ultimate comfort. Designed with adjustable drawcords, ribbed cuffs, and a kangaroo pouch pocket, this eco-friendly hoodie seamlessly blends style and functionality.
 
-    85% organic cotton, 15% recycled polyester
-    Ribbing: 97% organic cotton, 3% elastane
-    Brushed fleece fabric inside
-    Comfortable unisex fit
-    Double-layered hood
-    Flat drawcords with metal aglets
-    Kangaroo pocket
-    Inside and outside label patch for branding
-    Tear away care label
-    Fabric weight: 8.55 oz/yd² (290 g/m²)
-    Fabric weight for the black hoodie: 8.85 oz/yd² (300 g/m²)
-    The fabric of this product is certified by GOTS (Global Organic Textile Standard)
-    Blank product sourced from Latvia and Mexico
+                <br>
+                <br>Details:
+                <ul class='db-list'>
+                <li>85% organic cotton, 15% recycled polyester</li>
+                <li>Ribbing: 97% organic cotton, 3% elastane</li>
+                <li>Brushed fleece fabric inside</li>
+                <li>Comfortable unisex fit</li>
+                <li>Double-layered hood</li>
+                <li>Flat drawcords with metal aglets</li>
+                <li>Kangaroo pocket</li>
+                <li>Inside and outside label patch for branding</li>
+                <li>Tear away care label</li>
+                <li>Fabric weight: 8.55 oz/yd² (290 g/m²)</li>
+                <li>Fabric weight for the black hoodie: 8.85 oz/yd² (300 g/m²)</li>
+                <li>The fabric of this product is certified by GOTS (Global Organic Textile Standard)</li>
+                <li>Blank product sourced from Latvia and Mexico</li>
+                </ul>
+                
 
-Perfect as a canvas for your designs, the NorthSQD Premium Eco Hoodie will keep your prints and embroidery looking fresh, even after multiple washes. Add your unique touch or simply showcase your branded logo on this premium, eco-friendly piece. Embrace the spirit of the northern lights with NorthSQD.",
+",
                 'price' => 45.00,
                 'category' => 'Hoodie',
                 'collection' => 'Rodions',
@@ -152,20 +162,22 @@ Perfect as a canvas for your designs, the NorthSQD Premium Eco Hoodie will keep 
                 'name' => "Abibas Dad Hat",
                 'description' => "Introducing the NorthSQD x abibas Dad Hat—where versatility meets the enchanting allure of the northern lights. This stylish hat is made of 100% recycled polyester, offering a lightweight and adjustable fit perfect for any occasion. Enhance its appeal with custom embroidery designs on the front, back, and left side to create a standout accessory.
 
-Introducing the NorthSQD All-Over Print Reversible Bucket Hat—where versatility meets the enchanting spirit of the northern lights. This stylish bucket hat offers two looks for the price of one, allowing you to easily match different outfits. Made from breathable, premium fabric, this streetwear staple is sure to charm both you and your customers.
-
-    100% polyester
-    Fabric weight: 8.1 oz/yd² (275 g/m²)
-    Moisture-wicking and breathable fabric
-    Linen feel material
-    Reversible
-    Tear-away care label
-    Available in 3 sizes: XS, S/M, and L/XL
-    Printed, cut, and hand-sewn by our in-house team
-    Fabric is OEKO-TEX 100 standard certified
-    Blank product components sourced from China
-
-    Experience the perfect blend of style and functionality with the NorthSQD Reversible Bucket Hat. Embrace the spirit of the northern lights and elevate your streetwear collection with this versatile and fashionable accessory.",
+                <br>
+                <br>Details:
+                <ul class='db-list'>
+                <li>100% polyester</li>
+                <li>Fabric weight: 8.1 oz/yd² (275 g/m²)</li>
+                <li>Moisture-wicking and breathable fabric</li>
+                <li>Linen feel material</li>
+                <li>Reversible</li>
+                <li>Tear-away care label</li>
+                <li>Available in 3 sizes: XS, S/M, and L/XL</li>
+                <li>Printed, cut, and hand-sewn by our in-house team</li>
+                <li>Fabric is OEKO-TEX 100 standard certified</li>
+                <li>Blank product components sourced from China</li>
+                </ul>
+                
+",
                 'price' => 15.00,
                 'category' => 'Hat',
                 'collection' => 'Rodions',
