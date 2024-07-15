@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="input-wrap">
-                <button class="submit" type="submit">Sign In</button>
+                <button class="submit" type="submit">Sign Up</button>
             </div>
         </form>
     </div>

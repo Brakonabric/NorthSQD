@@ -11,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Collection;
 use App\Models\Item;
 use App\Models\ItemColor;
+use App\Models\ItemImage;
 use App\Models\ItemSize;
 use DB;
 
@@ -36,6 +37,7 @@ class ProductListController extends Controller
 
             return redirect('/error');
         }
+            $images = ItemImage::where('item_id', $id)->get();
             $colors = ItemColor::where('item_id', $id)->get();
             $sizes=[];
             foreach ($colors as $color) {
@@ -54,7 +56,8 @@ class ProductListController extends Controller
                 $items=[
                     'item'=>$item,
                     'colors'=>$colors,
-                    'sizes'=>$sizes
+                    'sizes'=>$sizes,
+                    'images'=>$images
                 ];  
             return view('product',['items'=>$items]);
         

@@ -5,14 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CartItem extends Model
+class ItemImage extends Model
 {
     protected $fillable = [
+        'image1',
+        'image2',
+        'image3',
+        'image4',
+        'image5',
         'item_id',
-        'cart_id',
-        'quantity',
-        'color',
-        'size'
+        
     ];
     public $timestamps = false;
 }

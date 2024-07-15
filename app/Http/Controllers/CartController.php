@@ -14,6 +14,9 @@ class CartController extends Controller
 {
     public function showCart(){
         $cart = session()->get('cart');
+        // foreach ($cart as $key => $cartitem) {
+        //     dd($cartitem['size']);
+        // }
         // if(!$cart){
         //     return back()->withErrors(['empty' => 'The cart is empty']);
         // }
@@ -29,6 +32,8 @@ class CartController extends Controller
             CartItem::create([
                 'item_id' => $id['id'],
                 'cart_id' => $userDBCart->id,
+                'size' => $id['size'],
+                'color' => $id['color'],
                 'quantity' => $id['quantity']
             ]);
             $userDBCart->amount+=$id['price']*$id['quantity'];

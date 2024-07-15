@@ -37,7 +37,7 @@ Route::get('/login', [UserController::class, 'showLoginForm']);
 Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::get('/logout', [UserController::class, 'logout']);
 
-Route::get('/addToCart/{id}', [CartItemController::class, 'addToCart'])->name('addToCart');
+Route::get('/addToCart/{id}/', [CartItemController::class, 'addToCart'])->name('addToCart');
 Route::get('/removeFromCart/{id}', [CartItemController::class, 'removeFromCart'])->name('removeFromCart');
 
 Route::get('/saveCart', [CartController::class, 'saveCart'])->name('saveCart');
