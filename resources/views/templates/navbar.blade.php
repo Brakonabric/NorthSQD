@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 <script src="{{ asset('js/nav.js') }}"></script>
 <div class="sticky-bar">
-    <div class="header-mob">
+    <div class="navbar-header">
         <div class="button-container" id="left-container">
             <button onclick="" class="mob-nav-button" id="menu">
                 <div class="burger" id="burger">
@@ -27,10 +27,10 @@
         </div>
     </div>
     <div class="dropdown-nav-list" id="dropdown-nav-list">
-        <div>
+        <nav>
             <br>
             <ul>
-                <li><h3>Categories</h3></li>
+                <li ><h3>Categories</h3></li>
                 <li><a href="#">Collections</a></li>
                 <li><a href="#">T-Shirts</a></li>
                 <li><a href="#">Sweatshirts</a></li>
@@ -49,6 +49,21 @@
                         <h4>SALE</h4>
                     </a></li>
             </ul>
-        </div>
+        </nav>
     </div>
+</div>
+<div class="navbar-table">
+    <nav>
+        <ul>
+            <li class="nav-list-item"><a href="#">T-Shirts</a></li>
+            <li class="nav-list-item"><a href="#">Sweatshirts</a></li>
+            <li class="nav-list-item"><a href="#">Accessories</a></li>
+            <li class="nav-list-item"><a href="#">Hoodie</a></li>
+            <li class="nav-list-item"><a href="#">Shoes</a></li>
+            <li class="nav-list-item"><a href="#">Hat</a></li>
+            <li class="nav-list-item"><a href="#">Collections</a></li>
+            <li class="nav-list-item"><a class="" href="/products">
+                    <img src="{{asset("svg/sale-mark.svg")}}" alt="">SALE</a></li>
+        </ul>
+    </nav>
 </div>

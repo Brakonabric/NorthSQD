@@ -11,6 +11,11 @@ ul {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 h1, h2, h3, h4, p, a, button {
     font-family: inherit;
 }
@@ -63,10 +68,8 @@ h1, h2, h3, h4, p, a, button {
     justify-content: center;
     align-items: end;
     border: none;
-    text-decoration: none;
     border-radius: 10%;
-    /*background-image: url('/images/1.png');*/
-    background-color: white;
+    background-color: #F5F5F5;
     background-size: contain;
     background-repeat: no-repeat;
 }

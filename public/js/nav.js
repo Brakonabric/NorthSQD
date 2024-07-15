@@ -1,3 +1,8 @@
+addEventListener("resize", (event) => {
+    let dropdown = document.getElementById("dropdown-nav-list");
+    dropdown.style.display = "none";
+    burger.classList.remove('open');
+});
 document.addEventListener("DOMContentLoaded", () => {
     let menuButton = document.getElementById("menu");
     let dropdown = document.getElementById("dropdown-nav-list");
