@@ -18,11 +18,21 @@ use DB;
 class ProductListController extends Controller
 {
     public function showall():View {
-        $items = DB::table('items')->get();
+        $items = Item::paginate(10);
+        return view('plp',['items'=>$items]);
+    }
+    public function search(Request $request):View {
+        if($request->category){
+            $word = $request->category;
+            $items = Item::where('category',$word)->paginate(10);
+            return view('plp',['items'=>$items]); 
+        }
+        $word=$request->input('q');
+        $items = Item::where('name','like',"%{$word}%")->paginate(10);
         return view('plp',['items'=>$items]);
     }
     public function homeSlider():View {
-        $items = DB::table('items')->inRandomOrder()->take(8)->get();
+        $items = Item::inRandomOrder()->take(8)->get();
         return view('home',['items'=>$items]);
     }
 
