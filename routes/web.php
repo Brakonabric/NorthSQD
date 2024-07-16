@@ -29,8 +29,6 @@ Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 Route::get('/',[ProductListController::class, 'homeSlider']);
 
 
-Route::get('/users',[UserController::class, 'showall'])->middleware('auth');
-Route::get('/users/remove',[UserController::class, 'remove'])->middleware('auth');
 Route::get('/sign-up', [UserController::class, 'showRegistrationForm']);
 Route::post('/sign-up', [UserController::class, 'register'])->name('register');
 Route::get('/login', [UserController::class, 'showLoginForm']);
@@ -46,5 +44,8 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('saveCart');
 Route::get('/error', function () {
     return view('error');
 });
+
+Route::get('/profile',[UserController::class, 'profile'])->middleware('auth');
+
 
 
