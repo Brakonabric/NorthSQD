@@ -22,7 +22,7 @@
             </div>
             <div class="small-img-col">
                 <img src="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}" class="thumbnail"
-                     data-image="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}">
+                     data-image="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}" alt="{{$items['item']->name}}">
             </div>
         </div>
         <div class="card__slide">
@@ -97,7 +97,7 @@
                         <div class="space-between-text-return"></div>
                         <p>View our full <a href="#">return policy.</a></p>
                         <div class="space-after-content"></div>
-                        <p>We accept returns within 31 days. Non-returnable items include final sale items, giftcards,
+                        <p>We accept returns within 31 days. Non-returnable items include final sale items, gift-cards,
                             downloadable products, personalized and print-on-demand products.</p>
                     </div>
                 </div>
