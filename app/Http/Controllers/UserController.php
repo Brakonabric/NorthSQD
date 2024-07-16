@@ -88,7 +88,7 @@ class UserController extends Controller
                     }
                     session()->put('cart', $cart);
                 }
-                return redirect('/');
+                return redirect(route('home'));
             }
             return back()->withErrors([
                 'email' => 'The provided credentials do not match our records.',

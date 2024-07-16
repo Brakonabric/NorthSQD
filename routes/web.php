@@ -16,9 +16,9 @@ use App\Http\Controllers\CartController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+//Route::get('/', function () {
+//    return view('home');
+//})->name('home');
 
 Route::get('/products',[ProductListController::class, 'showall'])->name('products');
 Route::get('/products/fill',[ProductListController::class, 'fill'])->middleware('auth');
@@ -26,7 +26,7 @@ Route::post('/products/add-product',[ProductListController::class, 'addProduct']
 Route::get('/products/add-product',[ProductListController::class, 'showAddProductForm']);
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
-Route::get('/',[ProductListController::class, 'homeSlider']);
+Route::get('/',[ProductListController::class, 'homeSlider'])->name('home');;
 
 
 Route::get('/sign-up', [UserController::class, 'showRegistrationForm']);

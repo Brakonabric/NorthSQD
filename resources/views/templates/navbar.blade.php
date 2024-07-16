@@ -16,7 +16,7 @@
                 <img src="{{ asset("svg/search.svg") }}" alt="#">
             </button>
         </div>
-        <img src="{{ asset("svg/logo.svg") }}" alt="#" class="logo">
+        <a href="{{route('home')}}"><img src="{{ asset("svg/logo.svg") }}" alt="#" class="logo"></a>
         <div class="button-container" id="right-container">
             <button onclick="" class="mob-nav-button" id="user">
                 <img src="{{ asset("svg/user.svg") }}" alt="#">
