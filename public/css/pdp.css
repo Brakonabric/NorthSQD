@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -128,17 +128,20 @@ button {
 }
 
 .card__price-discounted {
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px
 }
 
 .original-price {
-    color: #999;
+    color: darkgrey;
     text-decoration: line-through;
     margin-right: 10px;
+    font-size: 0.9em;
 }
 
 .discount {
-    color: #f00;
+    color: black;
 }
 
 /* Color Point and Size Chooser Styles */
@@ -232,21 +235,7 @@ button {
 
 /* Submit Button Styles */
 .submit-btn {
-    background-color: #db3998;
-    display: flex;
-    width: 100%;
-    max-width: 350px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: none;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.submit-btn button {
-    background-color: #db3998;
+    background: #db3998;
     display: flex;
     width: 100%;
     max-width: 350px;
@@ -261,11 +250,13 @@ button {
     font-size: 16px;
     font-weight: 800;
     text-decoration: none;
+    user-select: none;
 }
 
-.submit-btn button.out-of-stock {
+.out-of-stock {
     background-color: #ccc;
     cursor: not-allowed;
+    pointer-events: none;
 }
 
 .submit-btn button:hover:not(.out-of-stock) {
@@ -333,4 +324,11 @@ button {
 .space-between-text-return,
 .space-after-content {
     margin-bottom: 20px;
+}
+
+hr {
+    background-color: #DB3998;
+    border: 0;
+    height: 2px;
+    margin-top: calc(60px + 10vh);
 }
