@@ -17,8 +17,8 @@ return new class extends Migration
             $table->longText('image3');
             $table->longText('image4');
             $table->longText('image5');
-            $table->unsignedBigInteger('item_id');
-            $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
+            $table->unsignedBigInteger('color_id');
+            $table->foreign('color_id')->references('id')->on('item_colors')->onDelete('cascade');
         });
     }
 

@@ -18,11 +18,44 @@ use DB;
 class ProductListController extends Controller
 {
     public function showall():View {
-        $items = DB::table('items')->get();
+        $itemCount = Item::get() -> count();
+        $items = Item::paginate(10);
+        return view('plp',['items'=>$items,'itemCount' => $itemCount,'title' => 'SHOP ALL']);
+    }
+    public function search(Request $request):View {
+//        if($request->category){
+//            $word = $request->category;
+//            $items = Item::where('category',$word)->paginate(10);
+//            return view('plp',['items'=>$items]);
+//        }
+        $word=$request->input('q');
+        $items = Item::where('name','like',"%{$word}%")->paginate(10);
         return view('plp',['items'=>$items]);
     }
+
+    public function category(Request $request):View {
+        $word=$request->category;
+        $itemCount = Item::where('category',$word) -> count();
+        $items = Item::where('category',$word)->paginate(10);
+        return view('plp',['items'=>$items, 'itemCount' => $itemCount, 'title' => $word ]);
+    }
+
+    public function collection(Request $request):View {
+        $word = $request->collection;
+        $itemCount = Item::where('category',$word) -> count();
+        $items = Item::where('collection',$word)->paginate(10);
+        return view('plp',['items'=>$items, 'itemCount' => $itemCount, 'title' => $word ]);
+    }
+
+    public function sales():View {
+        $items = Item::whereNotNull('discount')->paginate(10);
+        $itemCount = Item::whereNotNull('discount') -> count();
+        return view('plp', ['items' => $items,  'itemCount' => $itemCount, 'title' => 'SALE' ]);
+    }
+
+
     public function homeSlider():View {
-        $items = DB::table('items')->inRandomOrder()->take(8)->get();
+        $items = Item::inRandomOrder()->take(8)->get();
         return view('home',['items'=>$items]);
     }
 
@@ -34,10 +67,9 @@ class ProductListController extends Controller
         }
     }
         catch(\Exception $e){
-
             return redirect('/error');
         }
-            $images = ItemImage::where('item_id', $id)->get();
+            $images = ItemImage::where('color_id', $id)->get();
             $colors = ItemColor::where('item_id', $id)->get();
             $sizes=[];
             foreach ($colors as $color) {

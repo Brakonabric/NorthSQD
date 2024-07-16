@@ -22,6 +22,11 @@
             </div>
             <div class="card__slide">
                 <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="card__image">
+
+            //<div class="small-img-col">
+            //    <img src="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}" class="thumbnail"
+            //       data-image="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}" alt="{{$items['item']->name}}">
+            
             </div>
         </div>
         <div class="content-container">
@@ -87,6 +92,7 @@
                     <div class="tab-content" data-index="1">
                         <p>View our full <a href="#">shipping information.</a></p>
                         <!-- Shipping and returns content here -->
+
                     </div>
                 </div>
             </div>
@@ -94,4 +100,8 @@
     </div>
     @include('templates/footer')
 </body>
+
+    // Pass the route URL to a JavaScript variable
+    // let addToCartUrl = "{{ route('addToCart', $items['item']->id) }}";
+</script>
 </html>

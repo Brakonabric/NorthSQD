@@ -120,8 +120,9 @@ document.addEventListener('DOMContentLoaded', function() {
             option.addEventListener('click', () => {
                 const currentColor = option.parentElement.parentElement.id.split('-')[1];
                 const selectedSize = option.getAttribute('data-size');
+                localStorage.setItem('selectedSize',selectedSize);
                 const colorAndSize = `${currentColor}-${selectedSize}`;
-
+              
                 if (option.classList.contains('selected')) {
                     option.classList.remove('selected');
                     localStorage.removeItem(`selected_size_${colorAndSize}`);
@@ -171,3 +172,18 @@ document.addEventListener('DOMContentLoaded', function() {
     activateThumbnails();
     activateSizeSelection();
 });
+
+
+
+    function addToCart(id){
+    let color = localStorage.getItem('selectedColor');
+    let size = null;
+        fetch(
+        addToCartUrl + '?' + new URLSearchParams({color: color}).toString()
+    ).then(response => {
+        if(response.redirected) {
+            window.location.href = response.url;
+        }
+    });
+    
+}

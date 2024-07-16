@@ -22,14 +22,6 @@ use DB;
 class UserController extends Controller
 {
     use CartLogicTrait;
-    public function showall():View {
-        $users = DB::table('users')->get();
-        return view('users',['users'=>$users]);
-    }
-    public function remove(): RedirectResponse{
-        DB::table('users')->delete();
-        return redirect('/users');
-    }
     public function showRegistrationForm()
     {
         return view('auth.register');
@@ -48,7 +40,7 @@ class UserController extends Controller
             'amount' => 0,
             'user_id' => $user->id
         ]);
-        return redirect('/users');
+        return redirect('/login');
     }
     public function showLoginForm()
     {
@@ -96,7 +88,7 @@ class UserController extends Controller
                     }
                     session()->put('cart', $cart);
                 }
-                return redirect('/users');
+                return redirect(route('home'));
             }
             return back()->withErrors([
                 'email' => 'The provided credentials do not match our records.',
@@ -106,5 +98,8 @@ class UserController extends Controller
         Auth::logout();
         session()->flush();
         return redirect('/login');
+    } 
+    public function profile(){
+        return view('profile');
     } 
 }

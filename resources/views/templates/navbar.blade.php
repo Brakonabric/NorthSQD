@@ -16,14 +16,14 @@
                 <img src="{{ asset("svg/search.svg") }}" alt="#">
             </button>
         </div>
-        <img src="{{ asset("svg/logo.svg") }}" alt="#" class="logo">
+        <a href="{{route('home')}}"><img src="{{ asset("svg/logo.svg") }}" alt="#" class="logo"></a>
         <div class="button-container" id="right-container">
-            <button onclick="" class="mob-nav-button" id="user">
+            <a href="{{ route('profile') }}" class="mob-nav-button" id="user">
                 <img src="{{ asset("svg/user.svg") }}" alt="#">
-            </button>
-            <button onclick="" class="mob-nav-button" id="cart">
+            </a>
+            <a href="{{ route('cart') }}" class="mob-nav-button" id="cart">
                 <img src="{{ asset("svg/shopping_cart.svg" )}}" alt="">
-            </button>
+            </a>
         </div>
     </div>
     <div class="dropdown-nav-list" id="dropdown-nav-list">
@@ -31,20 +31,20 @@
             <br>
             <ul>
                 <li ><h3>Categories</h3></li>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">T-Shirts</a></li>
-                <li><a href="#">Sweatshirts</a></li>
-                <li><a href="#">Accessories</a></li>
-                <li><a href="#">Hoodie</a></li>
-                <li><a href="#">Shoes</a></li>
-                <li><a href="#">Hat</a></li>
+                <li><a href="">Collections</a></li>
+                <li><a href="{{route('category')}}/?category=t-shirts">T-Shirts</a></li>
+                <li><a href="{{route('category')}}/?category=sweatshirts">Sweatshirts</a></li>
+                <li><a href="{{route('category')}}/?category=accessories">Accessories</a></li>
+                <li><a href="{{route('category')}}/?category=hoodie">Hoodie</a></li>
+                <li><a href="{{route('category')}}/?category=shoes">Shoes</a></li>
+                <li><a href="{{route('category')}}/?category=hat">Hat</a></li>
             </ul>
             <br>
             <ul class="sale">
                 <li>
                     <h3>TOP Sales</h3>
                 </li>
-                <li><a href="/products">
+                <li><a href="{{route('sales')}}">
                         <img src="{{asset("svg/sale-mark.svg")}}" alt="">
                         <h4>SALE</h4>
                     </a></li>
@@ -55,14 +55,14 @@
 <div class="navbar-table">
     <nav>
         <ul>
-            <li class="nav-list-item"><a href="#">T-Shirts</a></li>
-            <li class="nav-list-item"><a href="#">Sweatshirts</a></li>
-            <li class="nav-list-item"><a href="#">Accessories</a></li>
-            <li class="nav-list-item"><a href="#">Hoodie</a></li>
-            <li class="nav-list-item"><a href="#">Shoes</a></li>
-            <li class="nav-list-item"><a href="#">Hat</a></li>
+            <li class="nav-list-item"><a href="{{route('category')}}/?category=t-shirts">T-Shirts</a></li>
+            <li class="nav-list-item"><a href="{{route('category')}}/?category=sweatshirts">Sweatshirts</a></li>
+            <li class="nav-list-item"><a href="{{route('category')}}/?category=accessories">Accessories</a></li>
+            <li class="nav-list-item"><a href="{{route('category')}}/?category=hoodie">Hoodie</a></li>
+            <li class="nav-list-item"><a href="{{route('category')}}/?category=shoes">Shoes</a></li>
+            <li class="nav-list-item"><a href="{{route('category')}}/?category=hat">Hat</a></li>
             <li class="nav-list-item"><a href="#">Collections</a></li>
-            <li class="nav-list-item"><a class="" href="/products">
+            <li class="nav-list-item"><a class="" href="{{route('sales')}}">
                     <img src="{{asset("svg/sale-mark.svg")}}" alt="">SALE</a></li>
         </ul>
     </nav>
