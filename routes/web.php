@@ -54,3 +54,7 @@ Route::get('/returnPolicy', function () {
 Route::get('/shippingPolicy', function () {
     return view('shippingPolicy');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
