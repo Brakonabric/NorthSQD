@@ -42,7 +42,7 @@
                 <h4>Contacts</h4>
                 <ul>
                     <li>
-                        <a href="https://www.google.lv/maps/place/Uriekstes+iela+2A,+Zieme%C4%BCu+rajons,+R%C4%ABga,+LV-1005/@56.9895222,24.1091361,15z/data=!3m1!4b1!4m6!3m5!1s0x46eecf7557626a35:0xdcf974b277b9432b!8m2!3d56.9895109!4d24.1194144!16s%2Fg%2F11bw3z9_t5?entry=ttu">
+                        <a href="ttps://www.google.com/maps?q=Magebit+Riga" target="_blank">
                             <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="">2a Uriekstes,
                             Riga</a>
                     </li>

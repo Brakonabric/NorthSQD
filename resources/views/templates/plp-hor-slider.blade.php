@@ -11,6 +11,9 @@
                 <div class="product-wrapper">
                     <div class="image-container">
                         <img class="product-image" src="{{asset($item->imagePath)}}" alt={{ $item->name }}>
+                        @if($item->discount !== null && $item->discount > 0)
+                            <p class="sale-mark">SALE</p>
+                            @endif
                     </div>
                     <h3 class="name">
                         {{$item->name}}

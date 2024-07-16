@@ -23,6 +23,7 @@
 }
 
 .product-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,6 +35,12 @@
     background-color: #F5F5F5;
     border-radius: 5%;
 }
+
+.image-container {
+    position: relative;
+    display: flex;
+}
+
 
 .name {
     display: flex;
@@ -64,6 +71,19 @@
     gap: 10px;
     align-items: center;
     margin: 0;
+}
+
+.sale-mark {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+    background: #2CC354;
+    padding: 5px 10px;
+    border-radius: 2px 2px 2px 10px;
+    font-weight: bold;
+    width: 40px;
 }
 
 @media(max-width: 768px) {
