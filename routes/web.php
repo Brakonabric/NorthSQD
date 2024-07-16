@@ -59,3 +59,7 @@ Route::get('/profile',[UserController::class, 'profile'])->middleware('auth')->n
 Route::get('/shippingPolicy', function () {
     return view('shippingPolicy');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
