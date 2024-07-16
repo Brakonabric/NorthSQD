@@ -46,5 +46,7 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('saveCart');
 Route::get('/error', function () {
     return view('error');
 });
-
+Route::get('/returnPolicy', function () {
+    return view('returnPolicy');
+});
 
