@@ -11,12 +11,12 @@
                                 Riga</strong></a>
                     </li>
                     <li>
-                        <a href="tel:+371 25000666"><img class="footer-svg" src="svg/Icon_Phone.svg" alt=""><strong>+371
+                        <a href="tel:+371 25000666"><img class="footer-svg" src="{{asset("svg/Icon_Phone.svg")}}" alt=""><strong>+371
                                 25000666</strong>
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="svg/Icon_Mail.svg"
+                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset("svg/Icon_Mail.svg")}}" alt
                                                                  alt=""><strong>info@northsquad.lv</strong></a>
                     </li>
                     <li class="social-svg">
@@ -64,12 +64,12 @@
             <div class="footer-col">
                 <h4>Categories</h4>
                 <ul>
-                    <li><a href="{{route('category')}}/?category=t-shirt">T-Shirts</a></li>
-                    <li><a href="{{route('category')}}?category=sweatshirt">Sweatshirts</a></li>
-                    <li><a href="{{route('category')}}?category=accessories">Accessories</a></li>
-                    <li><a href="{{route('category')}}?category=hoodie">Hoodie</a></li>
-                    <li><a href="{{route('category')}}?category=shoes">Shoes</a></li>
-                    <li><a href="{{route('category')}}?category=hat">Hat</a></li>
+                    <li><a href="{{route('category')}}/?category=t-shirts">T-Shirts</a></li>
+                    <li><a href="{{route('category')}}/?category=sweatshirts">Sweatshirts</a></li>
+                    <li><a href="{{route('category')}}/?category=accessories">Accessories</a></li>
+                    <li><a href="{{route('category')}}/?category=hoodie">Hoodie</a></li>
+                    <li><a href="{{route('category')}}/?category=shoes">Shoes</a></li>
+                    <li><a href="{{route('category')}}/?category=hat">Hat</a></li>
                 </ul>
             </div>
             <div class="footer-col">
