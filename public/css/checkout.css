@@ -1,0 +1,40 @@
+#orderform {
+    display: flex;
+    flex-direction: column;
+}
+#orderform input,#orderform label {
+    display:block;
+}
+#orderform label {
+    margin-top: 20px;
+}
+#orderform input,#orderform select{
+    width: 90%;
+    min-height: 40px;
+    border-radius: 10px;
+    border: 2px solid #ececec;
+    background-color: white;
+    padding-left: 3%;
+    padding-right: 3%; 
+    padding: 3%,3%,3%,3%;
+}
+#orderform input:focus {
+    outline: none;
+    border: 2px solid #414141;
+}
+#orderform .submit {
+    background-color: #DB3998;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    min-height: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.bold{
+    font-weight: bold;
+}
+#orderform .checkbox{
+    display: inline-block;
+}

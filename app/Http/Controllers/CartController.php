@@ -40,7 +40,6 @@ class CartController extends Controller
     public function showCheckout(){
         $cart = session()->get('cart');
         $user = Auth::user();
-        $userDBCart = Cart::where('user_id',$user->id)->first();
         $order=[
             'cart'=>$cart,
             'user'=>$user
