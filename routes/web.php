@@ -26,6 +26,8 @@ Route::post('/products/add-product',[ProductListController::class, 'addProduct']
 Route::get('/products/add-product',[ProductListController::class, 'showAddProductForm']);
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
+Route::get('/search',[ProductListController::class, 'search'])->name('search');
+
 Route::get('/',[ProductListController::class, 'homeSlider']);
 
 
