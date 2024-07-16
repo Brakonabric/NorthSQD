@@ -3,7 +3,7 @@
 <div class="plp-hor-slider">
     <div class="sales-title">
         <h2 class="top-sales">TOP sales</h2>
-        <a href="#" class="shop-all">SHOP ALL</a>
+        <a href="{{ route('products')}}" class="shop-all">SHOP ALL</a>
     </div>
     <div class="scroll-container">
         @foreach($items as $item)

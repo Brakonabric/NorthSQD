@@ -28,6 +28,9 @@ Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
 Route::get('/',[ProductListController::class, 'homeSlider'])->name('home');;
 Route::get('/search',[ProductListController::class, 'search'])->name('search');
+Route::get('/collection',[ProductListController::class, 'collection'])->name('collection');
+Route::get('/category',[ProductListController::class, 'category'])->name('category');
+Route::get('/sales',[ProductListController::class, 'sales'])->name('sales');
 
 
 Route::get('/sign-up', [UserController::class, 'showRegistrationForm']);
@@ -40,13 +43,13 @@ Route::get('/addToCart/{id}/', [CartItemController::class, 'addToCart'])->name('
 Route::get('/removeFromCart/{id}', [CartItemController::class, 'removeFromCart'])->name('removeFromCart');
 
 Route::get('/saveCart', [CartController::class, 'saveCart'])->name('saveCart');
-Route::get('/cart', [CartController::class, 'showCart'])->name('saveCart');
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart');
 
 Route::get('/error', function () {
     return view('error');
 });
 
-Route::get('/profile',[UserController::class, 'profile'])->middleware('auth');
+Route::get('/profile',[UserController::class, 'profile'])->middleware('auth')->name('profile');
 
 
 
