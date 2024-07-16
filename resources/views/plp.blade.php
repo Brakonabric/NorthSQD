@@ -11,7 +11,10 @@
     <title>Products</title>
 </head>
 <body>
-
+    <form action="{{ route('search') }}" method="GET">
+        <input type="text" name="q" placeholder="Search Products">
+        <button type="submit">Search</button>
+    </form>
 <h2>TOP sales</h2>
 <strong><a href="" class="showall">Show all</a></strong>
 
@@ -28,26 +31,6 @@
                 <img src="{{asset($item->imagePath)}}" alt={{ $item->name }}>
             </div>
 
-            {{-- <div class="item-detail">
-                <div class="label description">Description:</div>
-                <div>{{$item->description}}</div>
-            </div> --}}
-            {{-- <div class="item-detail">
-                <div class="label category">Category:</div>
-                <div>{{$item->category}}</div>
-            </div>
-            <div class="item-detail">
-                <div class="label stock">In Stock:</div>
-                <div>{{$item->in_stock}}</div>
-            </div>
-            <div class="item-detail">
-                <div class="label size">Size:</div>
-                <div>{{$item->size}}</div>
-            </div>
-            <div class="item-detail">
-                <div class="label weight">Weight:</div>
-                <div>{{$item->weight}}</div>
-            </div> --}}
 
             <div class="item-detail name">
                 <div class="label">{{$item->name}}</div>
@@ -93,6 +76,9 @@
 
         </div>
     @endforeach
+</div>
+<div class = "pages">
+{{ $items->links() }}
 </div>
 <script src="scripts.js"></script>
 

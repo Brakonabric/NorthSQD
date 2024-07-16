@@ -27,6 +27,7 @@ Route::get('/products/add-product',[ProductListController::class, 'showAddProduc
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
 
 Route::get('/',[ProductListController::class, 'homeSlider'])->name('home');;
+Route::get('/search',[ProductListController::class, 'search'])->name('search');
 
 
 Route::get('/sign-up', [UserController::class, 'showRegistrationForm']);
