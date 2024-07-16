@@ -61,7 +61,7 @@ class CollectionLinass extends Seeder
 
 ",
                 'price' => 20.00,
-                'category' => 'T-Shirt',
+                'category' => 'T-Shirts',
                 'collection' => 'Linass',
                 'imagePath' => 'images\Linass\T-Shirt_Linass_white_1.png',
                 'weight' => 1.2,
@@ -130,7 +130,7 @@ class CollectionLinass extends Seeder
 
 ",
                 'price' => 30.00,
-                'category' => 'Sweatshirt',
+                'category' => 'Sweatshirts',
                 'collection' => 'Linass',
                 'imagePath' => 'images\Linass\Sweatshirt_Linass_white_1.png',
                 'weight' => 2.9,

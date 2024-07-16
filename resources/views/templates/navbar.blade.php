@@ -32,8 +32,8 @@
             <ul>
                 <li ><h3>Categories</h3></li>
                 <li><a href="">Collections</a></li>
-                <li><a href="{{route('category')}}/?category=t-shirt">T-Shirts</a></li>
-                <li><a href="{{route('category')}}/?category=sweatshirt">Sweatshirts</a></li>
+                <li><a href="{{route('category')}}/?category=t-shirts">T-Shirts</a></li>
+                <li><a href="{{route('category')}}/?category=sweatshirts">Sweatshirts</a></li>
                 <li><a href="{{route('category')}}/?category=accessories">Accessories</a></li>
                 <li><a href="{{route('category')}}/?category=hoodie">Hoodie</a></li>
                 <li><a href="{{route('category')}}/?category=shoes">Shoes</a></li>
@@ -55,8 +55,8 @@
 <div class="navbar-table">
     <nav>
         <ul>
-            <li class="nav-list-item"><a href="{{route('category')}}/?category=t-shirt">T-Shirts</a></li>
-            <li class="nav-list-item"><a href="{{route('category')}}/?category=sweatshirt">Sweatshirts</a></li>
+            <li class="nav-list-item"><a href="{{route('category')}}/?category=t-shirts">T-Shirts</a></li>
+            <li class="nav-list-item"><a href="{{route('category')}}/?category=sweatshirts">Sweatshirts</a></li>
             <li class="nav-list-item"><a href="{{route('category')}}/?category=accessories">Accessories</a></li>
             <li class="nav-list-item"><a href="{{route('category')}}/?category=hoodie">Hoodie</a></li>
             <li class="nav-list-item"><a href="{{route('category')}}/?category=shoes">Shoes</a></li>

@@ -18,8 +18,9 @@ use DB;
 class ProductListController extends Controller
 {
     public function showall():View {
+        $itemCount = Item::get() -> count();
         $items = Item::paginate(10);
-        return view('plp',['items'=>$items]);
+        return view('plp',['items'=>$items,'itemCount' => $itemCount,'title' => 'SHOP ALL']);
     }
     public function search(Request $request):View {
 //        if($request->category){
@@ -34,19 +35,22 @@ class ProductListController extends Controller
 
     public function category(Request $request):View {
         $word=$request->category;
+        $itemCount = Item::where('category',$word) -> count();
         $items = Item::where('category',$word)->paginate(10);
-        return view('plp',['items'=>$items]);
+        return view('plp',['items'=>$items, 'itemCount' => $itemCount, 'title' => $word ]);
     }
 
     public function collection(Request $request):View {
-            $word = $request->collection;
+        $word = $request->collection;
+        $itemCount = Item::where('category',$word) -> count();
         $items = Item::where('collection',$word)->paginate(10);
-        return view('plp',['items'=>$items]);
+        return view('plp',['items'=>$items, 'itemCount' => $itemCount, 'title' => $word ]);
     }
 
-    public function sales(Request $request):View {
+    public function sales():View {
         $items = Item::whereNotNull('discount')->paginate(10);
-        return view('plp', ['items' => $items]);
+        $itemCount = Item::whereNotNull('discount') -> count();
+        return view('plp', ['items' => $items,  'itemCount' => $itemCount, 'title' => 'SALE' ]);
     }
 
 
