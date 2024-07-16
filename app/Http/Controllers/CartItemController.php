@@ -17,8 +17,8 @@ class CartItemController extends Controller
     public function addToCart(Request $request)
     {
         $id=$request->id;
-        $size=$request->size;
-        $color=$request->color;
+        $size=$request->query('size');
+        $color=$request->query('color');
         $cart = session()->get('cart');
         $item = Item::find($id);
         $cart_item_id=session()->get('cart_item_id');

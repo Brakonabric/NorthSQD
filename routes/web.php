@@ -21,7 +21,6 @@ use App\Http\Controllers\CartController;
 //})->name('home');
 
 Route::get('/products',[ProductListController::class, 'showall'])->name('products');
-Route::get('/products/fill',[ProductListController::class, 'fill'])->middleware('auth');
 Route::post('/products/add-product',[ProductListController::class, 'addProduct'])->name('addProduct');
 Route::get('/products/add-product',[ProductListController::class, 'showAddProductForm']);
 Route::get('/products/{id}',[ProductListController::class, 'getProduct']);
@@ -33,9 +32,9 @@ Route::get('/category',[ProductListController::class, 'category'])->name('catego
 Route::get('/sales',[ProductListController::class, 'sales'])->name('sales');
 
 
-Route::get('/sign-up', [UserController::class, 'showRegistrationForm']);
+Route::get('/sign-up', [UserController::class, 'showRegistrationForm'])->middleware('guest');;
 Route::post('/sign-up', [UserController::class, 'register'])->name('register');
-Route::get('/login', [UserController::class, 'showLoginForm']);
+Route::get('/login', [UserController::class, 'showLoginForm'])->middleware('guest');
 Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::get('/logout', [UserController::class, 'logout']);
 
@@ -49,9 +48,16 @@ Route::get('/error', function () {
     return view('error');
 });
 
+
+Route::get('/profile',[UserController::class, 'profile'])->middleware('auth')->name('profile');
+
+Route::get('/checkout',[CartController::class, 'showCheckout']);
+Route::post('/checkout',[CartController::class, 'checkout'])->name('checkout');
+
 Route::get('/returnPolicy', function () {
     return view('returnPolicy');
 });
+
 
 Route::get('/profile',[UserController::class, 'profile'])->middleware('auth')->name('profile');
 

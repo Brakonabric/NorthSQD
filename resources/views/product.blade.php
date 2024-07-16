@@ -74,8 +74,8 @@
         <!-- CARD BTN -->
         <div class="card__footer">
             <div class="card__actions">
-                <button class="submit-btn">
-                    <a href="{{ route('addToCart', $items['item']->id) }}">Add to Cart</a>
+                <button class="submit-btn" onclick="addToCart({{$items['item']->id}})">
+                    {{-- <a href="{{ route('addToCart', $items['item']->id) }}">Add to Cart</a> --}}
                 </button>
             </div>
             <!-- CARD DESCRIPTIONS -->
@@ -107,4 +107,8 @@
 </div>
 @include('templates/footer')
 </body>
+<script>
+    // Pass the route URL to a JavaScript variable
+    let addToCartUrl = "{{ route('addToCart', $items['item']->id) }}";
+</script>
 </html>
