@@ -1,19 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to calculate discounted price and update DOM
-    const calculateDiscountedPrice = () => {
-        const originalPriceElement = document.querySelector('.original-price');
-        const discountElement = document.querySelector('.discount');
-
-        const originalPrice = parseFloat(originalPriceElement.textContent.replace('€ ', ''));
-        const discountAmount = parseFloat(discountElement.textContent.replace('€', ''));
-
-        const discountedPrice = originalPrice - discountAmount;
-
-        originalPriceElement.textContent = `€ ${originalPrice.toFixed(2)}`;
-        discountElement.textContent = `€ ${discountedPrice.toFixed(2)}`;
-    };
-
-    // Function to activate tabs
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to activate tabs Оставить
     const activateTabs = () => {
         const tabs = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
@@ -33,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tabs[0].click(); // Activate the first tab initially
     };
 
-    // Function to handle thumbnail interaction
+    // Function to handle thumbnail interaction Оставить
     const activateThumbnails = () => {
         const thumbnails = document.querySelectorAll('.thumbnail');
         const mainImage = document.querySelector('.card__image');
@@ -50,6 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
+    const enableSubmit = () => {
+        const addToCartButton = document.querySelector('.submit-btn');
+        addToCartButton.textContent = 'Add to Cart';
+        addToCartButton.classList.remove('out-of-stock')
+    }
+
+    const disableSubmit = () => {
+        const addToCartButton = document.querySelector('.submit-btn');
+        addToCartButton.textContent = 'Out of Stock';
+        addToCartButton.classList.add('out-of-stock')
+    }
+
     // Function to handle size selection
     const activateSizeSelection = () => {
         const sizeLists = document.querySelectorAll('.sizes');
@@ -58,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const showSizes = (colorId) => {
             sizeLists.forEach(list => {
                 if (list.id === `sizes-${colorId}`) {
+                    enableSubmit()
                     list.style.display = 'block';
                     localStorage.setItem('selectedColor', colorId);
                 } else {
@@ -66,16 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Update main product image to the first image of the selected color
-            const mainImage = document.querySelector('.card__image');
-            const thumbnails = document.querySelectorAll('.thumbnail');
-
-            thumbnails.forEach(thumb => {
-                if (thumb.getAttribute('data-color') === colorId) {
-                    mainImage.src = thumb.getAttribute('data-image');
-                    thumbnails.forEach(t => t.classList.remove('active'));
-                    thumb.classList.add('active');
-                }
-            });
+            // const mainImage = document.querySelector('.card__image');
+            // const thumbnails = document.querySelectorAll('.thumbnail');
+            //
+            // thumbnails.forEach(thumb => {
+            //     if (thumb.getAttribute('data-color') === colorId) {
+            //         mainImage.src = thumb.getAttribute('data-image');
+            //         thumbnails.forEach(t => t.classList.remove('active'));
+            //         thumb.classList.add('active');
+            //     }
+            // });
 
             // Clear selected sizes for other colors
             const currentColor = colorId;
@@ -103,7 +102,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Initialize based on localStorage or default color
         const storedColor = localStorage.getItem('selectedColor');
-        if (storedColor) {
+        const checkForColor = Array.prototype.some.call(colorButtons, function (color) {
+            return color.id === storedColor
+        })
+        if (checkForColor) {
             const selectedButton = document.querySelector(`#${storedColor}`);
             if (selectedButton) {
                 selectedButton.classList.add('selected');
@@ -114,76 +116,55 @@ document.addEventListener('DOMContentLoaded', function() {
             showSizes(colorButtons[0].id);
         }
 
-        // Handle size selection and persistence
+        //Handle size selection and persistence
         const sizeOptions = document.querySelectorAll('.size-option');
         sizeOptions.forEach(option => {
             option.addEventListener('click', () => {
                 const currentColor = option.parentElement.parentElement.id.split('-')[1];
-                const selectedSize = option.getAttribute('data-size');
-                localStorage.setItem('selectedSize',selectedSize);
-                const colorAndSize = `${currentColor}-${selectedSize}`;
-              
+                const selectedSize = option.getAttribute('id')
+                localStorage.setItem('selectedSize', selectedSize);
+                const colorAndSize = `${selectedSize}`;
                 if (option.classList.contains('selected')) {
                     option.classList.remove('selected');
-                    localStorage.removeItem(`selected_size_${colorAndSize}`);
                 } else {
                     sizeOptions.forEach(opt => {
                         if (opt.id.startsWith(currentColor)) {
                             opt.classList.remove('selected');
-                            localStorage.removeItem(`selected_size_${opt.id}`);
                         }
                     });
-
                     option.classList.add('selected');
-                    localStorage.setItem(`selected_size_${colorAndSize}`, 'true');
                 }
-
                 // Update Add to Cart button state
+                console.log(localStorage)
                 updateAddToCartButton();
             });
         });
-        
-        // Function to update Add to Cart button state based on selected size
+
+        // Function to update Add to Cart button state based on selected size !!!! переработать
         const updateAddToCartButton = () => {
-            const addToCartButton = document.querySelector('.submit-btn a');
             const selectedSizeElement = document.querySelector('.size-option.selected');
-    
             if (selectedSizeElement && selectedSizeElement.classList.contains('size-out-stock')) {
-                addToCartButton.classList.add('disabled');
-                addToCartButton.textContent = 'Out of Stock';
-                addToCartButton.removeEventListener('click', handleAddToCart);
+                disableSubmit()
             } else {
-                addToCartButton.classList.remove('disabled');
-                addToCartButton.textContent = 'Add to Cart';
-                addToCartButton.addEventListener('click', handleAddToCart);
+                enableSubmit()
             }
         };
-
-        updateAddToCartButton();
+        // updateAddToCartButton();
     };
-
-    // Function to handle Add to Cart action
-    const handleAddToCart = () => {
-        console.log('Adding product to cart...');
-    };
-
-    calculateDiscountedPrice();
     activateTabs();
     activateThumbnails();
     activateSizeSelection();
 });
 
-
-
-    function addToCart(id){
+function addToCart(id) {
     let color = localStorage.getItem('selectedColor');
-    let size = null;
-        fetch(
-        addToCartUrl + '?' + new URLSearchParams({color: color}).toString()
+    let size = localStorage.getItem('selectedSize');
+    fetch(
+        addToCartUrl + '?' + new URLSearchParams({color: color, size: size}).toString()
     ).then(response => {
-        if(response.redirected) {
+        if (response.redirected) {
             window.location.href = response.url;
         }
-    });
-    
+    })
+    localStorage.clear()
 }
