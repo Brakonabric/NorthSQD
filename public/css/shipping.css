@@ -1,0 +1,22 @@
+.caption-text {
+    margin-top: 4px;
+    display: flex;
+    font-size: 0.75em;
+    color: #727274;
+    justify-content: center;
+}
+
+.shipping-options-item {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.shipping-logo {
+    display: flex;
+    width: 90px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 6px;
+    border-color: #d0d0d0;
+    justify-content: center;
+}

@@ -3,7 +3,7 @@
 <div class="plp-hor-slider">
     <div class="sales-title">
         <h2 class="top-sales">TOP sales</h2>
-        <a href="#" class="shop-all">SHOP ALL</a>
+        <a href="{{ route('products')}}" class="shop-all">SHOP ALL</a>
     </div>
     <div class="scroll-container">
         @foreach($items as $item)
@@ -11,6 +11,9 @@
                 <div class="product-wrapper">
                     <div class="image-container">
                         <img class="product-image" src="{{asset($item->imagePath)}}" alt={{ $item->name }}>
+                        @if($item->discount !== null && $item->discount > 0)
+                            <p class="sale-mark">SALE</p>
+                            @endif
                     </div>
                     <h3 class="name">
                         {{$item->name}}

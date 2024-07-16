@@ -61,7 +61,7 @@ class CollectionKaterina extends Seeder
 
 ",
                 'price' => 20.00,
-                'category' => 'T-Shirt',
+                'category' => 'T-Shirts',
                 'collection' => 'Katerina',
                 'imagePath' => 'images\Katerina\T-Shirt_Katerina_white_5.png',
                 'weight' => 1.2,
@@ -123,7 +123,7 @@ class CollectionKaterina extends Seeder
                 
 ",
                 'price' => 30.00,
-                'category' => 'Sweatshirt',
+                'category' => 'Sweatshirts',
                 'collection' => 'Katerina',
                 'imagePath' => 'images\Katerina\Sweatshirt_Katerina_white_1.png',
                 'weight' => 2.9,
