@@ -104,7 +104,7 @@ a {
 }
 
 .input-wrap input:focus {
-
+    outline: none;
     border: 2px solid #414141;
 }
 
