@@ -60,7 +60,7 @@ class CollectionDeniss extends Seeder
 
 ",
                 'price' => 35.00,
-                'category' => 'T-Shirt',
+                'category' => 'T-Shirts',
                 'collection' => 'Deniss',
                 'imagePath' => 'images/Deniss/T-Shirt_Deniss_gray_1.png',
                 'weight' => 2.5,
@@ -123,7 +123,7 @@ class CollectionDeniss extends Seeder
 
 ",
                 'price' => 30.00,
-                'category' => 'Sweatshirt',
+                'category' => 'Sweatshirts',
                 'collection' => 'Deniss',
                 'imagePath' => 'images/Deniss/Sweatshirt_Deniss_orange_1.png',
                 'weight' => 2.9,

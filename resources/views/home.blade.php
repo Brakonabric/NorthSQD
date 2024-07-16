@@ -23,24 +23,24 @@
             style, warmth, and a touch of adventure.</p>
     </div>
     <div class="link-grid-container">
-        <a href="#" class="link-wrap"
+        <a href="{{route('collection')}}/?collection=linass" class="link-wrap"
            style="background-image: url({{ asset('/images/Linass/Accessories_Linass_white_2.png') }})">
             <h3 class="">LINASS</h3>
         </a>
-        <a href="#" class="link-wrap" style="background-image: url({{ asset('/images/Rodions/Accessories_Rodions_white_1.png') }})">
+        <a href="{{route('collection')}}/?collection=rodions" class="link-wrap" style="background-image: url({{ asset('/images/Rodions/Accessories_Rodions_white_1.png') }})">
             <h3 class="">RODIONS</h3>
         </a>
-        <a href="#" class="link-wrap">
+        <a href="{{route('collection')}}/?collection=matiss" class="link-wrap" style="background-image: url({{ asset('/images/pepe.png') }})">
             <h3 class="">MATISS</h3>
         </a>
-        <a href="#" class="link-wrap" style="background-image: url({{ asset('/images/Katerina/Hoodie_Katerina_white_2.png') }})"> 
+        <a href="{{route('collection')}}/?collection=katerina" class="link-wrap" style="background-image: url({{ asset('/images/Katerina/Hoodie_Katerina_white_2.png') }})">
             <h3 class="">KATERINA</h3>
         </a>
-        <a href="#" class="link-wrap"
+        <a href="{{route('collection')}}/?collection=deniss" class="link-wrap"
            style="background-image: url({{ asset('/images/Deniss/Shoes_Deniss_white_1.png') }})">
             <h3 class="">DENISS</h3>
         </a>
-        <a href="#" class="link-wrap" style="background-image: url({{ asset('/images/Katerina/Hat_Katerina_black_3.png') }})">
+        <a href="{{route('sales')}}" class="link-wrap" style="background-image: url({{ asset('/images/Katerina/Hat_Katerina_black_3.png') }})">
             <h3 class="top-sales-in-coll">TOP SALES</h3>
         </a>
     </div>

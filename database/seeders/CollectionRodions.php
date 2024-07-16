@@ -54,7 +54,7 @@ Embrace the spirit of the North with NorthSQD.",
 
 Embrace sustainable fashion with the Organic Cotton T-Shirt by NorthSQD, and let the spirit of the northern lights illuminate your style.",
                 'price' => 20.00,
-                'category' => 'T-Shirt',
+                'category' => 'T-Shirts',
                 'collection' => 'Rodions',
                 'imagePath' => 'images\Rodions\T-Shirt_Rodions_white_1.png',
                 'weight' => 1.2,
@@ -115,7 +115,7 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
 
 ",
                 'price' => 30.00,
-                'category' => 'Sweatshirt',
+                'category' => 'Sweatshirts',
                 'collection' => 'Rodions',
                 'imagePath' => 'images\Rodions\Sweatshirt_Rodions_white_1.png',
                 'weight' => 2.9,
