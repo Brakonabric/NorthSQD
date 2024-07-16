@@ -49,7 +49,13 @@ Route::get('/error', function () {
     return view('error');
 });
 
+Route::get('/returnPolicy', function () {
+    return view('returnPolicy');
+});
+
 Route::get('/profile',[UserController::class, 'profile'])->middleware('auth')->name('profile');
 
 
-
+Route::get('/shippingPolicy', function () {
+    return view('shippingPolicy');
+});
