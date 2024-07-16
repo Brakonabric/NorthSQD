@@ -182,7 +182,7 @@ class CollectionDeniss extends Seeder
 
 ",
                 'price' => 15.00,
-                'category' => 'Hoodie',
+                'category' => 'Hat',
                 'collection' => 'Deniss',
                 'imagePath' => 'images/Deniss/Hat_Deniss_white_2.png',
                 'weight' => 3.2,
