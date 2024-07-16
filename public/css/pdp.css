@@ -245,6 +245,33 @@ button {
     margin-bottom: 40px;
 }
 
+.submit-btn button {
+    background-color: #db3998;
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.submit-btn button.out-of-stock {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.submit-btn button:hover:not(.out-of-stock) {
+    background-color: grey;
+}
+
 .submit-btn a {
     color: #fff;
     font-size: 16px;
