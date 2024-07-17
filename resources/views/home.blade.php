@@ -13,6 +13,7 @@
           rel="stylesheet">
 </head>
 <body>
+@include('templates/cookie')
 @include('templates/navbar')
 <div class="emptyModulePlace">EMPTY</div>
 @include('templates.plp-hor-slider')
