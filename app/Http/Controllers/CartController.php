@@ -9,6 +9,8 @@ use Illuminate\Http\RedirectResponse;
 use App\Models\Item;
 use App\Models\CartItem;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
 
 class CartController extends Controller
 {
@@ -45,5 +47,22 @@ class CartController extends Controller
             'user'=>$user
         ];
         return view('checkout',['order'=>$order]);
+    }
+    public function checkout(Request $request){
+        $checkoutData = $request->validate([
+            'pacomat' => ['required'],
+            'terminal' => ['required'],
+            'name' => ['required'],
+            'surname' => ['required'],
+            'phone' => ['required','digits:8'],
+            'payment' => ['required'],
+            'policyAccept' => ['accepted'],
+            'termsAccept' => ['accepted']
+        ]);
+        $cart = session()->get('cart');
+        $cart=[];
+        dd($request);
+        session()->put('cart', $cart);
+        return redirect(route('cart'));
     }
 }

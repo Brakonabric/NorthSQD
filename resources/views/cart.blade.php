@@ -57,7 +57,9 @@
         <p class ="totalNumber" >€{{$subtotal+1.99}}</p>
         <hr>
         </div>
+        <form action={{ route('showCheckout')}}>
         <button class="submit">Continue</button>
+        </form>
     </div>
 </body>
 </html>
