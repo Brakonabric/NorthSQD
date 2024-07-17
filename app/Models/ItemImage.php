@@ -14,7 +14,6 @@ class ItemImage extends Model
         'image4',
         'image5',
         'item_id',
-        
     ];
     public $timestamps = false;
 }

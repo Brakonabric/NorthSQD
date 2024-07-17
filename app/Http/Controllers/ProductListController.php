@@ -72,17 +72,19 @@ class ProductListController extends Controller
             $colors = ItemColor::where('item_id', $id)->get();
             // reset($colors);
             // dd($colors[0]->id);
+      
             $sizes=[];
+            $images=[];
             foreach ($colors as $color) {
                 $gottenSizes = ItemSize::where('color_id', $color->id)->get();
-                $images = ItemImage::where('color_id', $color->id)->get();
+                $gottenImages = ItemImage::where('color_id', $color->id)->get();
+
                 if($gottenSizes){
-                $colorSize = [
-                    'color' => $color->color,
-                    'sizes' => $gottenSizes,
-                ];
                 $sizes[$color->color]=$gottenSizes;
-            }
+                }
+                if($gottenImages){
+                    $images[$color->color]=$gottenImages;
+                }
             }
 
 

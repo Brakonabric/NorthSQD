@@ -16,6 +16,7 @@ class Item extends Model
         'imagePreview',
         'weight',
         'discount',
+        'imageCount'
     ];
     public $timestamps = false;
 }

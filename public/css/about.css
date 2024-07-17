@@ -1,7 +1,17 @@
 .pink {
     color: #DB3998;
+    margin-bottom: -16px;
 }
 
-.about-us p, h3 {
-text-align: center;
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.about-grid {
+    width: 400px;
+    text-align: center;
 }
