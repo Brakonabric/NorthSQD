@@ -69,8 +69,10 @@ class ProductListController extends Controller
         catch(\Exception $e){
             return redirect('/error');
         }
-            $images = ItemImage::where('color_id', $id)->get();
             $colors = ItemColor::where('item_id', $id)->get();
+            // reset($colors);
+            // dd($colors[0]->id);
+            $images = ItemImage::where('color_id', $colors[0]->id)->get();
             $sizes=[];
             foreach ($colors as $color) {
                 $gottenSizes = ItemSize::where('color_id', $color->id)->get();

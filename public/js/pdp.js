@@ -158,7 +158,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function addToCart(id) {
     let color = localStorage.getItem('selectedColor');
-    let size = localStorage.getItem('selectedSize');
+    let size = localStorage.getItem('selectedSize').split('-')[1];
+    console.log(color, size)
     fetch(
         addToCartUrl + '?' + new URLSearchParams({color: color, size: size}).toString()
     ).then(response => {
