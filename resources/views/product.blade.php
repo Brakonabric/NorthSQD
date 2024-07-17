@@ -106,7 +106,6 @@
             <div class="tab-contents">
                 <div class="tab-content tab-content--active" data-index="0">
                     <p>{!! $items['item']->description !!}</p>
-                    <!-- Additional details content here -->
                 </div>
                 <div class="tab-content" data-index="1">
                     <p>View our full <a href="#">shipping information.</a></p>

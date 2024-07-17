@@ -204,7 +204,7 @@ button {
 
 .size-chooser li:hover,
 .size-chooser li.selected {
-    border: 2px solid #2cc354;
+    border: 1px solid #2cc354;
     font-weight: bold;
 }
 
