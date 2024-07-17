@@ -69,9 +69,12 @@ class CartController extends Controller
             'surname' => $request->surname,
             'phone' => $request->phone,
             'payment' => $request->payment,
-            'cost' => $request->cost
+            'cost' => ((double)$request->cost+((double)($request->pacomat=='latvijasPasts' ? 2.99 : 1.99)))
         ]);
         $cart = session()->get('cart');
+        if(!$cart){
+            return redirect('/error');
+        }
         foreach($cart as $id){
             OrderItem::create([
                 'item_id' => $id['id'],
@@ -80,11 +83,13 @@ class CartController extends Controller
                 'order_id' => $order->id
             ]);
         }
+        $successOrder= [
+            'cart'=>$cart,
+            'checkoutData'=>$checkoutData,
+            'email'=>$request->email
+            ];
         $cart=[];
         session()->put('cart', $cart);
-        return redirect(route('success'));
-    }
-    public function success(){
-        return view('success');
+        return view('success',['order'=>$successOrder]);
     }
 }

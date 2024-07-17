@@ -29,13 +29,13 @@
                             $subtotal += $item['price'] * $item['quantity'];
                         @endphp
                     @endforeach
-                    <p>€{{ $subtotal + 1.99 }}</p>
+                    <p>€{{ $subtotal }}</p>
                     <p><a href={{ route('cart') }}>Show products({{ $quantity }})</a></p>
         </div>
         <div id ="orderformbox">
             <form method="POST" id ='orderform' action="{{ route('checkout') }}">
                 @csrf
-                <input type="hidden" name="cost" id="cost" value={{$subtotal+1.99}}>
+                <input type="hidden" name="cost" id="cost" value={{$subtotal}}>
                 <div class="orderItem">
                     <h2>Delivery</h1>
                         <label for="pacomat" class="bold">Select Pacomat Type</label>
