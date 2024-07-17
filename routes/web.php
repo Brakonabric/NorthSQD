@@ -49,9 +49,8 @@ Route::get('/error', function () {
 });
 
 
-Route::get('/profile',[UserController::class, 'profile'])->middleware('auth')->name('profile');
 
-Route::get('/checkout',[CartController::class, 'showCheckout']);
+Route::get('/checkout',[CartController::class, 'showCheckout'])->name('showCheckout');
 Route::post('/checkout',[CartController::class, 'checkout'])->name('checkout');
 
 Route::get('/returnPolicy', function () {

@@ -1,14 +1,19 @@
+.order-info, #orderform{
+    margin-left: 3%;
+    align-items: center;
+}
 #orderform {
     display: flex;
     flex-direction: column;
 }
 #orderform input,#orderform label {
     display:block;
+    font-size: medium;
 }
 #orderform label {
     margin-top: 20px;
 }
-#orderform input,#orderform select{
+#orderform input:not(.checkbox,.sumbit,.phone),#orderform select{
     width: 90%;
     min-height: 40px;
     border-radius: 10px;
@@ -18,23 +23,115 @@
     padding-right: 3%; 
     padding: 3%,3%,3%,3%;
 }
-#orderform input:focus {
+#orderform select{
+    width: 97.2%;
+    min-height: 46px;
+    font-size: medium;
+}
+#orderform input:focus:not(.phone) {
     outline: none;
     border: 2px solid #414141;
-}
-#orderform .submit {
-    background-color: #DB3998;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    min-height: 40px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-weight: bold;
 }
 .bold{
     font-weight: bold;
 }
-#orderform .checkbox{
+
+#orderform .box-checkbox input,.box-checkbox p{
+
     display: inline-block;
+    vertical-align:middle;
+}
+#orderform .checkbox {
+    width:30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #ececec;
+    background-color: white;
+}
+.shipping-options-item {
+    display: inline-block;
+    margin-right: 16px;
+    cursor:pointer;
+}
+.shipping-options-item p {
+    text-align: center;
+}
+
+.shipping-logo {
+    display: flex;
+    width: 90px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 6px;
+    border-color: #d0d0d0;
+    justify-content: center;
+}
+.payment-options{
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.payment-options-item {
+    width:17%;
+    display: inline-block;
+    cursor:pointer;
+    margin-right:6%;
+}
+.payment-logo {
+    display: flex;
+    border: 1px solid;
+    border-radius: 6px;
+    border-color: #d0d0d0;
+    justify-content: center;
+}
+.payment-logo img{
+    height:20px;
+    padding:5px;
+}
+.shipping-options{
+    margin-top: 20px;
+}
+#orderform a{
+    color:#148EE6;
+    text-decoration: underline;
+    cursor:pointer;
+}
+#orderform input.submit  {
+    background-color: #DB3998;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    min-height: 60px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: large;
+}
+.orderItem{
+    width: 100%;
+}
+.forPhone{
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #ececec;
+    padding-left: 3%;
+    padding-right: 3%; 
+}
+.forPhone:focus-within {
+    border: 2px solid #414141;
+}
+.phone{
+    width: 90%;
+    min-height: 40px;
+    border-radius: 10px;
+    background-color: white;
+    padding-left: 3%;
+    padding-right: 3%; 
+    padding: 3%,3%,3%,3%;
+    border: none;
+    outline: none;
+}
+.phone:focus {
+    border: none;
+    outline: none;
 }
