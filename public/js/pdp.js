@@ -22,8 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to handle thumbnail interaction Оставить
     const activateThumbnails = () => {
         const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.querySelector('.card__image');
+
         thumbnails.forEach(thumb => {
             thumb.addEventListener('click', () => {
+                const imageUrl = thumb.getAttribute('data-image');
+                mainImage.src = imageUrl;
+
                 // Remove 'active' class from all thumbnails and add it to the clicked one
                 thumbnails.forEach(t => t.classList.remove('active'));
                 thumb.classList.add('active');
@@ -47,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const activateSizeSelection = () => {
         const sizeLists = document.querySelectorAll('.sizes');
         const imageLists = document.querySelectorAll('.image-for-color');
-        const previewLists = document.querySelectorAll('.card__slide');
         // Function to show sizes for a specific color
         const showSizes = (colorId) => {
             sizeLists.forEach(list => {
@@ -59,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     list.style.display = 'none';
                 }
             });
-
             imageLists.forEach(list => {
                 if (list.id.split('-')[2] === `${colorId}`) {
                     enableSubmit()
@@ -69,14 +72,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            previewLists.forEach(list => {
-                if (list.id.split('-')[1] === `${colorId}`) {
-                    enableSubmit()
-                    list.style.display = 'block';
-                } else {
-                    list.style.display = 'none';
-                }
-            });
+            // Update main product image to the first image of the selected color
+            // const mainImage = document.querySelector('.card__image');
+            // const thumbnails = document.querySelectorAll('.thumbnail');
+            //
+            // thumbnails.forEach(thumb => {
+            //     if (thumb.getAttribute('data-color') === colorId) {
+            //         mainImage.src = thumb.getAttribute('data-image');
+            //         thumbnails.forEach(t => t.classList.remove('active'));
+            //         thumb.classList.add('active');
+            //     }
+            // });
 
             // Clear selected sizes for other colors
             const currentColor = colorId;
@@ -125,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const currentColor = option.parentElement.parentElement.id.split('-')[1];
                 const selectedSize = option.getAttribute('id')
                 localStorage.setItem('selectedSize', selectedSize);
+                const colorAndSize = `${selectedSize}`;
                 if (option.classList.contains('selected')) {
                     option.classList.remove('selected');
                 } else {
@@ -136,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     option.classList.add('selected');
                 }
                 // Update Add to Cart button state
+                console.log(localStorage)
                 updateAddToCartButton();
             });
         });
@@ -154,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
     activateTabs();
     activateThumbnails();
     activateSizeSelection();
-});"NOTE: FIX THUMBNAILS ACTIVE STATE"
+});
 
 function addToCart(id) {
     let color = localStorage.getItem('selectedColor');
