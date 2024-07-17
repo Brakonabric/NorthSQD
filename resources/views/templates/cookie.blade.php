@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cookies</title>
-    <link rel="stylesheet" href="{{ asset('css/cookie.css') }}">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ asset('css/cookie.css') }}">
+  <script src="{{ asset('js/cookie.js') }}"></script>
 </head>
 <body>
-    <div class="cookie-container">
-        <div class="cookie-col">
-            <div class="cookie-text">
-                <p>This website uses cookies to ensure you get the best experience on our website.</p>
-                <a href="https://www.youtube.com/watch?v=4Ox-vYu9Ee8">Learn more</a>
-            </div>
-            <div class="cookie-btn">
-                <button class="btn-w">Reject All Cookies</button>
-                <button class="btn-g">Accept All Cookies</button>
-            </div>
-        </div>
+  <div class="wrapper">
+    <div class="content">
+      <p>This website uses cookies to ensure you get the best experience on our website.</p>
+      <a href="https://www.w3schools.com/" class="text">Learn more</a>
+      <div class="buttons">
+        <button class="item item-reject">Reject All Cookies</button>
+        <button class="item item-accept">Accept All Cookies</button>
+      </div>
     </div>
-    
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
