@@ -92,7 +92,9 @@
                     <!-- Additional details content here -->
                 </div>
                 <div class="tab-content" data-index="1">
-                    <p>View our full <a href="#">shipping information.</a></p>
+                    <p>At North Squad, we strive to ensure your shopping experience is seamless and convenient. We exclusively use pakomats for all our deliveries, offering you flexibility and reliability.</p>
+                    <p> All orders are processed within 1–2 business days. Once your order is ready, you will receive a notification with tracking information.</p> 
+                    <p>Returns happen via Omniva Parcel Lockers and takes within approximately 15 calendar days from the date we receive your returned item. If you need to return a product, view our full <a href="#">Return Policy.</a></p>
                     <!-- Shipping and returns content here -->
 
                 </div>
