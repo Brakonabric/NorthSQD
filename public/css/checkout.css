@@ -104,6 +104,7 @@
     background-color: #DB3998;
     color: white;
     border: none;
+    width:100%;
     border-radius: 25px;
     min-height: 60px;
     cursor: pointer;
@@ -118,26 +119,27 @@
     display: flex;
     border-radius: 10px;
     border: 2px solid #ececec;
-    padding-left: 3%;
-    padding-right: 3%; 
+    padding-left: 0%;
+    padding-right: 0%; 
+    width:96.1%;
 }
 .forPhone:focus-within {
     border: 2px solid #414141;
 }
 .phone{
-    width: 90%;
+    width:100%;
     min-height: 40px;
     border-radius: 10px;
     background-color: white;
-    padding-left: 3%;
-    padding-right: 3%; 
+    padding-left: 0%;
+    padding-right: 0%; 
     padding: 3%,3%,3%,3%;
     border: none;
     outline: none;
 }
-.phone img{
-    height:40px;
+.forPhone img{
     margin: 0;
+    border-radius:20px;
 }
 .phone:focus {
     border: none;
