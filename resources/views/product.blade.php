@@ -16,7 +16,7 @@
     <div class="image-container">
         <div class="thumbnails">
             @foreach($items['colors'] as $color)
-                <div class="image-for-color" id="{{$color -> color}}">
+                <div class="image-for-color" id="img-container-{{$color -> color}}">
                     @foreach($items['images'][$color->color] as $image)
                         @php
                             $paths=[$image['image1'],$image['image2'],$image['image3'],$image['image4'],$image['image5']];

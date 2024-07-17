@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to handle size selection
     const activateSizeSelection = () => {
         const sizeLists = document.querySelectorAll('.sizes');
-
+        const imageLists = document.querySelectorAll('.image-for-color');
         // Function to show sizes for a specific color
         const showSizes = (colorId) => {
             sizeLists.forEach(list => {
@@ -59,6 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     enableSubmit()
                     list.style.display = 'block';
                     localStorage.setItem('selectedColor', colorId);
+                } else {
+                    list.style.display = 'none';
+                }
+            });
+            imageLists.forEach(list => {
+                if (list.id.split('-')[2] === `${colorId}`) {
+                    enableSubmit()
+                    list.style.display = 'block';
                 } else {
                     list.style.display = 'none';
                 }
