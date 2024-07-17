@@ -19,7 +19,7 @@ class ProductListController extends Controller
 {
     public function showall():View {
         $itemCount = Item::get() -> count();
-        $items = Item::paginate(10);
+        $items = Item::inRandomOrder() -> paginate(12);
         return view('plp',['items'=>$items,'itemCount' => $itemCount,'title' => 'SHOP ALL']);
     }
     public function search(Request $request):View {
