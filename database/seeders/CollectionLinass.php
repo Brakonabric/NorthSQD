@@ -503,7 +503,7 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'imagePreview' => 'images/Deniss/Sweatshirt_Deniss_orange_1.png',
                 'weight' => 2.9,
                 'discount' => null,
-                'colors' => ['white'],
+                'colors' => ['white', 'orange', 'gray'],
                 'sizes' => ['S','M','L','XL'],
                 'imageCount' => 2
             ],
