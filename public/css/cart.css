@@ -100,12 +100,12 @@ body {
     font-weight: bold;
     width:100%;
 }
-@media (min-width: 575px) {
+@media (min-width: 769px) {
     .cart_items , .totalCost{
-    width: 20%;
+    width: 30%;
 }
 }
-@media (max-width: 574px) {
+@media (max-width: 768px) {
     .cart_items , .totalCost{
         width: 90%;
     }

@@ -1,12 +1,47 @@
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
 
-body{
+.error-box{
+    width:100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-container{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding-top: 20px;
 }
+.bigtext{
+    font-size:5em;
+}
+.error-btn{
+    width:100%;
+}
+.error-btn button{
+    background-color: #DB3998;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    min-height: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+    width:100%;
+    font-weight: bold;
+}
+.orderData{
+    text-align: left;
+}
+
+@media (min-width: 769px) {
+    .error-container{
+        width:30%;
+    }
+}
+@media (max-width: 768px) {
+    .error-container{
+        width:90%;
+    }
+    }
 

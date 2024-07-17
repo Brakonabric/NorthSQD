@@ -8,6 +8,8 @@ use App\Models\Cart;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Item;
 use App\Models\CartItem;
+use App\Models\Order;
+use App\Models\OrderItem;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -52,17 +54,44 @@ class CartController extends Controller
         $checkoutData = $request->validate([
             'pacomat' => ['required'],
             'terminal' => ['required'],
+            'email' =>['email','nullable'],
             'name' => ['required'],
             'surname' => ['required'],
             'phone' => ['required','digits:8'],
             'payment' => ['required'],
             'policyAccept' => ['accepted'],
-            'termsAccept' => ['accepted']
+            'termsAccept' => ['accepted'],
+            'cost' => ['required']
+        ]);
+        $order = Order::create([
+            'delivery' => $request->pacomat,
+            'terminal' => $request->terminal,
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'phone' => $request->phone,
+            'email' =>$request->email,
+            'payment' => $request->payment,
+            'cost' => ((double)$request->cost+((double)($request->pacomat=='latvijasPasts' ? 2.99 : 1.99)))
         ]);
         $cart = session()->get('cart');
+        if(!$cart){
+            return redirect('/error');
+        }
+        foreach($cart as $id){
+            OrderItem::create([
+                'item_id' => $id['id'],
+                'color' => $id['color'],
+                'size' => $id['size'],
+                'order_id' => $order->id
+            ]);
+        }
+        $successOrder= [
+            'cart'=>$cart,
+            'checkoutData'=>$checkoutData,
+            'email'=>$request->email
+            ];
         $cart=[];
-        dd($request);
         session()->put('cart', $cart);
-        return redirect(route('cart'));
+        return view('success',['order'=>$successOrder]);
     }
 }

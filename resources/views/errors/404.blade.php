@@ -8,19 +8,20 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="error-box">
     <div class="error-container">
         <div class="error-col">
-            <h1>404</h1>
+            <h1 class="bigtext">404</h1>
             <h2>Page not found</h2>
             <p>The page you are looking for was moved, removed, renamed, or might never existed</p>
         </div>
         <div class="error-btn">
-            <div class="error-main">
+            <form action={{route('home')}}>
                 <button>Go Home</button>
-            </div>
-            <div class="secret-btn"></div>
+            </form>
         </div>
     </div>
+</div>
     
 </body>
 </html>
