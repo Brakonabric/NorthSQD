@@ -30,6 +30,9 @@
     width:100%;
     font-weight: bold;
 }
+.orderData{
+    text-align: left;
+}
 
 @media (min-width: 769px) {
     .error-container{

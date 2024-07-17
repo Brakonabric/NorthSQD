@@ -17,6 +17,7 @@
                     <h1 class="bigtext">Success</h1>
                     <h2>Order created successfully!</h2>
                 </div>
+                <div class="orderData">
                 <p>Costumer name: {{ $order['checkoutData']['name'] }} {{ $order['checkoutData']['surname'] }}</p>
                 <p>Delivery by: {{$order['checkoutData']['pacomat']}}</p>
                 <p>Delivery to terminal: {{$order['checkoutData']['terminal']}}</p>
@@ -33,6 +34,7 @@
                 <p>Delivery cost: {{$order['checkoutData']['pacomat']=='latvijasPasts' ? 2.99 : 1.99}}</p>
                 <p>Total: {{((double)$order['checkoutData']['cost']+((double)($order['checkoutData']['pacomat']=='latvijasPasts' ? 2.99 : 1.99)))}}</p>
                 <p>Payed with: {{$order['checkoutData']['payment']}}</p>
+            </div>
                 <div class="error-btn">
                     <form action={{ route('home') }}>
                         <button>Go Home</button>

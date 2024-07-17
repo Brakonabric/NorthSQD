@@ -54,6 +54,7 @@ class CartController extends Controller
         $checkoutData = $request->validate([
             'pacomat' => ['required'],
             'terminal' => ['required'],
+            'email' =>['email','nullable'],
             'name' => ['required'],
             'surname' => ['required'],
             'phone' => ['required','digits:8'],
@@ -68,6 +69,7 @@ class CartController extends Controller
             'name' => $request->name,
             'surname' => $request->surname,
             'phone' => $request->phone,
+            'email' =>$request->email,
             'payment' => $request->payment,
             'cost' => ((double)$request->cost+((double)($request->pacomat=='latvijasPasts' ? 2.99 : 1.99)))
         ]);
