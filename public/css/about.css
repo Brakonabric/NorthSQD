@@ -26,6 +26,7 @@
     height: 180px;
     position: flex;
     margin: auto;
+    transition: display 0.5s ease;
 }
 
 .person-image {
