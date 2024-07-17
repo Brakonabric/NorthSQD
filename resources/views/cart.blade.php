@@ -39,7 +39,7 @@
             $subtotal+= $item['price'] * $item['quantity'] ;
             @endphp
         @endforeach
-        @endif
+       
     </div>
     <div class="totalCost">
         <div class="totalCostBox">
@@ -61,5 +61,13 @@
         <button class="submit">Continue</button>
         </form>
     </div>
+    @else
+    <div>
+        <h1>Cart is empty</h1>
+        <form action={{ route('products')}}>
+        <button class="submit">Continue Shopping</button>
+        </form>
+    </div>
+    @endif
 </body>
 </html>

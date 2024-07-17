@@ -8,6 +8,8 @@ use App\Models\Cart;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Item;
 use App\Models\CartItem;
+use App\Models\Order;
+use App\Models\OrderItem;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -57,12 +59,32 @@ class CartController extends Controller
             'phone' => ['required','digits:8'],
             'payment' => ['required'],
             'policyAccept' => ['accepted'],
-            'termsAccept' => ['accepted']
+            'termsAccept' => ['accepted'],
+            'cost' => ['required']
+        ]);
+        $order = Order::create([
+            'delivery' => $request->pacomat,
+            'terminal' => $request->terminal,
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'phone' => $request->phone,
+            'payment' => $request->payment,
+            'cost' => $request->cost
         ]);
         $cart = session()->get('cart');
+        foreach($cart as $id){
+            OrderItem::create([
+                'item_id' => $id['id'],
+                'color' => $id['color'],
+                'size' => $id['size'],
+                'order_id' => $order->id
+            ]);
+        }
         $cart=[];
-        dd($request);
         session()->put('cart', $cart);
-        return redirect(route('cart'));
+        return redirect(route('success'));
+    }
+    public function success(){
+        return view('success');
     }
 }

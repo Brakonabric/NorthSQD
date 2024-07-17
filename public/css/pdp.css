@@ -251,6 +251,7 @@ button {
     font-weight: 800;
     text-decoration: none;
     user-select: none;
+    cursor:pointer;
 }
 
 .out-of-stock {
@@ -331,4 +332,9 @@ hr {
     border: 0;
     height: 2px;
     margin-top: calc(60px + 10vh);
+}
+.surePopUp{
+    position:absolute;
+    background-color: white;
+    border: #000 solid;
 }

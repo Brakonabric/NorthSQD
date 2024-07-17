@@ -79,6 +79,15 @@
         <!-- CARD BTN -->
         <div class="card__footer">
             <div class="card__actions">
+                {{-- <div class="surePopUp">
+                    <h2>Added to cart! Where do you want to go?</h2>
+                    <form method="get" action={{route('home')}}>
+                    <button>Continue shopping</button>
+                    </form>
+                    <form method="get" action={{route('home')}}>
+                    <button>Go to cart</button>
+                    </form>
+                </div> --}}
                 <button class="submit-btn" onclick="addToCart({{$items['item']->id}})">Add to Cart</button>
             </div>
             <!-- CARD DESCRIPTIONS -->

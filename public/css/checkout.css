@@ -2,6 +2,10 @@
     margin-left: 3%;
     align-items: center;
 }
+.order-info a {
+    text-decoration: none;
+    color:#16151599;
+}
 #orderform {
     display: flex;
     flex-direction: column;
@@ -131,7 +135,27 @@
     border: none;
     outline: none;
 }
+.phone img{
+    height:40px;
+    margin: 0;
+}
 .phone:focus {
     border: none;
     outline: none;
 }
+@media (min-width: 769px) {
+    #orderformbox, .order-info{
+        width:40%;
+    }
+    .checkout{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+    }
+}
+@media (max-width: 768px) {
+    #orderformbox, .order-info{
+        width:90%;
+    }
+    }

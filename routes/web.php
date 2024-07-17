@@ -45,13 +45,14 @@ Route::get('/saveCart', [CartController::class, 'saveCart'])->name('saveCart');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart');
 
 Route::get('/error', function () {
-    return view('error');
+    return view('errors.404');
 });
 
 
 
 Route::get('/checkout',[CartController::class, 'showCheckout'])->name('showCheckout');
 Route::post('/checkout',[CartController::class, 'checkout'])->name('checkout');
+Route::get('/success',[CartController::class, 'success'])->name('success');
 
 Route::get('/returnPolicy', function () {
     return view('returnPolicy');
