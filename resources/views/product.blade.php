@@ -15,39 +15,31 @@
 <div class="card">
     <div class="image-container">
         <div class="thumbnails">
+            @php $preview = []; @endphp
             @foreach($items['colors'] as $color)
                 <div class="image-for-color" id="img-container-{{$color -> color}}">
                     @foreach($items['images'][$color->color] as $image)
                         @php
+                            $preview[$color->color] = $image['image1'];
                             $paths=[$image['image1'],$image['image2'],$image['image3'],$image['image4'],$image['image5']];
                         @endphp
                         @foreach($paths as $path)
                             @if($path != null)
                                 <div class="small-img-col">
-                                    <img src="{{ asset($path) }}" alt="{{ $items['item']->name }}" class="thumbnail"
-                                         data-image="{{ asset($path) }}">
+                                    <img src="{{ asset($path) }}" alt="{{ $items['item']->name }}" class="thumbnail">
                                 </div>
                             @endif
                         @endforeach
                     @endforeach
                 </div>
             @endforeach
-            {{--            <div class="small-img-col">--}}
-            {{--                <img src="{{ asset($items['item']->imagePreview) }}" alt="{{ $items['item']->name }}" class="thumbnail"--}}
-            {{--                     data-image="{{ asset($items['item']->imagePreview) }}">--}}
-            {{--            </div>--}}
-            {{--            <div class="small-img-col">--}}
-            {{--                <img src="{{ asset($items['item']->imagePreview) }}" alt="{{ $items['item']->name }}" class="thumbnail"--}}
-            {{--                     data-image="{{ asset($items['item']->imagePreview) }}">--}}
-            {{--            </div>--}}
-            {{--            <div class="small-img-col">--}}
-            {{--                <img src="{{ asset("images/Rodions/T-Shirts_Rodions_lavender_1.png") }}" class="thumbnail"--}}
-            {{--                     data-image="{{ asset("images/Rodions/T-Shirts_Rodions_lavender_1.png") }}" alt="">--}}
-            {{--            </div>--}}
         </div>
-        <div class="card__slide">
-            <img src="{{ asset($items['item']->imagePreview) }}" alt="{{ $items['item']->name }}" class="card__image">
-        </div>
+        @foreach($items['colors'] as $color)
+{{--            FINISH THIS PART AFTER LUNCH--}}
+            <div class="card__slide" id="preview-{{$color -> color}}">
+                <img src="{{ asset($preview[$color->color]) }}" alt="{{ $items['item']->name }}" class="card__image">
+            </div>
+        @endforeach
     </div>
     <div class="content-container">
         <!-- CARD HEADER -->
