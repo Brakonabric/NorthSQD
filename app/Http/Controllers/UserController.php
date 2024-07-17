@@ -70,7 +70,7 @@ class UserController extends Controller
                     "color"=> $product->color,
                     "size"=> $product->size,
                     "price" => $item->price,
-                    "imagePath" => $item->imagePath
+                    "imagePreview" => $item->imagePreview
                 ]];
             
             }
@@ -82,7 +82,7 @@ class UserController extends Controller
                     "color"=> $product->color,
                     "size"=> $product->size,
                     "price" => $item->price,
-                    "imagePath" => $item->imagePath
+                    "imagePreview" => $item->imagePreview
                 ];
             }
                     }

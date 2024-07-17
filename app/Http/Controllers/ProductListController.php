@@ -99,7 +99,7 @@ class ProductListController extends Controller
             'name' => 'required',
             'price' => 'required',
             'category' => 'required',
-            'imagePath' => 'required',
+            'imagePreview' => 'required',
             'size' => 'required',
             'weight' => 'required'
         ]);
@@ -110,7 +110,7 @@ class ProductListController extends Controller
         'price' => $request->price,
         'category' => $request->category,
         #'in_stock' => $request->has('in_stock'),
-        'imagePath' => $request->imagePath,
+        'imagePreview' => $request->imagePreview,
         'weight' => $request->weight,
         'discount' => $request->discount
         ]);

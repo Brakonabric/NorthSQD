@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('item_images', function (Blueprint $table) {
-            $table->longText('image1');
-            $table->longText('image2');
-            $table->longText('image3');
-            $table->longText('image4');
-            $table->longText('image5');
+            $table->longText('image1')->nullable();
+            $table->longText('image2')->nullable();
+            $table->longText('image3')->nullable();
+            $table->longText('image4')->nullable();
+            $table->longText('image5')->nullable();
             $table->unsignedBigInteger('color_id');
             $table->foreign('color_id')->references('id')->on('item_colors')->onDelete('cascade');
         });

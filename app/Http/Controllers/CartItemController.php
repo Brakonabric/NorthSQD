@@ -34,7 +34,7 @@ class CartItemController extends Controller
                 "color"=> $color,
                 "size"=> $size,
                 "price" => $item->price,
-                "imagePath" => $item->imagePath
+                "imagePreview" => $item->imagePreview
             ]];
         session()->put('cart', $cart);
         $cart_item_id++;
@@ -59,7 +59,7 @@ class CartItemController extends Controller
                 "color"=> $color,
                 "size"=> $size,
                 "price" => $item->price,
-                "imagePath" => $item->imagePath
+                "imagePreview" => $item->imagePreview
             ];
         session()->put('cart', $cart);
         $cart_item_id++;

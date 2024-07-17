@@ -13,7 +13,7 @@ class Item extends Model
         'price',
         'category',
         'collection',
-        'imagePath',
+        'imagePreview',
         'weight',
         'discount',
     ];
