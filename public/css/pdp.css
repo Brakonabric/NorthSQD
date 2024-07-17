@@ -115,7 +115,7 @@ button {
     text-transform: uppercase;
 }
 
-.card__subtitle p {
+.card__subtitle {
     font-size: 14px;
     color: #777;
     margin-bottom: 10px;
@@ -338,3 +338,4 @@ hr {
     background-color: white;
     border: #000 solid;
 }
+

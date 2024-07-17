@@ -6,7 +6,7 @@
                 <h2>Contacts</h2>
                 <ul>
                     <li>
-                        <a href="https://www.google.lv/maps/place/Uriekstes+iela+2A,+Zieme%C4%BCu+rajons,+R%C4%ABga,+LV-1005/@56.9895222,24.1091361,15z/data=!3m1!4b1!4m6!3m5!1s0x46eecf7557626a35:0xdcf974b277b9432b!8m2!3d56.9895109!4d24.1194144!16s%2Fg%2F11bw3z9_t5?entry=ttu">
+                        <a href="ttps://www.google.com/maps?q=Magebit+Riga">
                             <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt=""><strong>2a Uriekstes,
                                 Riga</strong></a>
                     </li>
@@ -16,8 +16,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset("svg/Icon_Mail.svg")}}" alt
-                                                                 alt=""><strong>info@northsquad.lv</strong></a>
+                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset("svg/Icon_Mail.svg")}}" alt=""><strong>info@northsquad.lv</strong></a>
                     </li>
                     <li class="social-svg">
                         <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt=""></a>

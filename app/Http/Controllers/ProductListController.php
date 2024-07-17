@@ -60,6 +60,7 @@ class ProductListController extends Controller
     }
 
     public function getProduct($id){
+        $items = Item::inRandomOrder() -> paginate(5);
         try{
         $item = Item::find($id);
         if(empty($item)){
@@ -88,13 +89,13 @@ class ProductListController extends Controller
             }
 
 
-                $items=[
+                $products=[
                     'item'=>$item,
                     'colors'=>$colors,
                     'sizes'=>$sizes,
                     'images'=>$images
                 ];  
-            return view('product',['items'=>$items]);
+            return view('product',['products'=>$products],['items'=>$items]);
         
     }
     public function addProduct(Request $request){

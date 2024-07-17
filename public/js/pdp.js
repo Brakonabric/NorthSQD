@@ -22,12 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to handle thumbnail interaction Оставить
     const activateThumbnails = () => {
         const thumbnails = document.querySelectorAll('.thumbnail');
-        const mainImage = document.querySelector('.card__image');
+        const previewImage = document.querySelectorAll('.card__slide');
 
         thumbnails.forEach(thumb => {
             thumb.addEventListener('click', () => {
                 const imageUrl = thumb.getAttribute('data-image');
-                mainImage.src = imageUrl;
+                previewImage.forEach( div => {
+                    if(div.classList.contains('active')) {
+                        const img = div.querySelector('img');
+                        img.src = imageUrl;
+                    }
+                })
 
                 // Remove 'active' class from all thumbnails and add it to the clicked one
                 thumbnails.forEach(t => t.classList.remove('active'));
@@ -48,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         addToCartButton.classList.add('out-of-stock')
     }
 
+    const previewLists = document.querySelectorAll('.card__slide');
     // Function to handle size selection
     const activateSizeSelection = () => {
         const sizeLists = document.querySelectorAll('.sizes');
@@ -72,17 +78,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            // Update main product image to the first image of the selected color
-            // const mainImage = document.querySelector('.card__image');
-            // const thumbnails = document.querySelectorAll('.thumbnail');
-            //
-            // thumbnails.forEach(thumb => {
-            //     if (thumb.getAttribute('data-color') === colorId) {
-            //         mainImage.src = thumb.getAttribute('data-image');
-            //         thumbnails.forEach(t => t.classList.remove('active'));
-            //         thumb.classList.add('active');
-            //     }
-            // });
+            previewLists.forEach(list => {
+                if (list.id.split('-')[1] === `${colorId}`) {
+                    enableSubmit()
+                    list.classList.add('active')
+                    list.style.display = 'block';
+                } else {
+                    list.classList.remove('active')
+                    list.style.display = 'none';
+                }
+            });
+
 
             // Clear selected sizes for other colors
             const currentColor = colorId;
@@ -143,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     option.classList.add('selected');
                 }
                 // Update Add to Cart button state
-                console.log(localStorage)
                 updateAddToCartButton();
             });
         });
@@ -167,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
 function addToCart(id) {
     let color = localStorage.getItem('selectedColor');
     let size = localStorage.getItem('selectedSize').split('-')[1];
-    console.log(color, size)
     fetch(
         addToCartUrl + '?' + new URLSearchParams({color: color, size: size}).toString()
     ).then(response => {
@@ -175,5 +179,5 @@ function addToCart(id) {
             window.location.href = response.url;
         }
     })
-    localStorage.clear()
 }
+

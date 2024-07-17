@@ -45,6 +45,7 @@
         </a>
     </div>
 </div>
+@include('templates/cookie')
 @include('templates/footer')
 </body>
 </html>
