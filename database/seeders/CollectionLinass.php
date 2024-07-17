@@ -64,7 +64,7 @@ class CollectionLinass extends Seeder
                 'price' => 20.00,
                 'category' => 'T-Shirts',
                 'collection' => 'Linass',
-                'imagePreview' => 'images\Linass\T-Shirt_Linass_white_1.png',
+                'imagePreview' => 'images\Linass\T-Shirts_Linass_white_1.png',
                 'weight' => 1.2,
                 'discount' => 3.01,
                 'colors' => ['white', 'black', 'pink'],
@@ -135,7 +135,7 @@ class CollectionLinass extends Seeder
                 'price' => 30.00,
                 'category' => 'Sweatshirts',
                 'collection' => 'Linass',
-                'imagePreview' => 'images\Linass\Sweatshirt_Linass_white_1.png',
+                'imagePreview' => 'images\Linass\Sweatshirts_Linass_white_1.png',
                 'weight' => 2.9,
                 'discount' => null,
                 'colors' => ['white', 'orange', 'black'],
@@ -206,15 +206,17 @@ class CollectionLinass extends Seeder
                 'description' => "Elevate your style with the Unisex Lace-Up Canvas Shoes by NorthSQD, where fashion meets the enchantment of the northern lights. Crafted for those who seek both comfort and flair, these shoes are designed to make a statement.
 
 The padded collar and tongue create a sleek, eye-catching silhouette, while the soft insole ensures extra comfort on the go. The artistic design, inspired by the mystique of the northern lights, brings a unique touch to your footwear collection. Customize your pair with your logo on the box, insole, and tongue—making sure your brand stands out in every stride.
-
-	100% polyester canvas upper side.
-	Ethylene-vinyl acetate (EVA) rubber outsole.
-	Breathable lining.
-	Padded collar and tongue.
-	Removable insole.
-	White laces.
-	Blank product sourced from China.
-
+<br>
+    <br>Details:
+    <ul class='db-list'>
+	<li>100% polyester canvas upper side.</li>
+	<li>Ethylene-vinyl acetate (EVA) rubber outsole.</li>
+	<li>Breathable lining.</li>
+	<li>Padded collar and tongue.</li>
+	<li>Removable insole.</li>
+	<li>White laces.</li>
+	<li>Blank product sourced from China.</li>
+</ul>
 Embrace the spirit of the North with NorthSQD.",
                 'price' => 45.00,
                 'category' => 'Shoes',
@@ -230,24 +232,27 @@ Embrace the spirit of the North with NorthSQD.",
             [
                 'name' => "Unisex Cotton T-Shirt",
                 'description' => "Introducing the Organic Cotton T-Shirt by NorthSQD—where sustainability meets the enchanting beauty of the northern lights. This high-quality T-shirt is crafted from 100% organic ring-spun cotton, making it the perfect choice for eco-conscious shoppers. With its exceptional comfort, don't be surprised if it quickly becomes your favorite wardrobe staple.
-
-    100% organic ring-spun cotton
-    Fabric weight: 5.3 oz./yd.² (180 g/m²)
-    Single jersey
-    Regular fit
-    Set-in sleeves
-    1 × 1 rib at collar
-    Wide double-needle topstitch on the sleeves and bottom hems
-    Self-fabric neck tape (inside, back of the neck)
-    The fabric of this product is certified by GRS (Global Recycled Standard), OCS (Organic Content Standard), and GOTS (Global Organic Textile Standard)
-    The fabric of this product is OEKO-TEX Standard 100 certified and PETA-Approved Vegan
-    Blank product sourced from Bangladesh
-
+<br>
+    <br>Details:
+    <ul class='db-list'>
+    <li>100% organic ring-spun cotton</li>
+    <li>Fabric weight: 5.3 oz./yd.² (180 g/m²)</li>
+    <li>Single jersey</li>
+    <li>Regular fit</li>
+    <li>Set-in sleeves</li>
+    <li>1 × 1 rib at collar</li>
+    <li>Wide double-needle topstitch on the sleeves and bottom hems</li>
+    <li>Self-fabric neck tape (inside, back of the neck)</li>
+    <li>The fabric of this product is certified by GRS (Global Recycled Standard), OCS (Organic Content Standard), and GOTS (Global Organic Textile Standard)</li>
+    <li>The fabric of this product is OEKO-TEX Standard 100 certified and PETA-Approved Vegan</li>
+    <li>Blank product sourced from Bangladesh</li>
+    </ul>
+       
 Embrace sustainable fashion with the Organic Cotton T-Shirt by NorthSQD, and let the spirit of the northern lights illuminate your style.",
                 'price' => 20.00,
                 'category' => 'T-Shirts',
                 'collection' => 'Rodions',
-                'imagePreview' => 'images\Rodions\T-Shirt_Rodions_white_1.png',
+                'imagePreview' => 'images\Rodions\T-Shirts_Rodions_white_1.png',
                 'weight' => 1.2,
                 'discount' => 3.01,
                 'colors' => ['white', 'black', 'lavender'],
@@ -260,15 +265,18 @@ Embrace sustainable fashion with the Organic Cotton T-Shirt by NorthSQD, and let
                 'description' => "Introducing the NorthSQD All-Over Print Minimalist Backpack—perfect for those who are always on the move, inspired by the ethereal beauty of the northern lights. This spacious backpack is crafted from water-resistant material and offers a stylish yet functional design. With ample storage, including a large inside pocket for a laptop and a hidden pocket for valuables, this backpack is ideal for travelers and daily commuters alike.
 
 Introducing the NorthSQD Tough Case for iPhone®—where durability meets the enchanting spirit of the northern lights. Designed with a dual-layer for extra protection, this case ensures your phone stays safe with an impact-resistant outer shell and an impact-absorbing inner liner. Customize it with your designs to offer customers a stylish yet robust protective case.
-
-    Polycarbonate outer shell
-    Thermoplastic Polyurethane (TPU) inner liner
-    Dual-layer protection
-    Precisely aligned port openings
-    Induction charging compatible
-    Designable edges (3D wrap)
-    Matte or gloss finish
-    Blank product sourced from Korea
+    <br>
+    <br>Details:
+    <ul class='db-list'>
+    <li>Polycarbonate outer shell</li>
+    <li>Thermoplastic Polyurethane (TPU) inner liner</li>
+    <li>Dual-layer protection</li>
+    <li>Precisely aligned port openings</li>
+    <li>Induction charging compatible</li>
+    <li>Designable edges (3D wrap)</li>
+    <li>Matte or gloss finish</li>
+    <li>Blank product sourced from Korea</li>
+    </ul>
 
 Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining practicality with the mystical charm of the northern lights, this case is perfect for those who want to protect their device in style.",
                 'price' => 50.00,
@@ -310,7 +318,7 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'price' => 30.00,
                 'category' => 'Sweatshirts',
                 'collection' => 'Rodions',
-                'imagePreview' => 'images\Rodions\Sweatshirt_Rodions_white_1.png',
+                'imagePreview' => 'images\Rodions\Sweatshirts_Rodions_white_1.png',
                 'weight' => 2.9,
                 'discount' => null,
                 'colors' => ['black', 'green', 'white'],
@@ -435,7 +443,7 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'price' => 35.00,
                 'category' => 'T-Shirts',
                 'collection' => 'Deniss',
-                'imagePreview' => 'images/Deniss/T-Shirt_Deniss_gray_1.png',
+                'imagePreview' => 'images/Deniss/T-Shirts_Deniss_gray_1.png',
                 'weight' => 2.5,
                 'discount' => 5.01,
                 'colors' => ['white', 'black', 'gray'],
@@ -500,10 +508,10 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'price' => 30.00,
                 'category' => 'Sweatshirts',
                 'collection' => 'Deniss',
-                'imagePreview' => 'images/Deniss/Sweatshirt_Deniss_orange_1.png',
+                'imagePreview' => 'images/Deniss/Sweatshirts_Deniss_orange_1.png',
                 'weight' => 2.9,
                 'discount' => null,
-                'colors' => ['white', 'orange', 'gray'],
+                'colors' => ['white', 'orange', 'black'],
                 'sizes' => ['S','M','L','XL'],
                 'imageCount' => 2
             ],
@@ -620,7 +628,7 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'price' => 20.00,
                 'category' => 'T-Shirts',
                 'collection' => 'Katerina',
-                'imagePreview' => 'images\Katerina\T-Shirt_Katerina_white_5.png',
+                'imagePreview' => 'images\Katerina\T-Shirts_Katerina_white_5.png',
                 'weight' => 1.2,
                 'discount' => 3.01,
                 'colors' => ['white', 'black', 'khaki'],
@@ -684,7 +692,7 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'price' => 30.00,
                 'category' => 'Sweatshirts',
                 'collection' => 'Katerina',
-                'imagePreview' => 'images\Katerina\Sweatshirt_Katerina_white_1.png',
+                'imagePreview' => 'images\Katerina\Sweatshirts_Katerina_white_1.png',
                 'weight' => 2.9,
                 'discount' => null,
                 'colors' => ['white', 'black'],
