@@ -16,12 +16,12 @@
     <div class="image-container">
         <div class="thumbnails">
             <div class="small-img-col">
-                <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="thumbnail"
-                     data-image="{{ asset($items['item']->imagePath) }}">
+                <img src="{{ asset($items['item']->imagePreview) }}" alt="{{ $items['item']->name }}" class="thumbnail"
+                     data-image="{{ asset($items['item']->imagePreview) }}">
             </div>
             <div class="small-img-col">
-                <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="thumbnail"
-                     data-image="{{ asset($items['item']->imagePath) }}">
+                <img src="{{ asset($items['item']->imagePreview) }}" alt="{{ $items['item']->name }}" class="thumbnail"
+                     data-image="{{ asset($items['item']->imagePreview) }}">
             </div>
             <div class="small-img-col">
                 <img src="{{ asset("images/Rodions/T-Shirt_Rodions_lavender_1.png") }}" class="thumbnail"
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="card__slide">
-            <img src="{{ asset($items['item']->imagePath) }}" alt="{{ $items['item']->name }}" class="card__image">
+            <img src="{{ asset($items['item']->imagePreview) }}" alt="{{ $items['item']->name }}" class="card__image">
         </div>
     </div>
     <div class="content-container">

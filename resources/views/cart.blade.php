@@ -17,7 +17,7 @@
         @if ($cart)
         @foreach ($cart as $item)
             <div class="item_box">
-                <img src="{{ asset($item['imagePath']) }}" alt="">
+                <img src="{{ asset($item['imagePreview']) }}" alt="">
                 <div class="item_desc">
                     <p class="item_title">{{ $item['name'] }}</p>
                     @if($item['size'])

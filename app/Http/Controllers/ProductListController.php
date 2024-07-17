@@ -19,7 +19,7 @@ class ProductListController extends Controller
 {
     public function showall():View {
         $itemCount = Item::get() -> count();
-        $items = Item::paginate(10);
+        $items = Item::inRandomOrder() -> paginate(12);
         return view('plp',['items'=>$items,'itemCount' => $itemCount,'title' => 'SHOP ALL']);
     }
     public function search(Request $request):View {
@@ -99,7 +99,7 @@ class ProductListController extends Controller
             'name' => 'required',
             'price' => 'required',
             'category' => 'required',
-            'imagePath' => 'required',
+            'imagePreview' => 'required',
             'size' => 'required',
             'weight' => 'required'
         ]);
@@ -110,7 +110,7 @@ class ProductListController extends Controller
         'price' => $request->price,
         'category' => $request->category,
         #'in_stock' => $request->has('in_stock'),
-        'imagePath' => $request->imagePath,
+        'imagePreview' => $request->imagePreview,
         'weight' => $request->weight,
         'discount' => $request->discount
         ]);

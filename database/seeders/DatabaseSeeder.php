@@ -11,10 +11,7 @@ class DatabaseSeeder extends Seeder
         $this->call(
             [
                 CollectionLinass::class,
-                CollectionDeniss::class,
-                CollectionKaterina::class,
-//              CollectionMatiss::class,
-                CollectionRodions::class
+//                CollectionMatiss::class,
             ]
         );
     }

@@ -31,7 +31,7 @@
                 <a href="{{ route('products')}}/{{$item->id}}"  class="product-container">
                     <div class="product-wrapper">
                         <div class="image-container">
-                            <img class="product-image" src="{{asset($item->imagePath)}}" alt={{ $item->name }}>
+                            <img class="product-image" src="{{asset($item->imagePreview)}}" alt={{ $item->name }}>
                             @if($item->discount !== null && $item->discount > 0)
                                 <p class="sale-mark">SALE</p>
                             @endif

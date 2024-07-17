@@ -18,9 +18,10 @@ return new class extends Migration
             $table->double('price');
             $table->char('category',length: 50);
             $table->char('collection',length: 50);
-            $table->longText('imagePath');
+            $table->longText('imagePreview');
             $table->double('weight');
             $table->double('discount')->nullable();
+            $table->integer('imageCount');
         });
     }
 
