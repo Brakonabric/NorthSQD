@@ -57,7 +57,7 @@ Route::get('/success', [CartController::class, 'success'])->name('success');
 
 Route::get('/returnPolicy', function () {
     return view('returnPolicy');
-});
+})->name('returnPolicy');;
 
 
 Route::get('/profile', [UserController::class, 'profile'])->middleware('auth')->name('profile');
@@ -66,11 +66,11 @@ Route::post('/profile', [UserController::class, 'profileUpdate'])->middleware('a
 
 Route::get('/shippingPolicy', function () {
     return view('shippingPolicy');
-});
+})->name('shippingPolicy');
 
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 
 Route::get('/admin/login', [AdminController::class, 'getLogin'])->name('adminLogin');
 Route::post('/admin/login', [AdminController::class, 'tryLogin'])->name('adminLoginPost');
