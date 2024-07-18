@@ -25,6 +25,7 @@ class ProductListController extends Controller
         if ($query) {
             $items = Item::where('name', 'LIKE', '%' . $query . '%')
                 ->orWhere('collection', 'LIKE', '%' . $query . '%')
+                ->orWhere('category', 'LIKE', '%' . $query . '%')
                 ->get();
         } else {
             $items = collect(); // Empty collection if no query
@@ -33,16 +34,15 @@ class ProductListController extends Controller
         return response()->json($items);
     }
 
-//    public function search(Request $request):View {
-////        if($request->category){
-////            $word = $request->category;
-////            $items = Item::where('category',$word)->paginate(10);
-////            return view('plp',['items'=>$items]);
-////        }
-//        $word=$request->input('q');
-//        $items = Item::where('name','like',"%{$word}%")->paginate(10);
-//        return view('plp',['items'=>$items]);
-//    }
+    public function searchRedirect(Request $request):View {
+        $word=$request-> search;
+        $items = Item::where('name', 'LIKE', '%' . $word . '%')
+            ->orWhere('collection', 'LIKE', '%' . $word . '%')
+            ->orWhere('category', 'LIKE', '%' . $word . '%')
+            ->paginate(12);
+        $itemCount = $items -> count();
+        return view('plp',['items'=>$items, 'title' => 'Similar to: ' . $word, 'itemCount' => $itemCount]);
+    }
 
     public function category(Request $request):View {
         $word=$request->category;

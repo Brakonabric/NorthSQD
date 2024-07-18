@@ -24,65 +24,49 @@
         <p class="filtered-count">{{$itemCount}} products</p>
     </div>
     <div class="dropdown-filter">
-{{--        FILTER--}}
+        {{--        FILTER--}}
     </div>
     <div class="plp-grid-container">
-            @foreach($items as $item)
-                <a href="{{ route('products')}}/{{$item->id}}"  class="product-container">
-                    <div class="product-wrapper">
-                        <div class="image-container">
-                            <img class="product-image" src="{{asset($item->imagePreview)}}" alt={{ $item->name }}>
-                            @if($item->discount !== null && $item->discount > 0)
-                                <p class="sale-mark">SALE</p>
-                            @endif
-                        </div>
-                        <h3 class="name">
-                            {{$item->name}}
-                        </h3>
-                        <div class="wrap">
-                            @if($item->discount !== null && $item->discount > 0)
-                                @php
-                                    $discountedPrice = $item->price - $item->discount;
-                                @endphp
-                                <h4 class="new-price price">
-                                    €{{ number_format($discountedPrice, 2) }}
-                                </h4>
-                                <h5 class="old-price price">
-                                    €{{ $item->price }}
-                                </h5>
-                            @else
-                                <h4 class="new-price price">
-                                    €{{$item->price}}
-                                </h4>
-                            @endif
-                        </div>
+        @foreach($items as $item)
+            <a href="{{ route('products')}}/{{$item->id}}" class="product-container">
+                <div class="product-wrapper">
+                    <div class="image-container">
+                        <img class="product-image" src="{{asset($item->imagePreview)}}" alt={{ $item->name }}>
+                        @if($item->discount !== null && $item->discount > 0)
+                            <p class="sale-mark">SALE</p>
+                        @endif
                     </div>
-                </a>
-            @endforeach
-        </div>
+                    <h3 class="name">
+                        {{$item->name}}
+                    </h3>
+                    <div class="wrap">
+                        @if($item->discount !== null && $item->discount > 0)
+                            @php
+                                $discountedPrice = $item->price - $item->discount;
+                            @endphp
+                            <h4 class="new-price price">
+                                €{{ number_format($discountedPrice, 2) }}
+                            </h4>
+                            <h5 class="old-price price">
+                                €{{ $item->price }}
+                            </h5>
+                        @else
+                            <h4 class="new-price price">
+                                €{{$item->price}}
+                            </h4>
+                        @endif
+                    </div>
+                </div>
+            </a>
+        @endforeach
+    </div>
 </div>
 {{--IMPORTANT--}}
 
-{{--    <form action="{{ route('search') }}" method="GET">--}}
-{{--        <input type="text" name="q" placeholder="Search Products">--}}
-{{--        <button type="submit">Search</button>--}}
-{{--    </form>--}}
-
-{{--IMPORTANT--}}
-
-
-
-
-{{--IMPORTANT--}}
-
-{{--<div class = "pages">--}}
-{{--{{ $items->links() }}--}}
-{{--</div>--}}
-
-{{--IMPORTANT--}}
+<div class="pages">
+    {{ $items->links() }}
+</div>
 <hr>
-
 @include('templates/footer')
-
 </body>
 </html>

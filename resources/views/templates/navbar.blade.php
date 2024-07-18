@@ -31,7 +31,6 @@
             <br>
             <ul>
                 <li><h3>Categories</h3></li>
-                <li><a href="">Collections</a></li>
                 <li><a href="{{route('category')}}/?category=t-shirts">T-Shirts</a></li>
                 <li><a href="{{route('category')}}/?category=sweatshirts">Sweatshirts</a></li>
                 <li><a href="{{route('category')}}/?category=accessories">Accessories</a></li>
@@ -61,14 +60,13 @@
             <li class="nav-list-item"><a href="{{route('category')}}/?category=hoodie">Hoodie</a></li>
             <li class="nav-list-item"><a href="{{route('category')}}/?category=shoes">Shoes</a></li>
             <li class="nav-list-item"><a href="{{route('category')}}/?category=hat">Hat</a></li>
-            <li class="nav-list-item"><a href="#">Collections</a></li>
             <li class="nav-list-item"><a class="" href="{{route('sales')}}">
                     <img src="{{asset("svg/sale-mark.svg")}}" alt="">SALE</a></li>
         </ul>
     </nav>
 </div>
 <div class="search-bar-mobile" hidden>
-    <form action="" method="get" class="search-form">
+    <form action="{{ route('searchRed') }}" method="get" class="search-form">
         @csrf
         <div class="search-container">
             <span class="search-state"></span>
@@ -92,7 +90,6 @@
     <script src="{{ asset('js/search.js') }}"></script>
         <div class="search-response-container">
             <ul class="search-list-mobile" id="search-list-mobile">
-
             </ul>
         </div>
 </div>

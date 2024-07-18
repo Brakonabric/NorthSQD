@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             data.forEach(item => {
                                 const itemElement = document.createElement('div');
                                 itemElement.classList.add('search-item');
-                                itemElement.innerHTML = `<li><a href="/products/${item.id}"><strong>${item.name}</strong> by ${item.collection}</a></li>`;
+                                itemElement.innerHTML = `<li ><a href="/products/${item.id}"><strong>${item.name}</strong> by ${item.collection}</a></li>`;
                                 searchListMobile.appendChild(itemElement);
                             });
                         } else {
