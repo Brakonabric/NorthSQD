@@ -110,7 +110,7 @@
           acceptBtn = cookieBox.querySelector(".item-accept"),
           rejectBtn = cookieBox.querySelector(".item-reject");
   acceptBtn.onclick = () => {
-    document.cookie = "Cookie=accepted; max-age=" + 60 * 60 * 24 * 30;
+    document.cookie = "Cookie=accepted; max-age=" + 60 * 60 * 24 * 30 +";SameSite=Lax";
     if (document.cookie.includes("Cookie=accepted")) {
       cookieBox.classList.add("hide");
     } else {
