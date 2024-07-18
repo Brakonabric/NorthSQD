@@ -82,15 +82,15 @@
                                 @endphp
                             @endif
                         @endif
-                        <input type="text" name="name" value={{ $name }}></input>
+                        <input required type="text" name="name" value={{ $name }}></input>
                         <label for="surname">Last Name*</label>
-                        <input type="text" name ="surname" value={{ $surname }}></input>
+                        <input required type="text" name ="surname" value={{ $surname }}></input>
                         <label for="email">Your e-mail</label>
                         <input type="text" name="email" value={{ $email }}></input>
                         <label for="phone">Phone Number *</label>
                         <div class = "forPhone">
                             <img src="{{ asset('svg/countryCode.png') }}">
-                            <input class="phone" type="text" name="phone"></input>
+                            <input required class="phone" type="text" name="phone"></input>
                         </div>
                 </div>
                 <div class="orderItem">
@@ -117,11 +117,11 @@
                 </div>
                 <input type="hidden" name="payment" id="payment">
                 <div class="box-checkbox">
-                    <input type = "checkbox" name="termsAccept" class ="checkbox"></input>
+                    <input required type = "checkbox" name="termsAccept" class ="checkbox"></input>
                     <p>Accept the <a>terms</a></p>
                 </div>
                 <div class="box-checkbox">
-                    <input type = "checkbox" name="policyAccept" class ="checkbox"></input>
+                    <input required type = "checkbox" name="policyAccept" class ="checkbox"></input>
                     <p>Accept the <a>privacy policy</a></p>
                 </div>
                 <div>

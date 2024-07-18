@@ -18,12 +18,12 @@
             @csrf
             <div class="input-wrap">
                 <label for ="email">Mobile number or email</label>
-                <input id="email" type="email" name="email" placeholder="Enter your mobile number or email">
+                <input required id="email" type="email" name="email" placeholder="Enter your mobile number or email">
             </div>
             <div class="input-wrap">
                 <label for ="password">Password</label>
                 <div class="passinp">
-                    <input id="password" type="password" name="password" placeholder="Enter your password">
+                    <input required id="password" type="password" name="password" placeholder="Enter your password">
                     <img id="showpass" class="showpass" src="{{ asset('svg/Eyeopen.svg') }}" alt="showPassword">
                     <img id="showpass2" style="display:none;" class="showpass" src="{{ asset('svg/Eyehide.svg') }}"
                         alt="showPassword">

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductListController;
 use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 
 /*
@@ -37,7 +38,7 @@ Route::get('/sign-up', [UserController::class, 'showRegistrationForm'])->middlew
 Route::post('/sign-up', [UserController::class, 'register'])->name('register');
 Route::get('/login', [UserController::class, 'showLoginForm'])->middleware('guest');
 Route::post('/login', [UserController::class, 'login'])->name('login');
-Route::get('/logout', [UserController::class, 'logout']);
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('/addToCart/{id}/', [CartItemController::class, 'addToCart'])->name('addToCart');
 Route::get('/removeFromCart/{id}', [CartItemController::class, 'removeFromCart'])->name('removeFromCart');
@@ -70,3 +71,8 @@ Route::get('/shippingPolicy', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/admin/login', [AdminController::class, 'getLogin'])->name('adminLogin');
+Route::post('/admin/login', [AdminController::class, 'tryLogin'])->name('adminLoginPost');
+Route::get('/admin/dashboard', [AdminController::class, 'showDashboard'])->middleware('adminauth')->name('adminDash');
+

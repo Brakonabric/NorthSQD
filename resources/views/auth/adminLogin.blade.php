@@ -6,55 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
     <title>Login</title>
-    <script>
-        function togglePassword() {
-            event.preventDefault();
-            var x = document.getElementById("password");
-            // TODO change image on click
-            //            var img = document.getElementById("passImg");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
-    </script>
 
 <body>
     @include('templates/navbar')
     <div class="box">
-        <h1 class="top-text">Sign Up</h1>
-        <p class="top-text">Already have an account? <a href="/login">Log In</a></p>
+        <h1 class="top-text">Log In</h1>
     </div>
     <div class = "loginForm">
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('adminLogin') }}">
             @csrf
             <div class="input-wrap">
                 <label for ="email">Mobile number or email</label>
-                <input required id="email" type="email" name="email" placeholder="Enter your mobile number or email">
+                <input id="email" type="email" name="email" placeholder="Enter your mobile number or email">
             </div>
             <div class="input-wrap">
                 <label for ="password">Password</label>
                 <div class="passinp">
-                    <input required id="password" type="password" name="password" placeholder="Enter your password">
+                    <input id="password" type="password" name="password" placeholder="Enter your password">
                     <img id="showpass" class="showpass" src="{{ asset('svg/Eyeopen.svg') }}" alt="showPassword">
                     <img id="showpass2" style="display:none;" class="showpass" src="{{ asset('svg/Eyehide.svg') }}"
                         alt="showPassword">
                 </div>
+                <a href="#">Forgot Password?</a>
             </div>
             <div class="input-wrap">
-                <button class="submit" type="submit">Sign Up</button>
+                <button class="submit" type="submit">Log In</button>
             </div>
         </form>
     </div>
-    <p class="continue">or continue with</p>
-    <div class="buttonBox">
-        <input class="social" type="image" src="{{ asset('svg/facebook_ic.svg') }}" />
-        <input class="social" type="image" src="{{ asset('svg/google_ic.svg') }}" />
-        <input class="social" type="image" src="{{ asset('svg/apple_ic.svg') }}" />
-    </div>
     <hr class="auth_line">
-
+    @include('templates/footer')
 </body>
 <script>
     let el = document.getElementById("showpass");
