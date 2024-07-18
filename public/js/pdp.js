@@ -179,5 +179,6 @@ function addToCart(id) {
             window.location.href = response.url;
         }
     })
+    localStorage.clear()
 }
 

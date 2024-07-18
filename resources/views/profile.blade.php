@@ -28,6 +28,7 @@
         </div>
         <div class="coolButtons">
             <button class="notEditThing optionsbut" type="button" onclick="showEdit()">Edit</button>
+            <div class="optionsbut logout" id="logout"><a href={{route('logout')}}>Logout</a></div>
             <button class="editThing optionsbut" type="button" onclick="cancel()">Cancel</button>
             <input class="editThing optionsbut" type="submit" value="Save"></input>
         </div>
@@ -39,23 +40,30 @@
     function showEdit() {
         const editItems=Array.from(document.getElementsByClassName("editThing"));
         const notEditItems=Array.from(document.getElementsByClassName("notEditThing"));
+        const logout=document.getElementById("logout");
+
         editItems.forEach(item => {
             item.style.display='inline-block';
         });
         notEditItems.forEach(item => {
             item.style.display='none';
         });
+        logout.style.display="none";
+
 
     }
     function cancel() {
         const editItems=Array.from(document.getElementsByClassName("editThing"));
         const notEditItems=Array.from(document.getElementsByClassName("notEditThing"));
+        const logout=document.getElementById("logout");
+
         editItems.forEach(item => {
             item.style.display='none';
         });
         notEditItems.forEach(item => {
             item.style.display='inline-block';
         });
+        logout.style.display="inline-flex";
     }
 
 </script>
