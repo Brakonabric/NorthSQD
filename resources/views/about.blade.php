@@ -48,10 +48,10 @@
     </div>
 
     <div class="about-grid">
-        <img src="{{ asset("images/man.png") }}" alt="Matiss" class="person-image">
-        <h3 class="pink">MATISS</h3>
+        <img src="{{ asset("images/man.png") }}" alt="Aleks" class="person-image">
+        <h3 class="pink">Aleks</h3>
         <h4>The Absent Member</h4>
-        <p>Matiss might have missed a lot of the fun due to being under the weather, but his contributions are still vital. His unique perspective and input have helped shape the direction of North SQD, even from afar.</p>
+        <p>Aleks might have missed a lot of the fun due to being under the weather, but his contributions are still vital. His unique perspective and input have helped shape the direction of North SQD, even from afar.</p>
     </div>
 </div>
 

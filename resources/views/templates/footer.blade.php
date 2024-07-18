@@ -78,7 +78,7 @@
                     <li><a href="{{route('collection')}}/?collection=rodions">Rodions</a></li>
                     <li><a href="{{route('collection')}}/?collection=katerina">Katerina</a></li> 
                     <li><a href="{{route('collection')}}/?collection=deniss">Deniss</a></li>            
-                    <li><a href="{{route('collection')}}/?collection=matiss">Matiss</a></li>
+                    <li><a href="{{route('collection')}}/?collection=Aleks">Aleks</a></li>
                 </ul>
             </div>
             <div class="footer-col">
