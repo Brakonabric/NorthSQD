@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/error.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin-dash.css') }}">
     <title>Document</title>
 </head>
 
@@ -15,8 +16,8 @@
             <div class="error-col">
                 <h1 class="bigtext">Orders</h1>
             </div>
-            <table style="width:100%">
-                <tr>
+            <table class="mainTable">
+                <tr id="mainRow">
                     <th>Delivery By</th>
                     <th>Terminal</th>
                     <th>Customer name</th>
@@ -24,7 +25,7 @@
                     <th>Customer email</th>
                     <th>Customer phone</th>
                     <th>Customer payment way</th>
-                    <th>Cost</th>
+                    <th>Cost,€</th>
                 </tr>
                 @foreach ($orders as $order)
                     <tr>
@@ -35,7 +36,7 @@
                         <th>{{$order['email']}}</th>
                         <th>{{$order['phone']}}</th>
                         <th>{{$order['payment']}}</th>
-                        <th>{{$order['cost']}}</th>
+                        <th class="cost">{{$order['cost']}}</th>
                     </tr>
                 @endforeach
             </table>
