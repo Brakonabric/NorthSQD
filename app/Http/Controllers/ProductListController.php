@@ -36,19 +36,19 @@ class ProductListController extends Controller
     public function category(Request $request):View {
         $word=$request->category;
         $itemCount = Item::where('category',$word) -> count();
-        $items = Item::where('category',$word)->paginate(10);
+        $items = Item::where('category',$word)->paginate(12);
         return view('plp',['items'=>$items, 'itemCount' => $itemCount, 'title' => $word ]);
     }
 
     public function collection(Request $request):View {
         $word = $request->collection;
-        $itemCount = Item::where('category',$word) -> count();
-        $items = Item::where('collection',$word)->paginate(10);
+        $itemCount = Item::where('collection',$word) -> count();
+        $items = Item::where('collection',$word)->paginate(12);
         return view('plp',['items'=>$items, 'itemCount' => $itemCount, 'title' => $word ]);
     }
 
     public function sales():View {
-        $items = Item::whereNotNull('discount')->paginate(10);
+        $items = Item::whereNotNull('discount')->paginate(12);
         $itemCount = Item::whereNotNull('discount') -> count();
         return view('plp', ['items' => $items,  'itemCount' => $itemCount, 'title' => 'SALE' ]);
     }
