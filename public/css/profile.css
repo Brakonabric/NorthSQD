@@ -30,8 +30,6 @@ body {
 .editThing{
     display: none;
 }
-.trickyText{
-}
 .coolButtons{
     width:100%;
     display:flex;
@@ -43,6 +41,7 @@ body {
     
 }
 .name-surname input{
+    height:30px;
     border-radius: 10px;
     border: 2px solid #ececec;
     padding-left: 3%;
