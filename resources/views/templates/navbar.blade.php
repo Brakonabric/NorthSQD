@@ -83,8 +83,9 @@
         </ul>
     </nav>
 </div>
-<div class="search-bar-mobile" hidden>
+<div class="search-bar-mobile" style="display: none">
     <form action="{{ route('searchRed') }}" method="get" class="search-form">
+
         @csrf
         <div class="search-container">
             <span class="search-state"></span>
@@ -104,7 +105,6 @@
                 </svg>
             </button>
         </div>
-    </form>
     <script src="{{ asset('js/search-engine.js') }}"></script>
         <div class="search-response-container">
             <ul class="search-list-mobile" id="search-list-mobile">

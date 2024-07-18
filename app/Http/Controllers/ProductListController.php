@@ -44,6 +44,8 @@ class ProductListController extends Controller
         return view('plp',['items'=>$items, 'title' => 'Similar to: ' . $word, 'itemCount' => $itemCount]);
     }
 
+
+
     public function category(Request $request):View {
         $word=$request->category;
         $itemCount = Item::where('category',$word) -> count();

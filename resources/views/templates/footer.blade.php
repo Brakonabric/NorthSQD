@@ -7,31 +7,31 @@
                 <ul>
                     <li>
                         <a href="ttps://www.google.com/maps?q=Magebit+Riga">
-                            <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt=""><strong>2a Uriekstes,
+                            <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="Company Address"><strong>2a Uriekstes,
                                 Riga</strong></a>
                     </li>
                     <li>
-                        <a href="tel:+371 25000666"><img class="footer-svg" src="{{asset("svg/Icon_Phone.svg")}}" alt=""><strong>+371
+                        <a href="tel:+371 25000666"><img class="footer-svg" src="{{asset("svg/Icon_Phone.svg")}}" alt="Contact Phone Number"><strong>+371
                                 25000666</strong>
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset("svg/Icon_Mail.svg")}}" alt=""><strong>info@northsquad.lv</strong></a>
+                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset("svg/Icon_Mail.svg")}}" alt="Contact e-mail"><strong>info@northsquad.lv</strong></a>
                     </li>
                     <li class="social-svg">
-                        <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt=""></a>
-                        <a href="#"><img src="{{asset('svg/Icon_WhatsApp.svg')}}" alt=""></a>
-                        <a href="#"><img src="{{asset('svg/Icon_Instagram.svg')}}" alt=""></a>
+                        <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt="Twitter"></a>
+                        <a href="#"><img src="{{asset('svg/Icon_WhatsApp.svg')}}" alt="WhatsApp"></a>
+                        <a href="#"><img src="{{asset('svg/Icon_Instagram.svg')}}" alt="Instagram"></a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="payment-row">
             <ul>
-                <li><img src="{{asset('svg/master card.svg')}}" alt=""></li>
-                <li><img src="{{asset('svg/visa.svg')}}" alt=""></li>
-                <li><img src="{{asset('svg/paypal.svg')}}" alt=""></li>
-                <li><img src="{{asset('svg/googlePay.svg')}}" alt=""></li>
+                <li><img src="{{asset('svg/master card.svg')}}" alt="MasterCard"></li>
+                <li><img src="{{asset('svg/visa.svg')}}" alt="Visa"></li>
+                <li><img src="{{asset('svg/paypal.svg')}}" alt="PayPal"></li>
+                <li><img src="{{asset('svg/googlePay.svg')}}" alt="GooglePay"></li>
             </ul>
         </div>
     </div>
@@ -42,21 +42,21 @@
                 <ul>
                     <li>
                         <a href="ttps://www.google.com/maps?q=Magebit+Riga" target="_blank">
-                            <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="">2a Uriekstes,
+                            <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="Company Address">2a Uriekstes,
                             Riga</a>
                     </li>
                     <li>
                         <a href="tel:+371 25000666"><img class="footer-svg" src="{{asset('svg/Icon_Phone.svg')}}"
-                                                         alt="">+371 25000666</a>
+                                                         alt="Contact Phone Number">+371 25000666</a>
                     </li>
                     <li>
                         <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset('svg/Icon_Mail.svg')}}"
-                                                                 alt="">info@northsquad.lv</a>
+                                                                 alt="Contact e-mail">info@northsquad.lv</a>
                     </li>
                     <li class="social-svg">
-                        <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt=""></a>
-                        <a href="#"><img src="{{asset('svg/Icon_WhatsApp.svg')}}" alt=""></a>
-                        <a href="#"><img src="{{asset('svg/Icon_Instagram.svg')}}" alt=""></a>
+                        <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt="Twitter"></a>
+                        <a href="#"><img src="{{asset('svg/Icon_WhatsApp.svg')}}" alt="WhatsApp"></a>
+                        <a href="#"><img src="{{asset('svg/Icon_Instagram.svg')}}" alt="Instagram"></a>
                     </li>
                 </ul>
             </div>
@@ -74,11 +74,11 @@
             <div class="footer-col">
                 <h4>Collections</h4>
                 <ul>
-                    <li><a href="{{route('collection')}}/?collection=rodions">Rodions</a></li>
                     <li><a href="{{route('collection')}}/?collection=linass">Linass</a></li>
+                    <li><a href="{{route('collection')}}/?collection=rodions">Rodions</a></li>
+                    <li><a href="{{route('collection')}}/?collection=katerina">Katerina</a></li> 
+                    <li><a href="{{route('collection')}}/?collection=deniss">Deniss</a></li>            
                     <li><a href="{{route('collection')}}/?collection=matiss">Matiss</a></li>
-                    <li><a href="{{route('collection')}}/?collection=katerina">Katerina</a></li>
-                    <li><a href="{{route('collection')}}/?collection=deniss">Deniss</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -98,10 +98,10 @@
         </div>
         <div class="payment-row pc">
             <ul>
-                <li><img src="{{asset('svg/master card.svg')}}" alt=""></li>
-                <li><img src="{{asset('svg/visa.svg')}}" alt=""></li>
-                <li><img src="{{asset('svg/paypal.svg')}}" alt=""></li>
-                <li><img src="{{asset('svg/googlePay.svg')}}" alt=""></li>
+                <li><img src="{{asset('svg/master card.svg')}}" alt="MasterCard"></li>
+                <li><img src="{{asset('svg/visa.svg')}}" alt="Visa"></li>
+                <li><img src="{{asset('svg/paypal.svg')}}" alt="PayPal"></li>
+                <li><img src="{{asset('svg/googlePay.svg')}}" alt="GooglePay"></li>
             </ul>
         </div>
     </div>

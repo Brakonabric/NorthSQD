@@ -70,6 +70,8 @@
 
 
 <hr>
+
 @include('templates/footer')
+
 </body>
 </html>

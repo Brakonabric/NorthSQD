@@ -17,7 +17,7 @@
         @if ($cart)
         @foreach ($cart as $item)
             <div class="item_box">
-                <img src="{{ asset($item['imagePreview']) }}" alt="">
+                <img src="{{ asset($item['imagePreview']) }}" alt="{{ $item->name }}">
                 <div class="item_desc">
                     <p class="item_title">{{ $item['name'] }}</p>
                     @if($item['size'])
@@ -28,11 +28,11 @@
                     <p class="item_cost">€{{ $item['price'] * $item['quantity'] }}</p>
                 </div>
                 <div class="item_quantity">
-                    <a href="{{ route('removeFromCart', $item) }}"><img onClick="plus()" src="{{ asset('svg/minus.svg') }}" alt=""></a>
+                    <a href="{{ route('removeFromCart', $item) }}"><img onClick="plus()" src="{{ asset('svg/minus.svg') }}" alt="Remove item"></a>
                     <div class="item_number">
                         <p class = "quantity">{{$item['quantity']}}</p>
                     </div>
-                    <a href="{{ route('addToCart', $item) }}"><img src="{{ asset('svg/plus.svg') }}" alt=""></a>
+                    <a href="{{ route('addToCart', $item) }}"><img src="{{ asset('svg/plus.svg') }}" alt="Add item"></a>
                 </div>
             </div>
             @php
