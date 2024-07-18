@@ -6,7 +6,7 @@
                 <h2>Contacts</h2>
                 <ul>
                     <li>
-                        <a href="ttps://www.google.com/maps?q=Magebit+Riga">
+                        <a href="https://www.google.com/maps?q=Magebit+Riga">
                             <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="Company Address"><strong>2a Uriekstes,
                                 Riga</strong></a>
                     </li>
@@ -28,10 +28,10 @@
         </div>
         <div class="payment-row">
             <ul>
-                <li><img src="{{asset('svg/master card.svg')}}" alt="MasterCard"></li>
-                <li><img src="{{asset('svg/visa.svg')}}" alt="Visa"></li>
-                <li><img src="{{asset('svg/paypal.svg')}}" alt="PayPal"></li>
-                <li><img src="{{asset('svg/googlePay.svg')}}" alt="GooglePay"></li>
+                <li><img src="{{asset('svg/master card.svg')}}" width="54" alt="MasterCard"></li>
+                <li><img src="{{asset('svg/visa.svg')}}"  width="69" alt="Visa"></li>
+                <li><img src="{{asset('svg/paypal.svg')}}" width="90" alt="PayPal"></li>
+                <li><img src="{{asset('svg/googlePay.svg')}}" width="72" alt="GooglePay"></li>
             </ul>
         </div>
     </div>
@@ -98,10 +98,10 @@
         </div>
         <div class="payment-row pc">
             <ul>
-                <li><img src="{{asset('svg/master card.svg')}}" alt="MasterCard"></li>
-                <li><img src="{{asset('svg/visa.svg')}}" alt="Visa"></li>
-                <li><img src="{{asset('svg/paypal.svg')}}" alt="PayPal"></li>
-                <li><img src="{{asset('svg/googlePay.svg')}}" alt="GooglePay"></li>
+                <li><img src="{{asset('svg/master card.svg')}}" width="54" alt="MasterCard"></li>
+                <li><img src="{{asset('svg/visa.svg')}}"  width="69" alt="Visa"></li>
+                <li><img src="{{asset('svg/paypal.svg')}}" width="90" alt="PayPal"></li>
+                <li><img src="{{asset('svg/googlePay.svg')}}" width="72" alt="GooglePay"></li>
             </ul>
         </div>
     </div>
