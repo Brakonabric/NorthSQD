@@ -760,6 +760,158 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'colors' => ['white', 'black'],
                 'sizes' => ['Medium size'],
                 'imageCount' => 4
+            ],                    [
+                'name' => "Unisex Cotton T-Shirt",
+                'description' => "Introducing the Organic Cotton T-Shirt by NorthSQD—where sustainability meets the enchanting beauty of the northern lights. This high-quality T-shirt is crafted from 100% organic ring-spun cotton, making it the perfect choice for eco-conscious shoppers. With its exceptional comfort, don't be surprised if it quickly becomes your favorite wardrobe staple.
+
+                <br>
+                <br>Details:
+                <ul class='db-list'>
+                <li>100% organic ring-spun cotton</li>
+                <li>Fabric weight: 5.3 oz./yd.² (180 g/m²)</li>
+                <li>Single jersey</li>
+                <li>Regular fit</li>
+                <li>Set-in sleeves</li>
+                <li>1 × 1 rib at collar</li>
+                <li>Wide double-needle topstitch on the sleeves and bottom hems</li>
+                <li>Self-fabric neck tape (inside, back of the neck)</li>
+                <li>The fabric of this product is certified by GRS (Global Recycled Standard), OCS (Organic Content Standard), and GOTS (Global Organic Textile Standard)</li>
+                <li>The fabric of this product is OEKO-TEX Standard 100 certified and PETA-Approved Vegan</li>
+                <li>Blank product sourced from Bangladesh</li>
+                </ul>
+
+",
+                'price' => 20.00,
+                'category' => 'T-Shirts',
+                'collection' => 'Matiss',
+                'imagePreview' => 'images\Matiss\T-Shirts_Matiss_white_3.png',
+                'weight' => 1.2,
+                'discount' => 3.01,
+                'colors' => ['white', 'black'],
+                'sizes' => ['S', 'M', 'L', 'XL'],
+                'imageCount' => 2
+            ],
+            //Accessories
+            [
+                'name' => "Insulated Tumbler with a Straw",
+                'description' => "Tired of mundane drinkware? Say hello to a North SQD Insulated Tumbler.
+
+                <br>
+                <br>Details:
+                <ul class='db-list'>
+                <li>High-grade stainless steel tumbler</li>
+                <li>20 oz. (600 ml)</li>
+                <li>Tumbler size: 4″ × 7.2″ (10.1 cm × 18.2 cm)</li>
+                <li>Includes straw and lid</li>
+                <li>Blank product sourced from China and printed in the US</li>
+                </ul>
+
+",
+                'price' => 30.00,
+                'category' => 'Accessories',
+                'collection' => 'Matiss',
+                'imagePreview' => 'images\Matiss\Accessories_Matiss_white_1',
+                'weight' => 20,
+                'discount' => 5.01,
+                'colors' => ['white'],
+                'sizes' => ['20 oz'],
+                'imageCount' => 5
+            ],
+            //Sweatshirt
+            [
+                'name' => "Unisex Sweatshirt",
+                'description' => "Discover unparalleled comfort and style with the NorthSQD Unisex Organic Raglan Sweatshirt, inspired by the mesmerizing northern lights. Designed for everyday wear, this sweatshirt promises to be a favorite in your wardrobe. The soft fleece inside offers a cozy feel, while the smooth 100% organic cotton exterior maintains a clean, polished look. Its premium materials ensure that your prints remain flawless and embroidery designs stay neat and durable.
+
+                <br>
+                <br>Details:
+                <ul class='db-list'>
+                <li>100% organic cotton exterior</li>
+                <li>Charcoal Mélange’s exterior: 60% organic cotton, 40% recycled polyester</li>
+                <li>80% organic cotton, 20% recycled polyester interior</li>
+                <li>97% organic cotton, 3% elastane ribs</li>
+                <li>Fabric weight: 8.3 oz/yd² (280 g/m²)</li>
+                <li>Fabric weight for Charcoal Mélange: 10.3 oz/yd² (348 g/m²)</li>
+                <li>Side-seamed</li>
+                <li>Raglan sleeves</li>
+                <li>Neck tape</li>
+                <li>Brushed fleece lining</li>
+                <li>2 × 2 ribbed cuffs, collar, and hem</li>
+                <li>The fabric of this product is certified by GRS (Global Recycled Standard), OCS (Organic Content Standard), and GOTS (Global Organic Textile Standard)</li>
+                <li>The fabric of this product is OEKO-TEX Standard 100 certified and PETA-Approved Vegan</li>
+                <li>Blank product sourced from Pakistan</li>
+                </ul>
+
+",
+                'price' => 30.00,
+                'category' => 'Sweatshirts',
+                'collection' => 'Matiss',
+                'imagePreview' => 'images\Matiss\Sweatshirts_Matiss_white_1.png',
+                'weight' => 2.9,
+                'discount' => null,
+                'colors' => ['white', 'black'],
+                'sizes' => ['S', 'M', 'L', 'XL'],
+                'imageCount' => 2
+            ],
+            //Hoodie
+            [
+                'name' => "Premium Eco Hoodie",
+                'description' => "Elevate your wardrobe with the NorthSQD Premium Eco Hoodie, where sustainability meets the enchanting charm of the northern lights. Exclusively available at Printful, this hoodie is crafted from high-quality organic and recycled materials, offering a luxurious, brushed inside for ultimate comfort. Designed with adjustable drawcords, ribbed cuffs, and a kangaroo pouch pocket, this eco-friendly hoodie seamlessly blends style and functionality.
+
+                <br>
+                <br>Details:
+                <ul class='db-list'>
+                <li>85% organic cotton, 15% recycled polyester</li>
+                <li>Ribbing: 97% organic cotton, 3% elastane</li>
+                <li>Brushed fleece fabric inside</li>
+                <li>Comfortable unisex fit</li>
+                <li>ADouble-layered hood</li>
+                <li>Flat drawcords with metal aglets</li>
+                <li>Kangaroo pocket</li>
+                <li>Inside and outside label patch for branding</li>
+                <li>Tear away care label</li>
+                <li>Fabric weight: 8.55 oz/yd² (290 g/m²)</li>
+                <li>Fabric weight for the black hoodie: 8.85 oz/yd² (300 g/m²)</li>
+                <li>The fabric of this product is certified by GOTS (Global Organic Textile Standard)</li>
+                <li>Blank product sourced from Latvia and Mexico</li>
+                </ul>
+
+",
+
+                'price' => 45.00,
+                'category' => 'Hoodie',
+                'collection' => 'Matiss',
+                'imagePreview' => 'images\Matiss\Hoodie_Matiss_black_1.png',
+                'weight' => 3.2,
+                'discount' => null,
+                'colors' => ['white', 'black'],
+                'sizes' => ['S', 'M', 'L', 'XL'],
+                'imageCount' => 2
+            ],
+            //Hat
+            [
+                'name' => "Oh Deer Beanie",
+                'description' => "Introducing the NorthSQD x Oh Deer Beanie — where versatility meets the enchanting allure of the northern lights. This stylish hat is offering a lightweight and adjustable fit perfect for any occasion. Enhance its appeal with custom embroidery designs on the front, back, and left side to create a standout accessory.<br>
+        <br>Details:
+        <ul class='db-list'>
+        <li>95% polyester, 5% spandex (fabric composition may vary by up to 1%)</li>
+        <li>Fabric weight: 6.19 oz./yd.² (210 g/m²)</li>
+        <li>Double-layered</li>
+        <li>Regular fit  (order a size up for a slouchy fit)</li>
+        <li>Customizable inside layer (the hat can’t be worn inside-out because of visible stitching)</li>
+        <li>Wash at 86°F (30°C)</li>
+        <li>Fabric is OEKO-TEX 100 standard certified</li>
+        <li>Components sourced from Lithuania</li>
+        </ul>
+",
+                'price' => 21.00,
+                'category' => 'Hat',
+                'collection' => 'Matiss',
+                'imagePreview' => 'images\Matiss\Hat_Matiss_white_1.png',
+                'weight' => 6.19,
+                'discount' => 2.01,
+                'colors' => ['white'],
+                'sizes' => ['Medium'],
+                'imageCount' => 4
             ]
         ];
 
