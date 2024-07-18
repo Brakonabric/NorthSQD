@@ -99,19 +99,19 @@
                         <div class="payment-options">
                             <div class="payment-options-item" onclick="changePayment('visa')">
                                 <div id="visa" class="payment-logo"><img src="{{ asset('svg/visa.svg') }}"
-                                        width="60%" alt="Omniva" class="logo"></div>
+                                        width="60%" alt="Visa" class="logo"></div>
                             </div>
                             <div class="payment-options-item" onclick="changePayment('mastercard')">
                                 <div id="mastercard" class="payment-logo"><img src="{{ asset('svg/master card.svg') }}"
-                                        alt="DPD" class="logo"></div>
+                                        alt="MasterCard" class="logo"></div>
                             </div>
                             <div class="payment-options-item" onclick="changePayment('gpay')">
                                 <div id="gpay" class="payment-logo"><img src="{{ asset('svg/googlePay.svg') }}"
-                                        width="60%" alt="Latvijas Pasts" class="logo"></div>
+                                        width="60%" alt="GooglePay" class="logo"></div>
                             </div>
                             <div class="payment-options-item" onclick="changePayment('paypal')">
                                 <div id="paypal" class="payment-logo"><img src="{{ asset('svg/paypal.svg') }}"
-                                        width="60%" alt="Latvijas Pasts" class="logo"></div>
+                                        width="60%" alt="PayPal" class="logo"></div>
                             </div>
                         </div>
                 </div>
