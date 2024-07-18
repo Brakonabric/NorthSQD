@@ -87,7 +87,7 @@
             </button>
         </div>
     </form>
-    <script src="{{ asset('js/search.js') }}"></script>
+    <script src="{{ asset('js/search-engine.js') }}"></script>
         <div class="search-response-container">
             <ul class="search-list-mobile" id="search-list-mobile">
             </ul>

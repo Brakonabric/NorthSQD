@@ -63,9 +63,12 @@
 </div>
 {{--IMPORTANT--}}
 
-<div class="pages">
-    {{ $items->links() }}
+<div class="shit">
+    <div class="pages">
+    </div>
 </div>
+
+
 <hr>
 @include('templates/footer')
 </body>
