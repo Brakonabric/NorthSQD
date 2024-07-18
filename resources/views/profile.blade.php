@@ -27,7 +27,7 @@
             <button class="notEditThing optionsbut" type="button" onclick="showEdit()">Edit</button>
             <div class="optionsbut logout" id="logout"><a href={{route('logout')}}>Logout</a></div>
             <button class="editThing optionsbut" type="button" onclick="cancel()">Cancel</button>
-            <input class="editThing optionsbut" type="submit" value="Save"></input>
+            <input class="editThing optionsbut" type="submit" value="Save">
         </div>
     </form>
     </div>

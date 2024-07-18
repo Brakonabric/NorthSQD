@@ -18,9 +18,9 @@
             <input type="text" name="weight" placeholder="weight">
             <input type="text" name="discount" placeholder="discount">
             <hr>
-            <input type="text" name="colors[][name]" placeholder="color1"></input>
-            <input type="checkbox" name="colors[][instock]"></input>
-            <input type="text" name="colors[][sizes]" placeholder="size1"></input>
+            <input type="text" name="colors[][name]" placeholder="color1">
+            <input type="checkbox" name="colors[][instock]">
+            <input type="text" name="colors[][sizes]" placeholder="size1">
             
             <button type="submit">add</button>
         </form>

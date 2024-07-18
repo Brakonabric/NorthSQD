@@ -9,9 +9,7 @@
     <script>
         function togglePassword() {
             event.preventDefault();
-            var x = document.getElementById("password");
-            // TODO change image on click
-            //            var img = document.getElementById("passImg");
+            let x = document.getElementById("password");
             if (x.type === "password") {
                 x.type = "text";
             } else {
@@ -49,12 +47,12 @@
     </div>
     <p class="continue">or continue with</p>
     <div class="buttonBox">
-        <input class="social" type="image" src="{{ asset('svg/facebook_ic.svg') }}" />
-        <input class="social" type="image" src="{{ asset('svg/google_ic.svg') }}" />
-        <input class="social" type="image" src="{{ asset('svg/apple_ic.svg') }}" />
+        <input class="social" type="image" src="{{ asset('svg/facebook_ic.svg') }}" alt="facebook"/>
+        <input class="social" type="image" src="{{ asset('svg/google_ic.svg') }}" alt="google"/>
+        <input class="social" type="image" src="{{ asset('svg/apple_ic.svg') }}" alt="apple"/>
     </div>
     <hr class="auth_line">
-
+    @include('templates/footer')
 </body>
 <script>
     let el = document.getElementById("showpass");
@@ -76,5 +74,4 @@
         }
     }
 </script>
-
 </html>

@@ -37,9 +37,9 @@
     </div>
     <p class="continue">or continue with</p>
     <div class="buttonBox">
-        <input class="social" type="image" src="{{ asset('svg/facebook_ic.svg') }}" />
-        <input class="social" type="image" src="{{ asset('svg/google_ic.svg') }}" />
-        <input class="social" type="image" src="{{ asset('svg/apple_ic.svg') }}" />
+        <input class="social" type="image" src="{{ asset('svg/facebook_ic.svg') }}" alt="facebook"/>
+        <input class="social" type="image" src="{{ asset('svg/google_ic.svg') }}" alt="google"/>
+        <input class="social" type="image" src="{{ asset('svg/apple_ic.svg') }}" alt="apple"/>
     </div>
     <hr class="auth_line">
     @include('templates/footer')
