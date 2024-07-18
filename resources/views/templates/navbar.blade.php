@@ -67,7 +67,7 @@
         </ul>
     </nav>
 </div>
-<div class="search-bar-mobile" hidden>
+<div class="search-bar-mobile" style="display: none">
     <form action="" method="get" class="search-form">
         @csrf
         <div class="search-container">
