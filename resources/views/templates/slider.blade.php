@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload">
     <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
 </head>
 <body>
     <div class="slide">
         <div class="slide-container">
-        <img src="{{ asset("images/Slider/Slider.png")}}" >
+        <img fetchpriority="high" src="{{ asset("images/Slider/Slider.png")}}" alt="Home Banner">
         </div>
         <div class="title-i">
         <div class="title-text">

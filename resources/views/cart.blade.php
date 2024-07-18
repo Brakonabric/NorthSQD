@@ -42,35 +42,36 @@
             @endphp
         @endforeach
 
+
+        <div class="totalCost">
+            <div class="totalCostBox">
+                <p>Subtotal</p>
+                <p class="costNumber">€{{$subtotal}}</p>
+                <hr>
+            </div>
+            <div class="totalCostBox">
+                <p>Shipping</p>
+                <p class="costNumber">From €1.99</p>
+                <hr>
+            </div>
+            <div class="totalCostBox">
+                <p class="total">Total</p>
+                <p class="totalNumber">€{{$subtotal+1.99}}</p>
+                <hr>
+            </div>
+            <form action={{ route('showCheckout')}}>
+                <button class="submit">Continue</button>
+            </form>
+        </div>
+    @else
+        <div>
+            <h1>Cart is empty</h1>
+            <form action={{ route('products')}}>
+                <button class="submit">Continue Shopping</button>
+            </form>
+        </div>
+    @endif
 </div>
-<div class="totalCost">
-    <div class="totalCostBox">
-        <p>Subtotal</p>
-        <p class="costNumber">€{{$subtotal}}</p>
-        <hr>
-    </div>
-    <div class="totalCostBox">
-        <p>Shipping</p>
-        <p class="costNumber">From €1.99</p>
-        <hr>
-    </div>
-    <div class="totalCostBox">
-        <p class="total">Total</p>
-        <p class="totalNumber">€{{$subtotal+1.99}}</p>
-        <hr>
-    </div>
-    <form action={{ route('showCheckout')}}>
-        <button class="submit">Continue</button>
-    </form>
-</div>
-@else
-    <div>
-        <h1>Cart is empty</h1>
-        <form action={{ route('products')}}>
-            <button class="submit">Continue Shopping</button>
-        </form>
-    </div>
-@endif
 <hr class="auth_line">
 @include('templates/footer')
 </body>

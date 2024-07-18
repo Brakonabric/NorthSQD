@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CollectionLinass extends Seeder
+class StoreItemSeeder extends Seeder
 {
     public function run(): void
     {
@@ -811,7 +811,7 @@ Introducing the NorthSQD Tough Case for iPhone®—where durability meets the en
                 'price' => 30.00,
                 'category' => 'Accessories',
                 'collection' => 'Matiss',
-                'imagePreview' => 'images\Matiss\Accessories_Matiss_white_1',
+                'imagePreview' => 'images\Matiss\Accessories_Matiss_white_1.png',
                 'weight' => 20,
                 'discount' => 5.01,
                 'colors' => ['white', 'black'],

@@ -4,15 +4,37 @@
   align-items: center;
 }
 
-/* .slide-container{
+.slide-container{
+    display: flex;
+    height: calc(358px + 15vh);
+    width: calc(768px + 40vw);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
 
-} */
+.slide-container img {
+    image-rendering: optimizeQuality;
+    width: 100%;
+    overflow: hidden;
+}
+
+.title-i {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+}
 
 .title-text {
   display: flex;
   justify-content: center;
+    text-transform: uppercase;
   align-items: center;
-  height: 106px;
+    text-align: center;
+    font-size: 25px;
+  height: 180px;
+    width: 600px;
   flex-shrink: 0;
   color: #171717;
 }
@@ -26,8 +48,8 @@
 }
 .exp-btns button {
   display: flex;
-  width: 193px;
-  height: 50px;
+  width: 240px;
+  height: 60px;
   padding: 16px 20px;
   font-size: 16px;
   border-radius: 20px;

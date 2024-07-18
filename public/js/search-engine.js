@@ -16,14 +16,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     .then(data => {
                         searchListMobile.innerHTML = '';
                         if (data.length > 0) {
+                            let i = 0;
                             data.forEach(item => {
-                                const itemElement = document.createElement('div');
-                                itemElement.classList.add('search-item');
-                                itemElement.innerHTML = `<li ><a href="/products/${item.id}"><strong>${item.name}</strong> by ${item.collection}</a></li>`;
+                                if (i <= 15) {
+                                let itemElement = document.createElement('li');
+                                itemElement.setAttribute('class','search-item');
+                                let route = `<a href="/products/${item.id}">`;
+                                let input = `${item.name} by ${item.collection}`.toUpperCase();
+                                let regex = new RegExp(query.toUpperCase(), 'g');
+                                let bold = `<strong>${query}</strong>`
+                                itemElement.innerHTML = route + input.replace(regex, bold.toUpperCase()) + `</a>`;
                                 searchListMobile.appendChild(itemElement);
+                                }
+                                i++;
                             });
                         } else {
-                            searchListMobile.innerHTML = '<p>No results found.</p>';
+                            searchListMobile.innerHTML = '<p class="no-result">No results found.</p>';
                         }
                     })
                     .catch(error => console.error('Error:', error));
