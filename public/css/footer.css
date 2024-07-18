@@ -70,7 +70,7 @@
 }
 
 .footer-svg {
-    padding-right: 1%;
+    padding-right: 6px;
 }
 
 .mobile-contacts {
@@ -87,6 +87,10 @@
 .mobile-contacts ul li {
     list-style: none;
     margin-bottom: 5%;
+}
+
+#sale {
+    margin-right: 4px;
 }
 
 @media(max-width: 768px){

@@ -7,16 +7,16 @@
                 <ul>
                     <li>
                         <a href="https://www.google.com/maps?q=Magebit+Riga">
-                            <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="Company Address"><strong>2a Uriekstes,
-                                Riga</strong></a>
+                            <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="Company Address">2a Uriekstes,
+                                Riga</a>
                     </li>
                     <li>
-                        <a href="tel:+371 25000666"><img class="footer-svg" src="{{asset("svg/Icon_Phone.svg")}}" alt="Contact Phone Number"><strong>+371
-                                25000666</strong>
+                        <a href="tel:+371 25000666"><img class="footer-svg" src="{{asset("svg/Icon_Phone.svg")}}" alt="Contact Phone Number">+371
+                                25000666
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset("svg/Icon_Mail.svg")}}" alt="Contact e-mail"><strong>info@northsquad.lv</strong></a>
+                        <a href="mailto:info@northsquad.lv"><img class="footer-svg" src="{{asset("svg/Icon_Mail.svg")}}" alt="Contact e-mail">info@northsquad.lv</a>
                     </li>
                     <li class="social-svg">
                         <a href="#"><img src="{{asset('svg/Icon_Twitter.svg')}}" alt="Twitter"></a>
@@ -92,7 +92,7 @@
             <div class="footer-col sales-col">
                 <h4 class="Sales">Special Offer</h4>
                 <ul>
-                    <li><a href="{{route('sales')}}"><img src="{{ asset('svg/sale-mark.svg') }}" alt="">SALE</a></li>
+                    <li><a href="{{route('sales')}}"><img src="{{ asset('svg/sale-mark.svg') }}" id="sale" alt="Discounts"><strong>SALE</strong></a></li>
                 </ul>
             </div>
         </div>
