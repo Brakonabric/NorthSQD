@@ -7,6 +7,7 @@
     <title>NorthSQD</title>
     <!-- Style -->
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -813,9 +813,9 @@ Introducing the NorthSQD Tough Case for iPhone®—where durability meets the en
                 'imagePreview' => 'images\Matiss\Accessories_Matiss_white_1',
                 'weight' => 20,
                 'discount' => 5.01,
-                'colors' => ['white'],
+                'colors' => ['white', 'black'],
                 'sizes' => ['20 oz'],
-                'imageCount' => 5
+                'imageCount' => 2
             ],
             //Sweatshirt
             [
