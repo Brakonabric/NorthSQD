@@ -20,9 +20,6 @@
             <p>Surname:</p> <p class="notEditThing trickyText"> {{ $user->surname }}</p><input class="editThing" name="surname" type="text" value={{ $user->surname }}>
             </div>
             <div class="name-surname">
-            <p>Your e-mail: {{ $user->email }}</p>
-            </div>
-            <div class="name-surname">
             <p>email: {{ $user->email }}</p>
             </div>
         </div>
