@@ -61,9 +61,9 @@
                 <div class="orderItem">
                     <label for="terminal" class="bold">Terminal</label>
                     <select name="terminal" id="terminal" form="orderform">
-                        <option value="terminal 1">terminal 1</option>
-                        <option value="terminal 2">terminal 2</option>
-                        <option value="terminal 3">terminal 3</option>
+                        <option value="0001 Cemetery Lane, USA">0001 Cemetery Lane, USA</option>
+                        <option value="742 Evergreen Terrace, Springfield">742 Evergreen Terrace, Springfield</option>
+                        <option value="698 Sycamore Road, San Pueblo, CA">698 Sycamore Road, San Pueblo, CA</option>
                         <option value="Uriekstes iela 2A">Uriekstes iela 2A</option>
                 </div>
                 </select>

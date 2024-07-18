@@ -1,0 +1,18 @@
+.mainTable{
+    width:100%;
+    border-collapse: collapse;
+    
+}
+.mainTable tr{
+    background-color: #518EF8
+}
+.mainTable tr:nth-of-type(even) {
+    background-color: #80B3FF;
+  }
+#mainRow{
+    background-color: white;
+    font-weight: bold;
+}
+th{
+     border: solid black 3px;
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/error.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin-dash.css') }}">
     <title>Document</title>
 </head>
 
@@ -15,8 +16,8 @@
             <div class="error-col">
                 <h1 class="bigtext">Orders</h1>
             </div>
-            <table style="width:100%">
-                <tr>
+            <table class="mainTable">
+                <tr id="mainRow">
                     <th>Delivery By</th>
                     <th>Terminal</th>
                     <th>Customer name</th>
