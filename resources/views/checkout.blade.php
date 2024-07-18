@@ -11,7 +11,7 @@
     @include('templates/navbar')
     <div class="checkout">
         <div class="order-info">
-            <h3>Order Info</h2>
+            <h2>Order Info</h2>
                 @if ($order['cart'])
                     @php
                         $subtotal = 0;
@@ -37,7 +37,7 @@
                 @csrf
                 <input type="hidden" name="cost" id="cost" value={{$subtotal}}>
                 <div class="orderItem">
-                    <h2>Delivery</h1>
+                    <h2>Delivery</h2>
                         <label for="pacomat" class="bold">Select Pacomat Type</label>
                 </div>
                 <div class="shipping-options">
@@ -65,10 +65,10 @@
                         <option value="742 Evergreen Terrace, Springfield">742 Evergreen Terrace, Springfield</option>
                         <option value="698 Sycamore Road, San Pueblo, CA">698 Sycamore Road, San Pueblo, CA</option>
                         <option value="Uriekstes iela 2A">Uriekstes iela 2A</option>
+                    </select>
                 </div>
-                </select>
                 <div class="orderItem">
-                    <h2>Contacts</h1>
+                    <h2>Contacts</h2>
                         <label for="name">First Name*</label>
                         @if ($order['user'])
                             @if ($order['user']->name)
@@ -82,20 +82,20 @@
                                 @endphp
                             @endif
                         @endif
-                        <input required type="text" name="name" value={{ $name }}></input>
+                        <input required type="text" name="name" value={{ $name }}>
                         <label for="surname">Last Name*</label>
-                        <input required type="text" name ="surname" value={{ $surname }}></input>
+                        <input required type="text" name ="surname" value={{ $surname }}>
                         <label for="email">Your e-mail</label>
-                        <input type="text" name="email" value={{ $email }}></input>
+                        <input type="text" name="email" value={{ $email }}>
                         <label for="phone">Phone Number *</label>
                         <div class = "forPhone">
-                            <img src="{{ asset('svg/countryCode.png') }}">
-                            <input required class="phone" type="text" name="phone"></input>
+                            <img src="{{ asset('svg/countryCode.png') }}" alt="Phone number code">
+                            <input required class="phone" type="text" name="phone">
                         </div>
                 </div>
                 <div class="orderItem">
-                    <h2>Payment</h1>
-                        <label for payment>Select Payment Method</label>
+                    <h2>Payment</h2>
+                        <label class="for payment">Select Payment Method</label>
                         <div class="payment-options">
                             <div class="payment-options-item" onclick="changePayment('visa')">
                                 <div id="visa" class="payment-logo"><img src="{{ asset('svg/visa.svg') }}"
@@ -117,19 +117,18 @@
                 </div>
                 <input type="hidden" name="payment" id="payment">
                 <div class="box-checkbox">
-                    <input required type = "checkbox" name="termsAccept" class ="checkbox"></input>
+                    <input required type = "checkbox" name="termsAccept" class ="checkbox">
                     <p>Accept the <a>terms</a></p>
                 </div>
                 <div class="box-checkbox">
-                    <input required type = "checkbox" name="policyAccept" class ="checkbox"></input>
+                    <input required type = "checkbox" name="policyAccept" class ="checkbox">
                     <p>Accept the <a>privacy policy</a></p>
                 </div>
                 <div>
-                    <input class ="submit" type="submit" value="Order" class=""></input>
+                    <input class ="submit" type="submit" value="Order">
                 </div>
             </form>
         </div>
-    </div>
     </div>
 @else
     <p>Cart is empty</p>

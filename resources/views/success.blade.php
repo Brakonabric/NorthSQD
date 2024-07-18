@@ -32,7 +32,7 @@
                     @endforeach
                 </ul>
                 <p>Delivery cost: {{$order['checkoutData']['pacomat']=='latvijasPasts' ? 2.99 : 1.99}}</p>
-                <p>Total: {{((double)$order['checkoutData']['cost']+((double)($order['checkoutData']['pacomat']=='latvijasPasts' ? 2.99 : 1.99)))}}</p>
+                <p>Total: {{((double)$order['checkoutData']['cost']+((double)$order['checkoutData']['pacomat']=='latvijasPasts' ? 2.99 : 1.99))}}</p>
                 <p>Payed with: {{$order['checkoutData']['payment']}}</p>
             </div>
                 <div class="error-btn">
