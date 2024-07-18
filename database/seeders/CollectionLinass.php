@@ -282,7 +282,7 @@ Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining pr
                 'price' => 50.00,
                 'category' => 'Accessories',
                 'collection' => 'Rodions',
-                'imagePreview' => 'images\Rodions\Accessories_Rodions_white_1.png',
+                'imagePreview' => 'images\Rodions\Accessories_Rodions_purple_1.png',
                 'weight' => 4.3,
                 'discount' => 5.01,
                 'colors' => ['purple'],
