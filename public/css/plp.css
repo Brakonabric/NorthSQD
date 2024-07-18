@@ -153,4 +153,10 @@ hr {
     .plp-grid-container {
         grid-template-columns: repeat(4, 1fr);
     }
+    .shit {
+        align-content: center;
+        height: 50px;
+        width: 100px;
+        flex-direction: row;
+    }
 }

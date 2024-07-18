@@ -45,7 +45,6 @@
            style="background-image: url({{ asset('/images/Matiss/Accessories_Matiss_white_1.png') }})">
             <h3 class="">MATISS</h3>
         </a>
-
         <a href="{{route('sales')}}" class="link-wrap"
            style="background-image: url({{ asset('/images/Katerina/Hat_Katerina_black_3.png') }})">
             <h3 class="top-sales-in-coll">TOP SALES</h3>

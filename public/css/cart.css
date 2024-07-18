@@ -115,3 +115,10 @@ body {
         width: 90%;
     }
     }
+
+.auth_line {
+    background-color: #DB3998;
+    border: 0;
+    height: 2px;
+    margin-top: calc(60px + 10vh);
+}

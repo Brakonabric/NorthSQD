@@ -22,7 +22,25 @@
                 <img src="{{ asset("svg/user.svg") }}" alt="#">
             </a>
             <a href="{{ route('cart') }}" class="mob-nav-button" id="cart">
-                <img src="{{ asset("svg/shopping_cart.svg" )}}" alt="">
+{{--                <img src="{{ asset("svg/shopping_cart.svg" )}}" alt="">--}}
+                @php
+                    $total = 0;
+                    $cart = session()->get('cart');
+                    if ($cart) {
+                        foreach ($cart as $i) {
+                        $total += $i['quantity'];
+                    }
+                    }
+                @endphp
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 2.44772 0.447715 2 1 2H2.43845C3.81505 2 5.015 2.93689 5.34887 4.27239L5.53078 5H18.6027C20.8917 5 22.3336 7.45864 21.2234 9.45693L18.4457 14.4569C17.9166 15.4093 16.9127 16 15.8232 16H8.56155C7.18495 16 5.985 15.0631 5.65113 13.7276L3.40859 4.75746C3.2973 4.3123 2.89732 4 2.43845 4H1C0.447715 4 0 3.55228 0 3ZM6.03078 7L7.59141 13.2425C7.7027 13.6877 8.10268 14 8.56155 14H15.8232C16.1864 14 16.521 13.8031 16.6973 13.4856L19.4751 8.48564C19.8461 7.81781 19.3637 7 18.6027 7H6.03078Z" fill="#040921"/>
+                    <path d="M9 20C9 21.1046 8.10457 22 7 22C5.89543 22 5 21.1046 5 20C5 18.8954 5.89543 18 7 18C8.10457 18 9 18.8954 9 20Z" fill="#040921"/>
+                    <path d="M19 20C19 21.1046 18.1046 22 17 22C15.8954 22 15 21.1046 15 20C15 18.8954 15.8954 18 17 18C18.1046 18 19 18.8954 19 20Z" fill="#040921"/>
+                    @if ($total > 0)
+                    <p class="inCart">{{$total}}</p>
+                    @endif
+                </svg>
+
             </a>
         </div>
     </div>
@@ -31,7 +49,6 @@
             <br>
             <ul>
                 <li><h3>Categories</h3></li>
-                <li><a href="">Collections</a></li>
                 <li><a href="{{route('category')}}/?category=t-shirts">T-Shirts</a></li>
                 <li><a href="{{route('category')}}/?category=sweatshirts">Sweatshirts</a></li>
                 <li><a href="{{route('category')}}/?category=accessories">Accessories</a></li>
@@ -61,14 +78,14 @@
             <li class="nav-list-item"><a href="{{route('category')}}/?category=hoodie">Hoodie</a></li>
             <li class="nav-list-item"><a href="{{route('category')}}/?category=shoes">Shoes</a></li>
             <li class="nav-list-item"><a href="{{route('category')}}/?category=hat">Hat</a></li>
-            <li class="nav-list-item"><a href="#">Collections</a></li>
             <li class="nav-list-item"><a class="" href="{{route('sales')}}">
                     <img src="{{asset("svg/sale-mark.svg")}}" alt="">SALE</a></li>
         </ul>
     </nav>
 </div>
 <div class="search-bar-mobile" style="display: none">
-    <form action="" method="get" class="search-form">
+    <form action="{{ route('searchRed') }}" method="get" class="search-form">
+
         @csrf
         <div class="search-container">
             <span class="search-state"></span>
@@ -88,11 +105,9 @@
                 </svg>
             </button>
         </div>
-    </form>
-    <script src="{{ asset('js/search.js') }}"></script>
+    <script src="{{ asset('js/search-engine.js') }}"></script>
         <div class="search-response-container">
             <ul class="search-list-mobile" id="search-list-mobile">
-
             </ul>
         </div>
 </div>

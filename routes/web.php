@@ -18,10 +18,6 @@ use App\Http\Controllers\CartController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('home');
-//})->name('home');
-
 Route::get('/products', [ProductListController::class, 'showall'])->name('products');
 Route::post('/products/add-product', [ProductListController::class, 'addProduct'])->name('addProduct');
 Route::get('/products/add-product', [ProductListController::class, 'showAddProductForm']);
@@ -29,6 +25,7 @@ Route::get('/products/{id}', [ProductListController::class,'getProduct']);
 
 Route::get('/', [ProductListController::class, 'homeSlider'])->name('home');;
 Route::get('/search', [ProductListController::class, 'search'])->name('search');
+Route::get('/search-result', [ProductListController::class, 'searchRedirect'])->name('searchRed');;
 Route::get('/collection', [ProductListController::class, 'collection'])->name('collection');
 Route::get('/category', [ProductListController::class, 'category'])->name('category');
 Route::get('/sales', [ProductListController::class, 'sales'])->name('sales');

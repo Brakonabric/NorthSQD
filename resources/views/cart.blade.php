@@ -69,5 +69,7 @@
         </form>
     </div>
     @endif
+    <hr class="auth_line">
+    @include('templates/footer')
 </body>
 </html>
