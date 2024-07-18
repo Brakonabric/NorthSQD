@@ -16,7 +16,7 @@
 </head>
 <body>
 @include('templates.navbar')
-<div class="emptyModulePlace">EMPTY</div>
+@include('templates/slider')
 @include('templates.plp-hor-slider')
 <div class="pre-collection">
     <div class="description">
