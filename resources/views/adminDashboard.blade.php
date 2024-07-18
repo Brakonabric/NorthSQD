@@ -25,7 +25,7 @@
                     <th>Customer email</th>
                     <th>Customer phone</th>
                     <th>Customer payment way</th>
-                    <th>Cost</th>
+                    <th>Cost,€</th>
                 </tr>
                 @foreach ($orders as $order)
                     <tr>
@@ -36,7 +36,7 @@
                         <th>{{$order['email']}}</th>
                         <th>{{$order['phone']}}</th>
                         <th>{{$order['payment']}}</th>
-                        <th>{{$order['cost']}}</th>
+                        <th class="cost">{{$order['cost']}}</th>
                     </tr>
                 @endforeach
             </table>

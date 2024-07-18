@@ -1,18 +1,32 @@
+body {
+    font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #141417;
+    width: 100%;
+}
 .mainTable{
     width:100%;
     border-collapse: collapse;
-    
 }
 .mainTable tr{
-    background-color: #518EF8
+    background-color: white;
 }
 .mainTable tr:nth-of-type(even) {
-    background-color: #80B3FF;
+    background-color: rgb(209, 209, 209);
   }
 #mainRow{
-    background-color: white;
-    font-weight: bold;
+    color:white;
+    background-color: rgb(25, 77, 112);
 }
-th{
-     border: solid black 3px;
+#mainRow th{
+    font-weight: 800;
+    text-align: center;
+}
+.mainTable th{
+    font-weight: 400;
+    padding: 8px 16px;
+    text-align: left;
+}
+.cost{
+    text-align: right;
+
 }
