@@ -217,7 +217,7 @@ The padded collar and tongue create a sleek, eye-catching silhouette, while the 
 	<li>White laces.</li>
 	<li>Blank product sourced from China.</li>
 </ul>
-Embrace the spirit of the North with NorthSQD.",
+",
                 'price' => 45.00,
                 'category' => 'Shoes',
                 'collection' => 'Rodions',
@@ -248,7 +248,7 @@ Embrace the spirit of the North with NorthSQD.",
     <li>Blank product sourced from Bangladesh</li>
     </ul>
        
-Embrace sustainable fashion with the Organic Cotton T-Shirt by NorthSQD, and let the spirit of the northern lights illuminate your style.",
+",
                 'price' => 20.00,
                 'category' => 'T-Shirts',
                 'collection' => 'Rodions',
@@ -277,8 +277,8 @@ Introducing the NorthSQD Tough Case for iPhone®—where durability meets the en
     <li>Matte or gloss finish</li>
     <li>Blank product sourced from Korea</li>
     </ul>
-
-Elevate phone protection with the NorthSQD Tough Case for iPhone®. Combining practicality with the mystical charm of the northern lights, this case is perfect for those who want to protect their device in style.",
+<br>
+",
                 'price' => 50.00,
                 'category' => 'Accessories',
                 'collection' => 'Rodions',
