@@ -81,6 +81,8 @@
 
 {{--IMPORTANT--}}
 <hr>
+
 @include('templates/footer')
+
 </body>
 </html>

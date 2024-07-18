@@ -187,7 +187,7 @@
 @media (max-width: 768px) {
     .sticky-bar {
         position: sticky;
-        z-index: 999;
+        z-index: 100;
     }
 
     .navbar-header {
@@ -206,6 +206,98 @@
 
     #left-container {
         display: flex;
+    }
+
+    body:has(.no-scroll) {
+        overflow: hidden;
+    }
+
+    .search-bar-mobile {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: lightgray;
+        top: 0;
+        z-index: 101;
+        overflow: hidden;
+        padding: 0 5vw;
+    }
+
+    .search-form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-container {
+        position: relative;
+        margin-top: 40px;
+        display: inline-flex;
+        background-color: white;
+        width: 90%;
+        height: 30px;
+        border: none;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    button svg {
+        display: flex;
+        align-items: center;
+    }
+
+    #search-bar-input {
+        border: none;
+        background: none;
+        width: 80%;
+    }
+
+    #search-bar-input {
+        outline: none;
+    }
+
+    #close-search {
+        position: absolute;
+        background: none;
+        border: none;
+        padding:0;
+        margin: 0;
+        top: -30px;
+        left: 95%;
+    }
+    .search-submit {
+        border: 5px solid rgba(255, 255, 255, 0);
+        background: none;
+        padding:0;
+        margin: 0;
+    }
+
+    .active-submit {
+        border: 5px solid #DB3998FF;
+        padding:0;
+        border-radius: 20px;
+        background: #DB3998FF;
+    }
+
+    /*.exit-svg {*/
+    /*    fill: white;*/
+    /*}*/
+
+    #search-reject {
+        position: absolute;
+        background: none;
+        border: none;
+        left: 80%
+    }
+    #search-reject svg {
+        height: 70%;
+        width: 70%;
+    }
+    .search-list-mobile {
+        list-style: none;
+        padding: 0;
     }
 }
 
