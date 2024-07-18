@@ -131,6 +131,10 @@
         padding: 0 20%;
     }
 
+    .payment-row img {
+        height: 40px;
+    }
+
     .sales-col {
         width: 13%;
     }

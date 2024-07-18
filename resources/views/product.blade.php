@@ -73,7 +73,6 @@
             <div class="size-chooser">
                 @foreach($products['colors'] as $color)
                     <div class="sizes" id="sizes-{{ $color->color }}" style="display: none;">
-                        <p>{{ $color->color }}</p>
                         <ul>
                             @foreach($products['sizes'][$color->color] as $size)
                                 <li class="size-option {{ $size->in_stock ? 'size-in-stock' : 'size-out-stock' }}"

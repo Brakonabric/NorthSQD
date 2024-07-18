@@ -27,7 +27,7 @@
            style="background-image: url({{ asset('/images/Linass/Accessories_Linass_white_2.png') }})">
             <h3 class="">LINASS</h3>
         </a>
-        <a href="{{route('collection')}}/?collection=rodions" class="link-wrap" style="background-image: url({{ asset('/images/Rodions/Accessories_Rodions_white_1.png') }})">
+        <a href="{{route('collection')}}/?collection=rodions" class="link-wrap" style="background-image: url({{ asset('/images/Rodions/Accessories_Rodions_purple_1.png') }})">
             <h3 class="">RODIONS</h3>
         </a>
         <a href="{{route('collection')}}/?collection=matiss" class="link-wrap" style="background-image: url({{ asset('/images/pepe.png') }})">
