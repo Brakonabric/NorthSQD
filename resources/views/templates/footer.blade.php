@@ -41,7 +41,7 @@
                 <h4>Contacts</h4>
                 <ul>
                     <li>
-                        <a href="ttps://www.google.com/maps?q=Magebit+Riga" target="_blank">
+                        <a href="https://www.google.com/maps?q=Magebit+Riga" target="_blank">
                             <img class="footer-svg" src="{{asset('svg/Icon-Address.svg')}}" alt="Company Address">2a Uriekstes,
                             Riga</a>
                     </li>
@@ -84,13 +84,13 @@
             <div class="footer-col">
                 <h4>Info</h4>
                 <ul>
-                    <li><a href="#">About NorthSQD</a></li>
-                    <li><a href="#">Refund policy</a></li>
-                    <li><a href="#">Shipping policy</a></li>
+                    <li><a href="{{route('about')}}">About NorthSQD</a></li>
+                    <li><a href="{{route('returnPolicy')}}">Return policy</a></li>
+                    <li><a href="{{route('shippingPolicy')}}">Shipping policy</a></li>
                 </ul>
             </div>
             <div class="footer-col sales-col">
-                <h4 class="Sales">TOP Sales</h4>
+                <h4 class="Sales">Special Offer</h4>
                 <ul>
                     <li><a href="{{route('sales')}}"><img src="{{ asset('svg/sale-mark.svg') }}" alt="">SALE</a></li>
                 </ul>
