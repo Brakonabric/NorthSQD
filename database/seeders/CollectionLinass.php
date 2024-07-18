@@ -760,7 +760,8 @@ Introducing the NorthSQD Tough Case for iPhone®—where durability meets the en
                 'colors' => ['white', 'black'],
                 'sizes' => ['Medium size'],
                 'imageCount' => 4
-            ],                    [
+            ],                    
+            [
                 'name' => "Unisex Cotton T-Shirt",
                 'description' => "Introducing the Organic Cotton T-Shirt by NorthSQD—where sustainability meets the enchanting beauty of the northern lights. This high-quality T-shirt is crafted from 100% organic ring-spun cotton, making it the perfect choice for eco-conscious shoppers. With its exceptional comfort, don't be surprised if it quickly becomes your favorite wardrobe staple.
 
@@ -784,7 +785,7 @@ Introducing the NorthSQD Tough Case for iPhone®—where durability meets the en
                 'price' => 20.00,
                 'category' => 'T-Shirts',
                 'collection' => 'Matiss',
-                'imagePreview' => 'images\Matiss\T-Shirts_Matiss_white_3.png',
+                'imagePreview' => 'images\Matiss\T-Shirts_Matiss_white_2.png',
                 'weight' => 1.2,
                 'discount' => 3.01,
                 'colors' => ['white', 'black'],

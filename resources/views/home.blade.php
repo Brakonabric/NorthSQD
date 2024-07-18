@@ -33,18 +33,19 @@
            style="background-image: url({{ asset('/images/Rodions/Accessories_Rodions_purple_1.png') }})">
             <h3 class="">RODIONS</h3>
         </a>
+        <a href="{{route('collection')}}/?collection=katerina" class="link-wrap"
+        style="background-image: url({{ asset('/images/Katerina/Hoodie_Katerina_white_2.png') }})">
+         <h3 class="">KATERINA</h3>
+     </a>
+        <a href="{{route('collection')}}/?collection=deniss" class="link-wrap"
+        style="background-image: url({{ asset('/images/Deniss/Shoes_Deniss_white_1.png') }})">
+         <h3 class="">DENISS</h3>
+     </a>
         <a href="{{route('collection')}}/?collection=matiss" class="link-wrap"
-           style="background-image: url({{ asset('/images/pepe.png') }})">
+           style="background-image: url({{ asset('/images/Matiss/Accessories_Matiss_white_1.png') }})">
             <h3 class="">MATISS</h3>
         </a>
-        <a href="{{route('collection')}}/?collection=katerina" class="link-wrap"
-           style="background-image: url({{ asset('/images/Katerina/Hoodie_Katerina_white_2.png') }})">
-            <h3 class="">KATERINA</h3>
-        </a>
-        <a href="{{route('collection')}}/?collection=deniss" class="link-wrap"
-           style="background-image: url({{ asset('/images/Deniss/Shoes_Deniss_white_1.png') }})">
-            <h3 class="">DENISS</h3>
-        </a>
+
         <a href="{{route('sales')}}" class="link-wrap"
            style="background-image: url({{ asset('/images/Katerina/Hat_Katerina_black_3.png') }})">
             <h3 class="top-sales-in-coll">TOP SALES</h3>
