@@ -100,6 +100,18 @@ class UserController extends Controller
         return redirect('/login');
     } 
     public function profile(){
-        return view('profile');
+        $user=Auth::user();
+        return view('profile', ['user'=>$user]);
+    } 
+    public function profileUpdate(Request $request){
+        $name=$request->name;
+        $surname=$request->surname;
+        $id=Auth::user()->id;
+        $user = User::find($id);
+        $user->name=$name;
+        $user->surname=$surname;
+        $user->save();
+
+        return back();
     } 
 }

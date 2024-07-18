@@ -60,6 +60,7 @@ Route::get('/returnPolicy', function () {
 
 
 Route::get('/profile', [UserController::class, 'profile'])->middleware('auth')->name('profile');
+Route::post('/profile', [UserController::class, 'profileUpdate'])->middleware('auth')->name('profilePost');
 
 
 Route::get('/shippingPolicy', function () {
