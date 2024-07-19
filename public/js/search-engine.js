@@ -1,7 +1,21 @@
+const searchBar = document.getElementById('search-bar-mobile');
+const searchOnButton = document.getElementById('search');
+const searchOffButton = document.getElementById('close-button');
+searchOnButton.addEventListener('click', () => {
+    const isSearchActive = searchBar.style.display === "block";
+    searchBar.style.display = isSearchActive ? "none" : "block";
+});
+
+searchOffButton.addEventListener('click', () => {
+    const isSearchActive = searchBar.style.display === "block";
+    searchBar.style.display = isSearchActive ? "none" : "block";
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const searchBarInput = document.getElementById('search-bar-input');
     const searchListMobile = document.getElementById('search-list-mobile');
-
+    const searchBar = document.getElementById('search-bar-mobile');
     if (searchBarInput && searchListMobile) {
         searchBarInput.addEventListener('input', function () {
             const query = searchBarInput.value;
@@ -41,3 +55,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+

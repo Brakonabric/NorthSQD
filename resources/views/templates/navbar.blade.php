@@ -88,13 +88,12 @@
         </ul>
     </nav>
 </div>
-<div class="search-bar-mobile">
+<div class="search-bar-mobile" id="search-bar-mobile">
+    @csrf
     <form action="{{ route('searchRed') }}" method="get" class="search-form">
-
-        @csrf
         <div class="close-title">
             <span class="search-state">Search</span>
-            <button class="close-button">
+            <button class="close-button" id="close-button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.3632 18.364C18.7537 17.9734 18.7537 17.3403 18.3632 16.9498L13.4141 12.0007L18.3646 7.05026C18.7551 6.65974 18.7551 6.02657 18.3646 5.63605C17.974 5.24552 17.3409 5.24552 16.9503 5.63605L11.9999 10.5865L7.04948 5.63604C6.65896 5.24552 6.02579 5.24552 5.63527 5.63604C5.24475 6.02657 5.24475 6.65973 5.63527 7.05026L10.5857 12.0007L5.63663 16.9498C5.2461 17.3403 5.2461 17.9734 5.63663 18.364C6.02715 18.7545 6.66032 18.7545 7.05084 18.364L11.9999 13.4149L16.949 18.364C17.3395 18.7545 17.9727 18.7545 18.3632 18.364Z"
                           fill="black"/>
@@ -109,13 +108,8 @@
                           fill="#040921"/>
                 </svg>
             </span>
+            <label id="search-label" for="search" hidden>Search for items and collections</label>
             <input type="search" id="search-bar-input" name="search" placeholder="Search..." autocomplete="off">
-            <button id="search-reject" type="button">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.3632 18.364C18.7537 17.9734 18.7537 17.3403 18.3632 16.9498L13.4141 12.0007L18.3646 7.05026C18.7551 6.65974 18.7551 6.02657 18.3646 5.63605C17.974 5.24552 17.3409 5.24552 16.9503 5.63605L11.9999 10.5865L7.04948 5.63604C6.65896 5.24552 6.02579 5.24552 5.63527 5.63604C5.24475 6.02657 5.24475 6.65973 5.63527 7.05026L10.5857 12.0007L5.63663 16.9498C5.2461 17.3403 5.2461 17.9734 5.63663 18.364C6.02715 18.7545 6.66032 18.7545 7.05084 18.364L11.9999 13.4149L16.949 18.364C17.3395 18.7545 17.9727 18.7545 18.3632 18.364Z"
-                          fill="black"/>
-                </svg>
-            </button>
         </div>
         <script src="{{ secure_asset('js/search-engine.js') }}"></script>
         <div class="search-response-container">
