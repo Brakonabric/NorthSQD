@@ -3,6 +3,8 @@ body {
     sans-serif;
   color: #141417;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .checkout {
@@ -10,12 +12,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 20px auto;
+  margin: 20px 5vw;
 }
 
 .order-info,
 #orderformbox {
-  width: 90%;
+  position: relative;
+  width: 90vw;
   max-width: 800px;
 }
 
