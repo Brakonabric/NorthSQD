@@ -1,10 +1,38 @@
 .slide {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.slide-container{
+.swiper {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.main-imgr {
     display: flex;
     height: calc(358px + 15vh);
     width: calc(768px + 40vw);
@@ -13,7 +41,7 @@
     align-items: center;
 }
 
-.slide-container img {
+.main-imgr img {
     image-rendering: optimizeQuality;
     width: 100%;
     overflow: hidden;
@@ -22,51 +50,96 @@
 .title-i {
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    justify-content: center;
 }
 
 .title-text {
-  display: flex;
-  justify-content: center;
+    margin: 0 auto;
     text-transform: uppercase;
-  align-items: center;
+    align-items: center;
     text-align: center;
-    font-size: 25px;
-  height: 180px;
-    width: 600px;
-  flex-shrink: 0;
-  color: #171717;
+    color: #171717;
 }
+
+.title-text h1 {
+    margin: 0;
+}
+
 .exp-btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    position: relative;
 }
+
 .exp-btns button {
-  display: flex;
-  width: 240px;
-  height: 60px;
-  padding: 16px 20px;
-  font-size: 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
 .cl-btn {
-  border: 2px solid var(--Black-text, #1e1f27);
-  color: var(--Black-text, #1e1f27);
-  background: white;
+    border: 2px solid #1E1F27FF;
+    color: #1E1F27FF;
+    background: white;
 }
 
 .sn-btn {
-  border: none;
-  color: var(--White, #fff);
-  background: var(--Main-action, #db3998);
+    border: none;
+    color: white;
+    background: #db3998;
+}
+
+.slide-container {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-imgr {
+        display: none;
+    }
+
+    .slide-container {
+        display: block;
+    }
+
+    .title-text {
+        width: 70%;
+    }
+
+    .exp-btns button {
+        width: 44%;
+        height: 50px;
+        padding: 16px 20px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .main-imgr {
+        display: block;
+    }
+
+    .slide-container {
+        display: none;
+    }
+
+    .title-text {
+        font-size: 25px;
+        height: 140px;
+        width: 580px;
+    }
+
+    .exp-btns button {
+        width: 240px;
+        height: 60px;
+        padding: 16px 20px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
 }
