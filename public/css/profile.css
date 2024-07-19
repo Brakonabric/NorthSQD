@@ -1,59 +1,89 @@
 body {
-    font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #141417;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.userBox{
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-.userBox a{
-    text-decoration: none;
-    color:white;
-    width:100%;
-}
-.optionsbut{
-    background-color: #DB3998;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    min-height: 40px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-weight: bold;
-    width:100%;
-    margin-right:5px
-}
-.editThing{
-    display: none;
-}
-.coolButtons{
-    width:100%;
-    display:flex;
-    flex-direction: row;
-}
-.name-surname{
-    display:flex;
-    flex-direction: row;
-    
-}
-.name-surname input{
-    height:30px;
-    border-radius: 10px;
-    border: 2px solid #ececec;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-.logout{
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
+  font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #141417;
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background: rgb(243, 244, 246);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  color: #db3998;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.field p,
+.field input {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.field input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #ececec;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #db3998;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  min-height: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.btn.logout a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.editThing {
+  display: none;
+}
