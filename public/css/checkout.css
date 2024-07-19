@@ -1,168 +1,171 @@
 body {
-    font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #141417;
-    width: 100%;
+  font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #141417;
+  width: 100%;
 }
-.order-info, #orderform{
-    margin-left: 3%;
-    align-items: center;
+
+.checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto;
 }
+
+.order-info,
+#orderformbox {
+  width: 90%;
+  max-width: 800px;
+}
+
 .order-info a {
-    text-decoration: none;
-    color:#16151599;
-}
-#orderform {
-    display: flex;
-    flex-direction: column;
-}
-#orderform input,#orderform label {
-    display:block;
-    font-size: medium;
-}
-#orderform label {
-    margin-top: 20px;
-}
-#orderform input:not(.checkbox,.sumbit,.phone),#orderform select{
-    width: 90%;
-    min-height: 40px;
-    border-radius: 10px;
-    border: 2px solid #ececec;
-    background-color: white;
-    padding-left: 3%;
-    padding-right: 3%; 
-    padding: 3%,3%,3%,3%;
-}
-#orderform select{
-    width: 97.2%;
-    min-height: 46px;
-    font-size: medium;
-}
-#orderform input:focus:not(.phone) {
-    outline: none;
-    border: 2px solid #414141;
-}
-.bold{
-    font-weight: bold;
+  text-decoration: none;
+  color: #16151599;
 }
 
-#orderform .box-checkbox input,.box-checkbox p{
-
-    display: inline-block;
-    vertical-align:middle;
-}
-#orderform .checkbox {
-    width:30px;
-    height: 30px;
-    border-radius: 10px;
-    border: 2px solid #ececec;
-    background-color: white;
-}
-.shipping-options-item {
-    display: inline-block;
-    margin-right: 16px;
-    cursor:pointer;
-}
-.shipping-options-item p {
-    text-align: center;
+#orderformbox {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.shipping-logo {
-    display: flex;
-    width: 90px;
-    height: 30px;
-    border: 1px solid;
-    border-radius: 6px;
-    border-color: #d0d0d0;
-    justify-content: center;
+.orderItem {
+  margin-bottom: 20px;
 }
-.payment-options{
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+.orderItem h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
 }
-.payment-options-item {
-    width:17%;
-    display: inline-block;
-    cursor:pointer;
-    margin-right:6%;
+
+.orderItem label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
-.payment-logo {
-    display: flex;
-    border: 1px solid;
-    border-radius: 6px;
-    border-color: #d0d0d0;
-    justify-content: center;
+
+#orderform input[type="text"],
+#orderform input[type="email"],
+#orderform select,
+.phone-container select,
+.phone-container input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ececec;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
-.payment-logo img{
-    height:20px;
-    padding:5px;
+
+#orderform input[type="text"]:focus,
+#orderform input[type="email"]:focus,
+#orderform select:focus {
+  border-color: #414141;
+  outline: none;
 }
-.shipping-options{
-    margin-top: 20px;
+
+.phone-container {
+  display: flex;
+  align-items: center;
 }
-#orderform a{
-    color:#148EE6;
-    text-decoration: underline;
-    cursor:pointer;
+
+.phone-container select {
+  width: 30%;
+  margin-right: 10px;
 }
-#orderform input.submit  {
-    background-color: #DB3998;
-    color: white;
-    border: none;
-    width:100%;
-    border-radius: 25px;
-    min-height: 60px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: large;
+
+.phone-container input {
+  width: 70%;
 }
-.orderItem{
-    width: 100%;
+
+.shipping-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
-.forPhone{
-    display: flex;
-    border-radius: 10px;
-    border: 2px solid #ececec;
-    padding-left: 0%;
-    padding-right: 0%; 
-    width:96.1%;
+
+.shipping-option {
+  flex: 1 1 100px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #d0d0d0;
+  border-radius: 8px;
+  text-align: center;
 }
-.forPhone:focus-within {
-    border: 2px solid #414141;
+
+.shipping-option input {
+  display: none;
 }
-.phone{
-    width:100%;
-    min-height: 40px;
-    border-radius: 10px;
-    background-color: white;
-    padding-left: 0%;
-    padding-right: 0%; 
-    padding: 3%,3%,3%,3%;
-    border: none;
-    outline: none;
+
+.shipping-option p {
+  margin: 0;
 }
-.forPhone img{
-    margin: 0;
-    border-radius:20px;
+
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
-.phone:focus {
-    border: none;
-    outline: none;
+
+.payment-option {
+  flex: 1 1 100px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #d0d0d0;
+  border-radius: 8px;
+  text-align: center;
 }
-@media (min-width: 769px) {
-    #orderformbox, .order-info{
-        width:40%;
-    }
-    .checkout{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width:100%;
-    }
+
+.payment-option input {
+  display: none;
 }
+
+.payment-option p {
+  margin: 0;
+}
+
+.box-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.box-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.box-checkbox label {
+  font-size: 0.9em;
+}
+
+.submit {
+  background-color: #db3998;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: initial;
+}
+
+input:invalid:focus {
+  border-color: red;
+}
+
 @media (max-width: 768px) {
-    #orderformbox, .order-info{
-        width:90%;
-    }
-    }
+  .order-info,
+  #orderformbox {
+    width: 95%;
+  }
+}
