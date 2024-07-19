@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset('css/plp.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/plp.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
@@ -17,7 +18,7 @@
     <div class="plp-header">
         <div class="filter-sort">
             <button class="filter-btn">
-                <img src="{{asset("svg/filter.svg")}}" alt="filter">
+                <img src="{{secure_asset("svg/filter.svg")}}" alt="filter">
             </button>
             <p>Sort/Filter</p>
         </div>
@@ -31,7 +32,7 @@
             <a href="{{ route('products')}}/{{$item->id}}" class="product-container">
                 <div class="product-wrapper">
                     <div class="image-container">
-                        <img class="product-image" src="{{asset($item->imagePreview)}}" alt={{ $item->name }}>
+                        <img class="product-image" src="{{secure_asset($item->imagePreview)}}" alt={{ $item->name }}>
                         @if($item->discount !== null && $item->discount > 0)
                             <p class="sale-mark">SALE</p>
                         @endif

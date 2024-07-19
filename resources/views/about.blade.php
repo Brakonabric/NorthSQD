@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/about.css') }}">
     <title>About NorthSQD</title>
 </head>
 <body>
@@ -21,8 +22,8 @@
 <div class="about">
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ asset("images/man.png") }}" alt="Katerina" class="person-image">
-            <img src="{{ asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
+            <img src="{{ secure_asset("images/man.png") }}" alt="Katerina" class="person-image">
+            <img src="{{ secure_asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
         </div>
         <h3 class="pink">LINASS</h3>
         <h4>The Team Lead</h4>
@@ -33,8 +34,8 @@
 
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ asset("images/man.png") }}" alt="Katerina" class="person-image">
-            <img src="{{ asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
+            <img src="{{ secure_asset("images/man.png") }}" alt="Katerina" class="person-image">
+            <img src="{{ secure_asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
         </div>
         <h3 class="pink">DENISS</h3>
         <h4>The Back-End Wizard</h4>
@@ -45,8 +46,8 @@
 
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ asset("images/man.png") }}" alt="Katerina" class="person-image">
-            <img src="{{ asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
+            <img src="{{ secure_asset("images/man.png") }}" alt="Katerina" class="person-image">
+            <img src="{{ secure_asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
         </div>
         <h3 class="pink">RODIONS</h3>
         <h4>The Front-End Master</h4>
@@ -57,8 +58,8 @@
 
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ asset("images/woman.png") }}" alt="Katerina" class="person-image">
-            <img src="{{ asset("images/woman2.png") }}" alt="Katerina" class="hover-person-image">
+            <img src="{{ secure_asset("images/woman.png") }}" alt="Katerina" class="person-image">
+            <img src="{{ secure_asset("images/woman2.png") }}" alt="Katerina" class="hover-person-image">
         </div>
         <h3 class="pink">KATERINA</h3>
         <h4>The Designer and Muse</h4>
@@ -69,8 +70,8 @@
 
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ asset("images/people/Aleks.jpg") }}" alt="Aleks" class="person-image">
-            <img src="{{ asset("images/people/oak.png") }}" alt="Aleks" class="hover-person-image">
+            <img src="{{ secure_asset("images/people/Aleks.jpg") }}" alt="Aleks" class="person-image">
+            <img src="{{ secure_asset("images/people/oak.png") }}" alt="Aleks" class="hover-person-image">
         </div>
         <h3 class="pink">Aleks</h3>
         <h4>Bootcamp Trainer</h4>
@@ -83,7 +84,7 @@
 </div>
 
 <div class="text-block">
-    <img src="{{ asset("images/about.jpeg") }}" alt="team photo" class="about-image">
+    <img src="{{ secure_asset("images/about.jpeg") }}" alt="team photo" class="about-image">
     <p>Together, we are North SQD, a small but mighty team committed to bringing you high-quality, stylish merchandise.
         Our logo is a testament to our collective journey, always pointing us forward and upward. We hope you enjoy
         shopping with us as much as we enjoyed creating this for you!</p>

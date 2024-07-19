@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/pdp.css') }}">
-    <script src="{{ asset('js/pdp.js') }}"></script>
+    <link rel="stylesheet" href="{{ secure_asset('css/pdp.css') }}">
+    <script src="{{ secure_asset('js/pdp.js') }}"></script>
     <title>Product Details</title>
     <script>
         const addToCartUrl = "{{ route('addToCart', $products['item']->id) }}";
@@ -26,8 +27,8 @@
                         @foreach($paths as $path)
                             @if($path != null)
                                 <div class="small-img-col">
-                                    <img src="{{ asset($path) }}" alt="{{ $products['item']->name }}"
-                                         data-image='{{ asset($path) }}' class="thumbnail">
+                                    <img src="{{ secure_asset($path) }}" alt="{{ $products['item']->name }}"
+                                         data-image='{{ secure_asset($path) }}' class="thumbnail">
                                 </div>
                             @endif
                         @endforeach
@@ -38,7 +39,7 @@
         @foreach($products['colors'] as $color)
             {{--            FINISH THIS PART AFTER LUNCH--}}
             <div class="card__slide" id="preview-{{$color -> color}}" style="display: none">
-                <img src="{{ asset($preview[$color->color]) }}" alt="{{ $products['item']->name }}" class="card__image">
+                <img src="{{ secure_asset($preview[$color->color]) }}" alt="{{ $products['item']->name }}" class="card__image">
             </div>
         @endforeach
     </div>

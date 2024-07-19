@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Add Product</title>
     <body>
         <form method="POST" action="{{ route('addProduct') }}">

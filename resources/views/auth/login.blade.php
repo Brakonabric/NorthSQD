@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/auth.css') }}">
     <title>Login</title>
 
 <body>
@@ -24,8 +24,8 @@
                 <label for ="password">Password</label>
                 <div class="passinp">
                     <input required id="password" type="password" name="password" placeholder="Enter your password">
-                    <img id="showpass" class="showpass" src="{{ asset('svg/Eyeopen.svg') }}" alt="showPassword">
-                    <img id="showpass2" style="display:none;" class="showpass" src="{{ asset('svg/Eyehide.svg') }}"
+                    <img id="showpass" class="showpass" src="{{ secure_asset('svg/Eyeopen.svg') }}" alt="showPassword">
+                    <img id="showpass2" style="display:none;" class="showpass" src="{{ secure_asset('svg/Eyehide.svg') }}"
                         alt="showPassword">
                 </div>
                 <a href="#">Forgot Password?</a>
@@ -37,9 +37,9 @@
     </div>
     <p class="continue">or continue with</p>
     <div class="buttonBox">
-        <input class="social" type="image" src="{{ asset('svg/facebook_ic.svg') }}" alt="facebook"/>
-        <input class="social" type="image" src="{{ asset('svg/google_ic.svg') }}" alt="google"/>
-        <input class="social" type="image" src="{{ asset('svg/apple_ic.svg') }}" alt="apple"/>
+        <input class="social" type="image" src="{{ secure_asset('svg/facebook_ic.svg') }}" alt="facebook"/>
+        <input class="social" type="image" src="{{ secure_asset('svg/google_ic.svg') }}" alt="google"/>
+        <input class="social" type="image" src="{{ secure_asset('svg/apple_ic.svg') }}" alt="apple"/>
     </div>
     <hr class="auth_line">
     @include('templates/footer')

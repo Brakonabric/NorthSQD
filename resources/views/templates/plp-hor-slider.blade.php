@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="{{ asset('css/plp-hor-slider.css') }}">
-<script src="{{ asset('js/plp-hor-slider.js') }}"></script>
+<link rel="stylesheet" href="{{ secure_asset('css/plp-hor-slider.css') }}">
+<script src="{{ secure_asset('js/plp-hor-slider.js') }}"></script>
 <div class="plp-hor-slider">
     <div class="sales-title">
         <h2 class="top-sales">TOP sales</h2>
@@ -10,7 +10,7 @@
             <a href="{{ route('products')}}/{{$item->id}}"  class="product-container">
                 <div class="product-wrapper">
                     <div class="image-container">
-                        <img class="product-image" src="{{asset($item->imagePreview)}}" alt={{ $item->name }}>
+                        <img class="product-image" src="{{secure_asset($item->imagePreview)}}" alt={{ $item->name }}>
                         @if($item->discount !== null && $item->discount > 0)
                             <p class="sale-mark">SALE</p>
                             @endif

@@ -337,4 +337,7 @@
         width: 130px;
         height: 100%;
     }
+    .search-bar-mobile {
+        display: none;
+    }
 }

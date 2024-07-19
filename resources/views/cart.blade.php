@@ -2,9 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/cart.css') }}">
     <title>Cart</title>
 
 <body>
@@ -17,7 +18,7 @@
     @if ($cart)
         @foreach ($cart as $item)
             <div class="item_box">
-                <img src="{{ asset($item['imagePreview']) }}" alt="{{ $item['name'] }}">
+                <img src="{{ secure_asset($item['imagePreview']) }}" alt="{{ $item['name'] }}">
                 <div class="item_desc">
                     <p class="item_title">{{ $item['name'] }}</p>
                     @if($item['size'])
@@ -29,12 +30,12 @@
                 </div>
                 <div class="item_quantity">
                     <a href="{{ route('removeFromCart', $item) }}"><img
-                                src="{{ asset('svg/minus.svg') }}"
+                                src="{{ secure_asset('svg/minus.svg') }}"
                                 alt="Remove item"></a>
                     <div class="item_number">
                         <p class="quantity">{{$item['quantity']}}</p>
                     </div>
-                    <a href="{{ route('addToCart', $item) }}"><img src="{{ asset('svg/plus.svg') }}" alt="Add item"></a>
+                    <a href="{{ route('addToCart', $item) }}"><img src="{{ secure_asset('svg/plus.svg') }}" alt="Add item"></a>
                 </div>
             </div>
             @php

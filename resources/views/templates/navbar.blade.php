@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-<script src="{{ asset('js/nav.js') }}"></script>
+<link rel="stylesheet" href="{{ secure_asset('css/navbar.css') }}">
+<script src="{{ secure_asset('js/nav.js') }}"></script>
 <div class="sticky-bar">
     <div class="navbar-header">
         <div class="button-container" id="left-container">
@@ -13,13 +13,13 @@
                 </span>
             </button>
             <button onclick="" class="mob-nav-button" id="search">
-                <img src="{{ asset("svg/search.svg") }}" alt="search">
+                <img src="{{ secure_asset("svg/search.svg") }}" alt="search">
             </button>
         </div>
-        <a class="logo-container" href="{{route('home')}}"><img src="{{ asset("svg/logo.svg") }}" alt="#" class="logo"></a>
+        <a class="logo-container" href="{{route('home')}}"><img src="{{ secure_asset("svg/logo.svg") }}" alt="#" class="logo"></a>
         <div class="button-container" id="right-container">
             <a href="{{ route('profile') }}" class="mob-nav-button" id="user">
-                <img src="{{ asset("svg/user.svg") }}" alt="#">
+                <img src="{{ secure_asset("svg/user.svg") }}" alt="#">
             </a>
             <a href="{{ route('cart') }}" class="mob-nav-button" id="cart" style="position: relative">
                 @php
@@ -66,7 +66,7 @@
                     <h3>TOP Sales</h3>
                 </li>
                 <li><a href="{{route('sales')}}">
-                        <img src="{{asset("svg/sale-mark.svg")}}" alt="">
+                        <img src="{{secure_asset("svg/sale-mark.svg")}}" alt="">
                         <h4>SALE</h4>
                     </a></li>
             </ul>
@@ -84,7 +84,7 @@
             <li class="nav-list-item"><a href="{{route('category')}}/?category=shoes">Shoes</a></li>
             <li class="nav-list-item"><a href="{{route('category')}}/?category=hat">Hat</a></li>
             <li class="nav-list-item"><a class="" href="{{route('sales')}}">
-                    <img src="{{asset("svg/sale-mark.svg")}}" alt="">SALE</a></li>
+                    <img src="{{secure_asset("svg/sale-mark.svg")}}" alt="">SALE</a></li>
         </ul>
     </nav>
 </div>
@@ -102,7 +102,6 @@
             </button>
         </div>
         <div class="search-container">
-            <label id="search-label" for="search-bar" hidden>Search for items and collections</label>
             <span class="search-submit" id="search-submit" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path class="exit-svg" fill-rule="evenodd" clip-rule="evenodd"
@@ -118,7 +117,7 @@
                 </svg>
             </button>
         </div>
-        <script src="{{ asset('js/search-engine.js') }}"></script>
+        <script src="{{ secure_asset('js/search-engine.js') }}"></script>
         <div class="search-response-container">
             <ul class="search-list-mobile" id="search-list-mobile">
             </ul>
