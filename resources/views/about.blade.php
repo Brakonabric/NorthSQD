@@ -22,8 +22,8 @@
 <div class="about">
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ secure_asset("images/man.png") }}" alt="Katerina" class="person-image">
-            <img src="{{ secure_asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
+            <img src="{{ secure_asset("images/people/Linass.png") }}" alt="Linass" class="person-image">
+            <img src="{{ secure_asset("images/people/Linass2.png") }}" alt="Linass" class="hover-person-image">
         </div>
         <h3 class="pink">LINASS</h3>
         <h4>The Team Lead</h4>
@@ -34,8 +34,8 @@
 
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ secure_asset("images/man.png") }}" alt="Katerina" class="person-image">
-            <img src="{{ secure_asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
+            <img src="{{ secure_asset("images/people/Deniss.png") }}" alt="Deniss" class="person-image">
+            <img src="{{ secure_asset("images/people/Deniss2.png") }}" alt="Deniss" class="hover-person-image">
         </div>
         <h3 class="pink">DENISS</h3>
         <h4>The Back-End Wizard</h4>
@@ -46,8 +46,8 @@
 
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ secure_asset("images/man.png") }}" alt="Katerina" class="person-image">
-            <img src="{{ secure_asset("images/man2.png") }}" alt="Katerina" class="hover-person-image">
+            <img src="{{ secure_asset("images/people/Rodions.png") }}" alt="Rodions" class="person-image">
+            <img src="{{ secure_asset("images/people/Rodions2.png") }}" alt="Rodions" class="hover-person-image">
         </div>
         <h3 class="pink">RODIONS</h3>
         <h4>The Front-End Master</h4>
@@ -58,8 +58,8 @@
 
     <div class="about-grid">
         <div class="img-container">
-            <img src="{{ secure_asset("images/woman.png") }}" alt="Katerina" class="person-image">
-            <img src="{{ secure_asset("images/woman2.png") }}" alt="Katerina" class="hover-person-image">
+            <img src="{{ secure_asset("images/people/Katerina.png") }}" alt="Katerina" class="person-image">
+            <img src="{{ secure_asset("images/people/Katerina2.png") }}" alt="Katerina" class="hover-person-image">
         </div>
         <h3 class="pink">KATERINA</h3>
         <h4>The Designer and Muse</h4>
@@ -73,7 +73,7 @@
             <img src="{{ secure_asset("images/people/Aleks.jpg") }}" alt="Aleks" class="person-image">
             <img src="{{ secure_asset("images/people/oak.png") }}" alt="Aleks" class="hover-person-image">
         </div>
-        <h3 class="pink">Aleks</h3>
+        <h3 class="pink">ALEKS</h3>
         <h4>Bootcamp Trainer</h4>
         <p>Alex is not a member of our squad, but he is an outstanding bootcamp trainer who turned our training into an
             unforgettable adventure. His talent as a memologist made each day brighter and more fun, and his ability to

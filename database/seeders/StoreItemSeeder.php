@@ -387,9 +387,9 @@ Introducing the NorthSQD Tough Case for iPhone®—where durability meets the en
                 'imagePreview' => 'images\Rodions\Hat_Rodions_white_1.png',
                 'weight' => 3.2,
                 'discount' => 2.01,
-                'colors' => ['white', 'black'],
+                'colors' => ['white'],
                 'sizes' => ['Medium'],
-                'imageCount' => 2
+                'imageCount' => 3
             ],
             [
                 'name' => "Unisex Canvas Shoes",

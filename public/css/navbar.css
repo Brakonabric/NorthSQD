@@ -54,6 +54,9 @@
     margin: 0;
     align-items: center;
     height: 100%;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
 }
 
 .dropdown-nav-list h3 {
@@ -310,6 +313,7 @@
     button:active {
         background: #0f6674;
     }
+
 
     .button-container a {
         display: flex;

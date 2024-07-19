@@ -28,7 +28,7 @@ class UserController extends Controller
     }
     public function register(Request $request): RedirectResponse
     {
-        $request->validate([
+        $data = $request->validate([
             'email' => 'required|email|unique:users',
             'password' => 'required'
         ]);
@@ -40,7 +40,8 @@ class UserController extends Controller
             'amount' => 0,
             'user_id' => $user->id
         ]);
-        return redirect('/login');
+        Auth::attempt($data);
+        return redirect(route('home'));
     }
     public function showLoginForm()
     {

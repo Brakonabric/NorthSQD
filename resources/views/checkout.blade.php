@@ -138,6 +138,7 @@
     </div>
 </div>
 
+<hr class="auth_line">
 @include('templates/footer')
 
     <script>

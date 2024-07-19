@@ -3,118 +3,140 @@ body {
     padding: 0;
     font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.cart_items{
-    width:90% ;
-    margin-left:20px;
+
+.cart_items {
+    width: 90%;
+    margin-left: 20px;
     margin: auto;
     display: block;
 }
+
 .item_box {
-    width:100% ;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: row;
 }
-.item_box img{
-    width:25%;
-    height:80%
+
+.item_box img {
+    width: 25%;
+    height: 80%
 }
-.item_desc{
+
+.item_desc {
     display: flex;
     flex-direction: column;
-    width:50%;
+    width: 50%;
     margin-left: 5%;
 }
+
 .item_desc p {
     margin-bottom: 0;
     height: 20px;
 }
+
 .item_title {
     margin-top: 2px;
     font-weight: bold;
     word-wrap: break-word;
 }
+
 .item_size {
     margin-top: 15px;
     font-size: small;
-    color:#888888;
+    color: #888888;
 }
+
 .item_cost {
     margin-top: 9px;
 }
-.item_quantity{
+
+.item_quantity {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 25%;
 }
+
 .item_quantity img {
     display: inline-block;
     width: 120%
 
 }
-.item_number{
+
+.item_number {
     font-weight: bold;
     margin-top: 0;
     vertical-align: 35px;
     text-align: center;
 }
-.totalCost{
-    margin-top: 30px;
-    margin-left:20px;
-    width:90%;
+
+.totalCost {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    display: block;
 }
+
 .totalCostBox {
-    width:100%;
+    width: 100%;
 }
+
 .totalCostBox p {
     display: inline-block;
     margin-bottom: 0px;
 }
+
 .totalCostBox hr {
-    color:#D5D5D5;
+    color: #D5D5D5;
     background-color: #D5D5D5;
-    height:2px;
-    border-width:0;
+    height: 2px;
+    border-width: 0;
 }
-.costNumber{
+
+.costNumber {
     float: right;
-    font-size:small
+    font-size: small
 }
-.totalNumber{
+
+.totalNumber {
     float: right;
     font-size: medium;
     font-weight: bold;
 }
-.total{
+
+.total {
     font-weight: bold;
 }
+
 .submit {
     background-color: #DB3998;
-    color:white;
-    border:none;
+    color: white;
+    border: none;
     border-radius: 15px;
-    min-height:40px;
-    cursor:pointer;
+    min-height: 40px;
+    cursor: pointer;
     margin-top: 20px;
     font-weight: bold;
-    width:100%;
+    width: 100%;
 }
+
 @media (min-width: 769px) {
-    .cart_items , .totalCost{
-    width: 30%;
+    .cart_items, .totalCost {
+        width: 30%;
+    }
+    .totalCost {
+        width: 100%;
+    }
 }
-}
+
 @media (max-width: 768px) {
-    .cart_items , .totalCost{
-        width: 90%;
+    .cart_items, .totalCost {
+        width: 60%;
     }
+    .totalCost {
+        width: 100%;
     }
+}
 
 .auth_line {
     background-color: #DB3998;
